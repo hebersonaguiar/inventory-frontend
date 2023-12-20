@@ -30,7 +30,3 @@ app.get("/exampleData", function (req, res) {
        res.json({"error": error});
     })
 });
-
-app.use(express.static(pathToBaseFolderOfStaticContent, {
-    extensions: ['html', 'htm'],
-}));
