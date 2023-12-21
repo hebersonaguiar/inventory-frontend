@@ -12,9 +12,9 @@ app.listen(port, () => {
 });
 
 // Define a route handler for HTTP GET requests
-app.get("/exampleData", function (req, res) {
+app.get("/getHosts", function (req, res) {
 
-  const url = 'https://jsonplaceholder.typicode.com/todos';
+  const url = 'http://inventory:5000/hosts';
 
   // Make a request
   axios.get(url)
