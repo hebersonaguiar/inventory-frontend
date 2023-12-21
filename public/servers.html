@@ -99,10 +99,10 @@
               <th scope="col">Processor</th>
               <th scope="col">S.O.</th>
               <th scope="col">Distribution</th>
-              <th scope="col">MEM TOTAL</th>
-              <th scope="col">MEM FREE</th>
-              <th scope="col">UPTIME</th>
-              <th scope="col">MAC ADDRESS</th>
+              <th scope="col">Mem Total</th>
+              <th scope="col">Mem Free</th>
+              <th scope="col">Uptime</th>
+              <th scope="col">Mac</th>
               <th scope="col">Criado em</th>
               <th scope="col">Atualizado em</th>
               <th scope="col">Ambiente</th>
@@ -192,8 +192,8 @@
   $(document).ready(function() {
     // Create a new DataTable object
     table = $('#servers-list').DataTable({
-        //  "lengthMenu": [ [15, 50, 100, -1], [15, 50, 100, "All"] ],
-        //  "pagingType": "simple",
+         "lengthMenu": [ [15, 50, 100, -1], [15, 50, 100, "All"] ],
+         "pagingType": "simple",
          scrollY: 400,
          scrollCollapse: true,
          order: [[ 0, 'asc' ], [3, 'desc' ]],
