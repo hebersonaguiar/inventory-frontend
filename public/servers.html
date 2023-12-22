@@ -124,7 +124,7 @@
           </thead>
         </table>
       </div>
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="moreInfoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -236,7 +236,7 @@
              { data:'environnment' },
              {data: "id" , render : function ( data, type, row, meta ) {
                   return type === 'display'  ?
-                    '<a class="btn btn-primary" href="#" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Mais</a>' :
+                    '<a class="btn btn-primary" id="more-info" href="#" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal">Mais</a>' :
                     data;
               }},
             //  { data: 'url' },
