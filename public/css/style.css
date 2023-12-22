@@ -180,3 +180,15 @@ hr{
 #servers-list_length{
     margin-left: -615px;
 }
+
+#servers-list_filter{
+    margin-left: 508px;
+}
+
+#servers-list_info{
+    margin-left: -492px;
+}
+
+#servers-list_paginate{
+    margin-right: -121px;
+}
