@@ -124,6 +124,23 @@
           </thead>
         </table>
       </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   <!-- <div class="container text-center">
     <h1 class="service-title">LINKS</h1>
@@ -216,8 +233,12 @@
              { data: 'mac_address' },
              { data: 'created_at' },
              { data: 'updated_at' },
-             { data: 'environnment' },
-             { data: '<button class="btn btn-primary" type="submit">Mais</button>' }
+             { data:'environnment' },
+             {data: "id" , render : function ( data, type, row, meta ) {
+                  return type === 'display'  ?
+                    '<a class="btn btn-primary" href="#" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal"></a>' :
+                    data;
+              }},
             //  { data: 'url' },
             //  { data: 'cluster' },
             //  { data: 'publication' },
