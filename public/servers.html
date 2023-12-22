@@ -101,6 +101,7 @@
               <table class="table table-servers" id="additionalInformation">
                 <thead>
                   <tr>
+                    <th scope="col">Id</th>
                     <th scope="col">Hostname</th>
                     <th scope="col">Ip</th>
                     <th scope="col">Architcture</th>
@@ -242,6 +243,7 @@
            url: '/getHosts',
          },
          columns: [
+             { data: 'id' },
              { data: 'hostname' },
              { data: 'ip' },
              { data: 'architecture' },
@@ -249,7 +251,7 @@
             //  { data: 'processor' },
             //  { data: 'so' },
             //  { data: 'distribution' },
-            //  { data: 'mem_total' },
+            //  { data: 'mem_total' },ss
             //  { data: 'mem_free' },
             //  { data: 'up_time' },
             //  { data: 'mac_address' },
