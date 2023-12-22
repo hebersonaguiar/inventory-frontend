@@ -101,10 +101,19 @@
               <table class="table table-servers" id="additionalInformation">
                 <thead>
                   <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Hostname</th>
-                    <th scope="col">Ip</th>
-                    <th scope="col">Architcture</th>
+                    <th scope="col">Url</th>
+                    <th scope="col">Cluster</th>
+                    <th scope="col">Publicação</th>
+                    <th scope="col">Middleware</th>
+                    <th scope="col">Framework</th>
+                    <th scope="col">Linguagem App</th>
+                    <th scope="col">Prioridade</th>
+                    <th scope="col">Risco</th>
+                    <th scope="col">Sigla</th>
+                    <th scope="col">Objetivo</th>
+                    <th scope="col">Datacenter</th>
+                    <th scope="col">Reposirório</th>
+                    <th scope="col">Nacional/CJF</th>
                   </tr>
                 </thead>
               </table>
@@ -243,10 +252,10 @@
            url: '/getHosts',
          },
          columns: [
-             { data: 'id' },
-             { data: 'hostname' },
-             { data: 'ip' },
-             { data: 'architecture' },
+            //  { data: 'id' },
+            //  { data: 'hostname' },
+            //  { data: 'ip' },
+            //  { data: 'architecture' },
             //  { data: 'plataform' },
             //  { data: 'processor' },
             //  { data: 'so' },
@@ -263,19 +272,19 @@
             //         '<a class="btn btn-primary" id="buttonModal" href="#" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal">Mais</a>' :
             //         data;
             //   }},
-            //  { data: 'url' },
-            //  { data: 'cluster' },
-            //  { data: 'publication' },
-            //  { data: 'midleware' },
-            //  { data: 'framework' },
-            //  { data: 'app_language' },
-            //  { data: 'priority' },
-            //  { data: 'risk' },
-            //  { data: 'acronym' },
-            //  { data: 'goal' },
-            //  { data: 'datacenter' },
-            //  { data: 'repository' },
-            //  { data: 'national_cjf' }
+             { data: 'url' },
+             { data: 'cluster' },
+             { data: 'publication' },
+             { data: 'midleware' },
+             { data: 'framework' },
+             { data: 'app_language' },
+             { data: 'priority' },
+             { data: 'risk' },
+             { data: 'acronym' },
+             { data: 'goal' },
+             { data: 'datacenter' },
+             { data: 'repository' },
+             { data: 'national_cjf' }
            ]
          })
   });
