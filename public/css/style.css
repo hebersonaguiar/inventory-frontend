@@ -193,12 +193,12 @@ hr{
     margin-right: -121px;
 }
 
-#more-info{
+#buttonModal{
     background-color: #999;
     border-color: #999;
 }
 
-#more-info:focus{
+#buttonModal:focus{
     background-color: #999;
     border-color: #999;
 }
