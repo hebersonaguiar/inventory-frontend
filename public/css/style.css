@@ -207,3 +207,8 @@ hr{
     background-color: #999;
     border-color: #999;
 }
+
+#modal-add-info{
+    width: 1463px;
+    margin-left: -180px
+}
