@@ -220,7 +220,7 @@
              { data:'environnment' },
              {data: "hostname" , render : function ( data, type, row, meta ) {
                   return type === 'display'  ?
-                    '<a class="btn btn-primary buttonModal" id="'+ data +'" href="#" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal">Mais</a>' :
+                    '<a class="btn btn-primary buttonModal" id="'+ data +'" href="#" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal"><input style="display:none" id="idHostName" placeholder="'+ data +'"/>Mais</a>' :
                     data;
               }},
             //  { data: 'url' },
@@ -251,7 +251,7 @@
          ajax: {
            url: '/getHostsUsername',
            data: function(d) {
-              d.id = $('#id').val();
+              d.id = $('#idHostName').val();
               console.log(d)
             }
          },
