@@ -94,13 +94,13 @@
         <div class="modal-dialog modal-xl">
           <div class="modal-content" id="modal-add-info">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Informações Complementares</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <table class="table table-servers" id="additionalInformation">
                 <thead>
-                  <p style="display: none;" id="hostnameModal"></p>
+                  <!-- <p style="display: none;" id="hostnameModal"></p> -->
                   <tr>
                     <th scope="col">Url</th>
                     <th scope="col">Cluster</th>
@@ -251,9 +251,9 @@
     // Create a new DataTable object
 
     var host = document.getElementById("idHostName").placeholder;
-    document.getElementById("hostnameModal").innerHTML = host;
+    document.getElementById("exampleModalLabel").innerHTML = host;
     
-    var idd = $('#hostnameModal').val();
+    var idd = $('#exampleModalLabel').val();
     // var idd = document.getElementById("hostnameModal").placeholder;
     var url = '/getHostsUsername/'+idd;
     table = $('#additionalInformation').DataTable({
