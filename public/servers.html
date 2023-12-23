@@ -99,6 +99,7 @@
             </div>
             <div class="modal-body">
               <table class="table table-servers" id="additionalInformation">
+                <p style="display: none;" id="hostnameModal"></p>
                 <thead>
                   <tr>
                     <th scope="col">Url</th>
@@ -220,7 +221,7 @@
              { data:'environnment' },
              {data: "hostname" , render : function ( data, type, row, meta ) {
                   return type === 'display'  ?
-                    '<a class="btn btn-primary buttonModal" id="'+ data +'" href="#" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal"><input type="text" style="display:none" id="idHostName" placeholder="'+ data +'"/>Mais</a>' :
+                    '<a class="btn btn-primary buttonModal" id="'+ data +'" href="#" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal" onclick="parseHostname()"><input type="text" style="display:none" id="idHostName" placeholder="'+ data +'"/>Mais</a>' :
                     data;
               }},
             //  { data: 'url' },
@@ -240,11 +241,16 @@
          })
   });
 
+  function parseHostname() {
+    var host = document.getElementById("idHostName").placeholder;
+    document.getElementById("hostnameModal").innerHTML = host;
+  }
+
   $(document).ready(function() {
     // Create a new DataTable object
     
-    // var idd = $('#idHostName').val();
-    var idd = document.getElementById("idHostName").placeholder;
+    var idd = $('#hostnameModal').val();
+    // var idd = document.getElementById("hostnameModal").placeholder;
     var url = '/getHostsUsername/'+idd;
     table = $('#additionalInformation').DataTable({
          "lengthMenu": [ [15, 50, 100, -1], [15, 50, 100, "All"] ],
