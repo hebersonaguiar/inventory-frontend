@@ -31,10 +31,10 @@ app.get("/getHosts", function (req, res) {
     })
 });
 
-app.get("/getHostsUsername/:id", function (req, res) {
+app.get("/getHostsUsername?", function (req, res) {
 
-  const id = req.params.id;
-  console.log("In API, value is: "+id);
+  // const id = req.params.id;
+  console.log("In API, value is: "+req.params);
 
   const url = 'http://inventory:5000/hosts/'+id.str;
 
