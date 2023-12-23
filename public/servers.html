@@ -243,7 +243,8 @@
   $(document).ready(function() {
     // Create a new DataTable object
     
-    var idd = $('#idHostName').val();
+    // var idd = $('#idHostName').val();
+    var idd = document.getElementById("idHostName").placeholder;
     var url = '/getHostsUsername/'+idd;
     table = $('#additionalInformation').DataTable({
          "lengthMenu": [ [15, 50, 100, -1], [15, 50, 100, "All"] ],
