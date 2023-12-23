@@ -31,11 +31,13 @@ app.get("/getHosts", function (req, res) {
     })
 });
 
-app.get("/getHostsUsername?", function (req, res) {
+app.get("/getHostsUsername/:id", function (req, res) {
 
-  console.log("In API, value is: "+req.params);
+  const idd = req.params.id;
 
-  const url = 'http://inventory:5000/hosts/'+req.params;
+  console.log("In API, value is: "+idd);
+
+  const url = 'http://inventory:5000/hosts/'+idd;
 
   // Make a request
   axios.get(url)

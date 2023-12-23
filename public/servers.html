@@ -242,6 +242,9 @@
 
   $(document).ready(function() {
     // Create a new DataTable object
+    
+    var idd = 'vm-one';
+    var url = '/getHostsUsername/'+idd;
     table = $('#additionalInformation').DataTable({
          "lengthMenu": [ [15, 50, 100, -1], [15, 50, 100, "All"] ],
          "pagingType": "simple",
@@ -249,13 +252,17 @@
          scrollCollapse: true,
          order: [[ 0, 'asc' ], [3, 'desc' ]],
          ajax: {
-           url: '/getHostsUsername',
-           data: function(d) {
-              // d.id = $('#idHostName').val();
-              d.id = "vm-one";
-              console.log(d)
-            }
+          type: "GET",
+           url: url,
          },
+        //  ajax: {
+        //    url: '/getHostsUsername',
+        //    data: function(d) {
+        //       // d.id = $('#idHostName').val();
+        //       d.id = "vm-one";
+        //       console.log(d)
+        //     }
+        //  },
          columns: [
             //  { data: 'id' },
             //  { data: 'hostname' },
