@@ -251,7 +251,8 @@
          ajax: {
            url: '/getHostsUsername',
            data: function(d) {
-              d.id = $('#idHostName').val();
+              // d.id = $('#idHostName').val();
+              d.id = "vm-one";
               console.log(d)
             }
          },
