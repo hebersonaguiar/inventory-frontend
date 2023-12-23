@@ -34,7 +34,9 @@ app.get("/getHosts", function (req, res) {
 app.get("/getHostsUsername", function (req, res) {
 
   // const servername = req.params.servername;
-  const servername = req.body;
+  const id = req.body;
+  console.log("In API, value is: "+id);
+  console.log("In API, body is: "+req.body);
 
   const url = 'http://inventory:5000/hosts/'+servername.str;
 
