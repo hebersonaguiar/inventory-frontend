@@ -33,10 +33,9 @@ app.get("/getHosts", function (req, res) {
 
 app.get("/getHostsUsername?", function (req, res) {
 
-  // const id = req.params.id;
   console.log("In API, value is: "+req.params);
 
-  const url = 'http://inventory:5000/hosts/'+id.str;
+  const url = 'http://inventory:5000/hosts/'+req.params;
 
   // Make a request
   axios.get(url)
