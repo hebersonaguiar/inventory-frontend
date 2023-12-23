@@ -57,7 +57,7 @@
         <table class="table table-servers" id="servers-list">
           <thead>
             <tr>
-              <th scope="col" id="hostnameModal">Id</th>
+              <th scope="col">Id</th>
               <th scope="col">Hostname</th>
               <th scope="col">Ip</th>
               <th scope="col">Architcture</th>
@@ -100,7 +100,7 @@
             <div class="modal-body">
               <table class="table table-servers" id="additionalInformation">
                 <thead>
-                  <!-- <p style="display: none;" id="hostnameModal"></p> -->
+                  <p style="display: none;" id="hostnameModal"></p>
                   <tr>
                     <th scope="col">Url</th>
                     <th scope="col">Cluster</th>
@@ -249,8 +249,11 @@
   // $(document).ready(function() {
   function parseHostname() {
     // Create a new DataTable object
+
+    var host = document.getElementById("idHostName").placeholder;
+    document.getElementById("hostnameModal").innerHTML = host;
     
-    var idd = $('#idHostName').val();
+    var idd = $('#hostnameModal').val();
     // var idd = document.getElementById("hostnameModal").placeholder;
     var url = '/getHostsUsername/'+idd;
     table = $('#additionalInformation').DataTable({
