@@ -34,9 +34,6 @@ app.get("/getHosts", function (req, res) {
 app.get("/getHostsUsername/:id", function (req, res) {
 
   const idd = req.params.id;
-
-  console.log("In API, value is: "+idd);
-
   const url = 'http://inventory:5000/hosts/'+idd;
 
   // Make a request
