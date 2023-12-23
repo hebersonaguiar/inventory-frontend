@@ -218,7 +218,6 @@
   function parseHostname() {
     // Create a new DataTable object
     var host = document.getElementById("hostName").placeholder;
-    console.log("Value Hosts: "+host);
     var url = '/getHostsUsername/'+host;
     table = $('#additionalInformation').DataTable({
          "lengthMenu": [ [15, 50, 100, -1], [15, 50, 100, "All"] ],
