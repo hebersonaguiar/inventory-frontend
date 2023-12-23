@@ -243,7 +243,7 @@
   $(document).ready(function() {
     // Create a new DataTable object
     
-    var idd = 'vm-one';
+    var idd = $('#idHostName').val();
     var url = '/getHostsUsername/'+idd;
     table = $('#additionalInformation').DataTable({
          "lengthMenu": [ [15, 50, 100, -1], [15, 50, 100, "All"] ],
