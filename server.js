@@ -33,7 +33,6 @@ app.get("/getHosts", function (req, res) {
 
 app.get("/getHostsUsername/:id", function (req, res) {
 
-  // const servername = req.params.servername;
   const id = req.params.id;
   console.log("In API, value is: "+id);
 
