@@ -252,12 +252,12 @@
 
     var host = document.getElementById("idHostName").placeholder;
     console.log("Value Hosts: "+host);
-    document.getElementById("exampleModalLabel").innerHTML = host;
+    // document.getElementById("exampleModalLabel").innerHTML = host;
     
-    var idd = $('#exampleModalLabel').val();
+    // var idd = $('#exampleModalLabel').val();
     // var idd = document.getElementById("hostnameModal").placeholder;
-    var url = '/getHostsUsername/'+idd;
-    console.log("ID onclick: "+idd);
+    var url = '/getHostsUsername/'+host;
+    // console.log("ID onclick: "+idd);
     table = $('#additionalInformation').DataTable({
          "lengthMenu": [ [15, 50, 100, -1], [15, 50, 100, "All"] ],
          "pagingType": "simple",
