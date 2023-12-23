@@ -193,18 +193,18 @@ hr{
     margin-right: -121px;
 }
 
-#buttonModal{
-    background-color: #999;
+.buttonModal{
+    background-color: .999;
     border-color: #999;
 }
 
-#buttonModal:focus{
-    background-color: #999;
+.buttonModal:focus{
+    background-color:#999;
     border-color: #999;
 }
 
-#buttonModal:hover{
-    background-color: #999;
+.buttonModal:hover{
+    background-color:#999;
     border-color: #999;
 }
 

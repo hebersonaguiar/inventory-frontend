@@ -30,3 +30,25 @@ app.get("/getHosts", function (req, res) {
        res.json({"error": error});
     })
 });
+
+app.get("/getHostsUsername", function (req, res) {
+
+  // const servername = req.params.servername;
+  const servername = req.body;
+
+  const url = 'http://inventory:5000/hosts/'+servername.str;
+
+  // Make a request
+  axios.get(url)
+    .then(response => {
+      // send the collected data back to the client-side DataTable
+      res.json({
+        "data": response.data
+      })
+    })
+    .catch(function (error) {
+       // handle error
+       console.log(error);
+       res.json({"error": error});
+    })
+});

@@ -119,8 +119,8 @@
               </table>
             </div>
             <div class="modal-footer">
-              <button type="button" id="buttonModal" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-              <button type="button" id="buttonModal" class="btn btn-primary">Atualizar</button>
+              <button type="button" class="btn btn-secondary buttonModal" data-bs-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-primary buttonModal">Atualizar</button>
             </div>
           </div>
         </div>
@@ -218,9 +218,9 @@
              { data: 'created_at' },
              { data: 'updated_at' },
              { data:'environnment' },
-             {data: "id" , render : function ( data, type, row, meta ) {
+             {data: "hostname" , render : function ( data, type, row, meta ) {
                   return type === 'display'  ?
-                    '<a class="btn btn-primary" id="buttonModal" href="#" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal">Mais</a>' :
+                    '<a class="btn btn-primary buttonModal" id="'+ data +'" href="#" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal">Mais</a>' :
                     data;
               }},
             //  { data: 'url' },
@@ -249,7 +249,10 @@
          scrollCollapse: true,
          order: [[ 0, 'asc' ], [3, 'desc' ]],
          ajax: {
-           url: '/getHosts',
+           url: '/getHostsUsername',
+           data: function(d) {
+              d.id = $('#id').val();
+            }
          },
          columns: [
             //  { data: 'id' },
