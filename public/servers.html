@@ -220,7 +220,7 @@
              { data:'environnment' },
              {data: "hostname" , render : function ( data, type, row, meta ) {
                   return type === 'display'  ?
-                    '<a class="btn btn-primary buttonModal" id="'+ data +'" href="#" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal"><input style="display:none" id="idHostName" placeholder="'+ data +'"/>Mais</a>' :
+                    '<a class="btn btn-primary buttonModal" id="'+ data +'" href="#" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal"><input type="text" style="display:none" id="idHostName" placeholder="'+ data +'"/>Mais</a>' :
                     data;
               }},
             //  { data: 'url' },
