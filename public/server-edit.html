@@ -54,63 +54,64 @@
     <div class="container text-center">
       <h1 class="service-title">Servidores Linux</h1>
       <div class="row text-center">
-        <table class="table table-servers" id="servers-list">
-          <thead>
-            <tr>
-              <th scope="col">Id</th>
-              <th scope="col">Hostname</th>
-              <th scope="col">Ip</th>
-              <th scope="col">Architcture</th>
-              <th scope="col">Plataform</th>
-              <th scope="col">Processor</th>
-              <th scope="col">S.O.</th>
-              <th scope="col">Distribution</th>
-              <th scope="col">Mem Total</th>
-              <th scope="col">Mem Free</th>
-              <th scope="col">Uptime</th>
-              <th scope="col">Mac</th>
-              <th scope="col">Criado em</th>
-              <th scope="col">Atualizado em</th>
-              <th scope="col">Ambiente</th>
-              <th scope="col">Mais</th>
-              <th scope="col">Editar</th>
-            </tr>
-          </thead>
-        </table>
-      </div>
-      <div class="modal fade" id="moreInfoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-          <div class="modal-content" id="modal-add-info">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Informações Complementares</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <table class="table table-servers" id="additionalInformation">
-                <thead>
-                  <tr>
-                    <th scope="col">Url</th>
-                    <th scope="col">Cluster</th>
-                    <th scope="col">Publicação</th>
-                    <th scope="col">Middleware</th>
-                    <th scope="col">Framework</th>
-                    <th scope="col">Linguagem</th>
-                    <th scope="col">Prioridade</th>
-                    <th scope="col">Risco</th>
-                    <th scope="col">Sigla</th>
-                    <th scope="col">Objetivo</th>
-                    <th scope="col">Datacenter</th>
-                    <th scope="col">Reposirório</th>
-                    <th scope="col">Nacional/CJF</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary buttonModal" data-bs-dismiss="modal">Fechar</button>
-            </div>
+        <form action="">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Hostname</label>
+            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
           </div>
-        </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">URL</label>
+            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Cluster</label>
+            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Publicação</label>
+            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Middleware</label>
+            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Framework</label>
+            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Linguagem</label>
+            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Prioridade</label>
+            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Risco</label>
+            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Sigla</label>
+            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Datacenter</label>
+            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Repsitório</label>
+            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nacional?CJF</label>
+            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Objetivo</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        </form>
       </div>
     </div>
   <!-- <div class="container text-center">
