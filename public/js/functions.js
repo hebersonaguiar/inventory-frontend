@@ -32,7 +32,7 @@ $(document).ready(function() {
               }},
               {data: "hostname" , render : function ( data, type, row, meta ) {
                    return type === 'display'  ?
-                     '<a class="btn btn-primary buttonModal" id="#s" href="/server-edit.html" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal">Edit</a>' :
+                     '<a class="btn btn-primary" id="#s" href="/server-edit.html" role="button">Edit</a>' :
                      data;
                }},
            ]
