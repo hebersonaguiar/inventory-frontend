@@ -30,6 +30,11 @@ $(document).ready(function() {
                     '<a class="btn btn-primary buttonModal" id="'+ data +'" href="#" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal" onclick="parseHostname()"><input type="text" style="display:none" id="hostName" placeholder="'+ data +'"/>Mais</a>' :
                     data;
               }},
+              {data: "hostname" , render : function ( data, type, row, meta ) {
+                   return type === 'display'  ?
+                     '<a class="btn btn-primary buttonModal" id="#s" href="/server-edit.html" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal">Edit</a>' :
+                     data;
+               }},
            ]
          })
   });
