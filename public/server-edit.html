@@ -200,11 +200,14 @@
     .then((data) => {
       let hosts = data;
 
-      hosts.map(function(author) {
-        console.log("Hostname: "+author.hostname);
+      hosts.map(function(host) {
+        console.log("Hostname: " + host.hostname);
+        let hostname = document.getElementById("in-hostname");
         // let li = document.createElement('li');
         // let name = document.createElement('h2');
         // let email = document.createElement('span');
+
+        hostname.innerHTML = `${host.hostname}`;
 
         // name.innerHTML = `${author.name}`;
         // email.innerHTML = `${author.email}`;
