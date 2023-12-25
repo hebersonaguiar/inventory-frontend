@@ -189,7 +189,7 @@
   <!-- Call JavaScript Funcionts file-->
   <script type = "text/javascript" src="js/functions.js" class="init"></script>
   <script>
-    // const ul = document.getElementById('in-hostname');
+    const elHostname = document.getElementById('in-hostname');
     // const list = document.createDocumentFragment();
     const url = 'http://10.0.0.171:5000/hosts';
 
@@ -208,7 +208,7 @@
         // let name = document.createElement('h2');
         // let email = document.createElement('span');
 
-        // hostname.innerHTML = `${host.hostname}`;
+        elHostname.innerHTML = `${host.hostname}`;
 
         // name.innerHTML = `${author.name}`;
         // email.innerHTML = `${author.email}`;
@@ -222,7 +222,7 @@
       console.log(error);
     });
 
-  // ul.appendChild(list);
+    // elHostname.appendChild(elHostname);
   </script>
   </body>
 </html>
