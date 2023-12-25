@@ -210,5 +210,10 @@ hr{
 
 #modal-add-info{
     width: 1463px;
-    margin-left: -180px
+    margin-left: -180pxs
+}
+
+#form-infos{
+    text-align: left;
+    font-weight: bold;
 }
