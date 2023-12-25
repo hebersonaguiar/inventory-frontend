@@ -65,7 +65,7 @@
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Cluster</label>
-            <input class="form-control" type="text" id="id-cluster" placeholder="Cluster" aria-label="default input example">
+            <input class="form-control" type="text" id="in-cluster" placeholder="Cluster" aria-label="default input example">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Publicação</label>
@@ -77,7 +77,7 @@
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Framework</label>
-            <input class="form-control" type="text" id="id-framework" placeholder="Framework" aria-label="default input example">
+            <input class="form-control" type="text" id="in-framework" placeholder="Framework" aria-label="default input example">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Linguagem</label>
@@ -93,7 +93,7 @@
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Sigla</label>
-            <input class="form-control" type="text" id="id-silga" placeholder="Sigla" aria-label="default input example">
+            <input class="form-control" type="text" id="in-silga" placeholder="Sigla" aria-label="default input example">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Datacenter</label>
@@ -189,8 +189,19 @@
   <!-- Call JavaScript Funcionts file-->
   <script type = "text/javascript" src="js/functions.js" class="init"></script>
   <script>
+
     const elHostname = document.getElementById('in-hostname');
-    // const list = document.createDocumentFragment();
+    const elUrl = document.getElementById('in-url');
+    const elCluster = document.getElementById('in-cluster');
+    const elPublicacao = document.getElementById('in-publicacao');
+    const elMiddleware = document.getElementById('in-middleware');
+    const elFramework = document.getElementById('in-framework');
+    const elLinguagem = document.getElementById('in-linguagem');
+    const elPrioridade = document.getElementById('in-prioridade');
+    const elRisco = document.getElementById('in-risco');
+    const elSigla = document.getElementById('in-sigla');
+    const elRepositorio = document.getElementById('in-repositorio');
+
     const url = 'http://10.0.0.171:5000/hosts';
 
     fetch(url)
@@ -201,29 +212,22 @@
       let hosts = data;
 
       hosts.map(function(host) {
-        console.log("Hostname: " + host.hostname);
-        document.getElementById('in-hostname').innerHTML = `${host.hostname}`;
-        // let hostname = document.getElementById("in-hostname");
-        // let li = document.createElement('li');
-        // let name = document.createElement('h2');
-        // let email = document.createElement('span');
         elHostname.setAttribute('placeholder', `${host.hostname}`);
-
-        // elHostname.innerHTML = `${host.hostname}`;
-
-        // name.innerHTML = `${author.name}`;
-        // email.innerHTML = `${author.email}`;
-
-        // li.appendChild(name);
-        // li.appendChild(email);
-        // list.appendChild(li);
+        elUrl.setAttribute('placeholder', `${host.url}`);
+        elCluster.setAttribute('placeholder', `${host.cluster}`);
+        elPublicacao.setAttribute('placeholder', `${host.publication}`);
+        elMiddleware.setAttribute('placeholder', `${host.midleware}`);
+        elFramework.setAttribute('placeholder', `${host.framework}`);
+        elLinguagem.setAttribute('placeholder', `${host.app_language}`);
+        elPrioridade.setAttribute('placeholder', `${host.priority}`);
+        elRisco.setAttribute('placeholder', `${host.risk}`);
+        elSigla.setAttribute('placeholder', `${host.acronym}`);
+        elRepositorio.setAttribute('placeholder', `${host.repository}`);
       });
     })
     .catch(function(error) {
       console.log(error);
     });
-
-    // elHostname.appendChild(elHostname);
   </script>
   </body>
 </html>
