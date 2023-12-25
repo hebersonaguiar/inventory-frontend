@@ -57,47 +57,47 @@
         <form action="">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Hostname</label>
-            <input class="form-control" type="text" placeholder="Hostname" aria-label="default input example" disabled>
+            <input class="form-control" type="text" id="in-hostname" placeholder="Hostname" aria-label="default input example" disabled>
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">URL</label>
-            <input class="form-control" type="text" placeholder="URL" aria-label="default input example">
+            <input class="form-control" type="text" id="in-url" placeholder="URL" aria-label="default input example">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Cluster</label>
-            <input class="form-control" type="text" placeholder="Cluster" aria-label="default input example">
+            <input class="form-control" type="text" id="id-cluster" placeholder="Cluster" aria-label="default input example">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Publicação</label>
-            <input class="form-control" type="text" placeholder="Publicação" aria-label="default input example">
+            <input class="form-control" type="text" id="in-publicacao" placeholder="Publicação" aria-label="default input example">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Middleware</label>
-            <input class="form-control" type="text" placeholder="Middleware" aria-label="default input example">
+            <input class="form-control" type="text" id="in-middleware" placeholder="Middleware" aria-label="default input example">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Framework</label>
-            <input class="form-control" type="text" placeholder="Framework" aria-label="default input example">
+            <input class="form-control" type="text" id="id-framework" placeholder="Framework" aria-label="default input example">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Linguagem</label>
-            <input class="form-control" type="text" placeholder="Linguagem" aria-label="default input example">
+            <input class="form-control" type="text" id="in-linguagem" placeholder="Linguagem" aria-label="default input example">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Prioridade</label>
-            <input class="form-control" type="text" placeholder="Prioridade" aria-label="default input example">
+            <input class="form-control" type="text" id="in-prioridade" placeholder="Prioridade" aria-label="default input example">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Risco</label>
-            <input class="form-control" type="text" placeholder="Risco" aria-label="default input example">
+            <input class="form-control" type="text" id="in-risco" placeholder="Risco" aria-label="default input example">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Sigla</label>
-            <input class="form-control" type="text" placeholder="Sigla" aria-label="default input example">
+            <input class="form-control" type="text" id="id-silga" placeholder="Sigla" aria-label="default input example">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Datacenter</label>
-            <select class="form-select" aria-label="Selecione">
+            <select class="form-select" id="in-datacenter" aria-label="Selecione">
               <option selected>Selecione</option>
               <option value="Blade">Blade</option>
               <option value="HCI">HCI</option>
@@ -105,19 +105,19 @@
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Repsitório</label>
-            <input class="form-control" type="text" placeholder="Repsitório" aria-label="default input example">
+            <input class="form-control" type="text" id="in-repositorio" placeholder="Repsitório" aria-label="default input example">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nacional/CJF</label>
-            <select class="form-select" aria-label="Selecione">
+            <select class="form-select" id="in-nacional-cjf" aria-label="Selecione">
               <option selected>Selecione</option>
               <option value="CJF">CJF</option>
               <option value="Nacional">Nacional</option>
             </select>
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Objetivo</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="in-objetivo" class="form-label">Objetivo</label>
+            <textarea class="form-control" id="in-objetivo" rows="3"></textarea>
           </div>
           <button type="button" class="btn btn-primary">Atualizar</button>
           <button type="button" class="btn btn-secondary"><a href="/index.html" id="bt-cancel-form">Cancelar</a></button>
@@ -188,5 +188,37 @@
   <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.11.1/js/dataTables.bootstrap5.min.js"></script>
   <!-- Call JavaScript Funcionts file-->
   <script type = "text/javascript" src="js/functions.js" class="init"></script>
+  <script>
+    const ul = document.getElementById('in-hostname');
+    // const list = document.createDocumentFragment();
+    const url = 'http://inventory:5000/hosts';
+
+    fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      let hosts = data;
+
+      hosts.map(function(author) {
+        console.log("Hostname: "+hosts.hostname)
+        // let li = document.createElement('li');
+        // let name = document.createElement('h2');
+        // let email = document.createElement('span');
+
+        // name.innerHTML = `${author.name}`;
+        // email.innerHTML = `${author.email}`;
+
+        // li.appendChild(name);
+        // li.appendChild(email);
+        // list.appendChild(li);
+      });
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+
+  // ul.appendChild(list);
+  </script>
   </body>
 </html>
