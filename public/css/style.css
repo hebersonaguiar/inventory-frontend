@@ -217,3 +217,12 @@ hr{
     text-align: left;
     font-weight: bold;
 }
+
+#bt-cancel-form{
+    color: #fff;
+    text-decoration: none;
+}
+
+#bt-cancel-form:hover{
+    color:#fff;
+}
