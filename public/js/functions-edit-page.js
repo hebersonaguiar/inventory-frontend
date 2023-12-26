@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     const hostToEdit = localStorage.getItem('hosttoedit');
-    console.log("Edit page: " + greetingValue);
+    console.log("Edit page: " + hostToEdit);
 
     const elHostname = document.getElementById('in-hostname');
     const elUrl = document.getElementById('in-url');
