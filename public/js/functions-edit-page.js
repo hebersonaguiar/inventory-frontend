@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    const greetingValue = localStorage.getItem('hosttoedit');
+    const hostToEdit = localStorage.getItem('hosttoedit');
     console.log("Edit page: " + greetingValue);
 
     const elHostname = document.getElementById('in-hostname');
@@ -15,7 +15,7 @@ $(document).ready(function() {
     const elSigla = document.getElementById('in-sigla');
     const elRepositorio = document.getElementById('in-repositorio');
 
-    const url = 'http://10.0.0.171:5000/hosts';
+    const url = 'http://10.0.0.171:5000/hosts/'+hostToEdit;
 
     fetch(url)
     .then((response) => {
