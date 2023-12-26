@@ -1,9 +1,11 @@
 $(document).ready(function() {
     // function editValue() {
     //   var hostEdit = document.getElementById("edithostName").placeholder;
-      const hostEdit = localStorage.getItem('hostnamevalue');
+      var greetingValue = localStorage.getItem('hosttoedit');
+      console.log("Edit page: " + greetingValue);
+    //   const hostEdit = localStorage.getItem('hostnamevalue');
     //   var hostEdit = sessionStorage.getItem("hostnamevalue");
-      console.log(hostEdit);
+    //   console.log(hostEdit);
     
       const elHostname = document.getElementById('in-hostname');
       const elUrl = document.getElementById('in-url');
