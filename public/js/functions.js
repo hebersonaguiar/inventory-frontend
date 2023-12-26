@@ -76,43 +76,45 @@ function parseHostname() {
 }
 
 
-const editHostnameValue = document.getElementById('edit-hostName');
+$(document).ready(function() {
+  const editHostnameValue = document.getElementById('edit-hostName');
 
-const elHostname = document.getElementById('in-hostname');
-const elUrl = document.getElementById('in-url');
-const elCluster = document.getElementById('in-cluster');
-const elPublicacao = document.getElementById('in-publicacao');
-const elMiddleware = document.getElementById('in-middleware');
-const elFramework = document.getElementById('in-framework');
-const elLinguagem = document.getElementById('in-linguagem');
-const elPrioridade = document.getElementById('in-prioridade');
-const elRisco = document.getElementById('in-risco');
-const elSigla = document.getElementById('in-sigla');
-const elRepositorio = document.getElementById('in-repositorio');
+  const elHostname = document.getElementById('in-hostname');
+  const elUrl = document.getElementById('in-url');
+  const elCluster = document.getElementById('in-cluster');
+  const elPublicacao = document.getElementById('in-publicacao');
+  const elMiddleware = document.getElementById('in-middleware');
+  const elFramework = document.getElementById('in-framework');
+  const elLinguagem = document.getElementById('in-linguagem');
+  const elPrioridade = document.getElementById('in-prioridade');
+  const elRisco = document.getElementById('in-risco');
+  const elSigla = document.getElementById('in-sigla');
+  const elRepositorio = document.getElementById('in-repositorio');
 
-const url = 'http://10.0.0.171:5000/hosts/'+editHostnameValue;
+  const url = 'http://10.0.0.171:5000/hosts/'+editHostnameValue;
 
-fetch(url)
-.then((response) => {
-  return response.json();
-})
-.then((data) => {
-  let hosts = data;
+  fetch(url)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    let hosts = data;
 
-  hosts.map(function(host) {
-    elHostname.setAttribute('placeholder', `${host.hostname}`);
-    elUrl.setAttribute('placeholder', `${host.url}`);
-    elCluster.setAttribute('placeholder', `${host.cluster}`);
-    elPublicacao.setAttribute('placeholder', `${host.publication}`);
-    elMiddleware.setAttribute('placeholder', `${host.midleware}`);
-    elFramework.setAttribute('placeholder', `${host.framework}`);
-    elLinguagem.setAttribute('placeholder', `${host.app_language}`);
-    elPrioridade.setAttribute('placeholder', `${host.priority}`);
-    elRisco.setAttribute('placeholder', `${host.risk}`);
-    elSigla.setAttribute('placeholder', `${host.acronym}`);
-    elRepositorio.setAttribute('placeholder', `${host.repository}`);
+    hosts.map(function(host) {
+      elHostname.setAttribute('placeholder', `${host.hostname}`);
+      elUrl.setAttribute('placeholder', `${host.url}`);
+      elCluster.setAttribute('placeholder', `${host.cluster}`);
+      elPublicacao.setAttribute('placeholder', `${host.publication}`);
+      elMiddleware.setAttribute('placeholder', `${host.midleware}`);
+      elFramework.setAttribute('placeholder', `${host.framework}`);
+      elLinguagem.setAttribute('placeholder', `${host.app_language}`);
+      elPrioridade.setAttribute('placeholder', `${host.priority}`);
+      elRisco.setAttribute('placeholder', `${host.risk}`);
+      elSigla.setAttribute('placeholder', `${host.acronym}`);
+      elRepositorio.setAttribute('placeholder', `${host.repository}`);
+    });
+  })
+  .catch(function(error) {
+    console.log(error);
   });
-})
-.catch(function(error) {
-  console.log(error);
 });
