@@ -77,8 +77,8 @@ function parseHostname() {
 
 
 $(document).ready(function() {
-  const editHostnameValue = document.getElementById('edit-hostName').placeholder;
-  console.log(editHostnameValue);
+  var hostEdit = document.getElementById("hostName").placeholder;
+  console.log(hostEdit);
 
   const elHostname = document.getElementById('in-hostname');
   const elUrl = document.getElementById('in-url');
@@ -92,7 +92,7 @@ $(document).ready(function() {
   const elSigla = document.getElementById('in-sigla');
   const elRepositorio = document.getElementById('in-repositorio');
 
-  const url = 'http://10.0.0.171:5000/hosts/'+editHostnameValue;
+  const url = 'http://10.0.0.171:5000/hosts';
 
   fetch(url)
   .then((response) => {
