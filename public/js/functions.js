@@ -27,12 +27,12 @@ $(document).ready(function() {
             { data:'environnment' },
             {data: "hostname" , render : function ( data, type, row, meta ) {
                 return type === 'display'  ?
-                  '<a class="btn btn-primary buttonModal" id="'+ data +'" href="#" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal" onclick="parseHostname()"><input type="text" style="display:none" id="hostName" placeholder="'+ data +'"/>Mais</a>' :
+                  '<a class="btn btn-primary buttonModal" id="'+ data +'" href="#" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal" onclick="parseHostname()"><input type="text" style="display:none" id="hostName" placeholder="'+ data +'" value="'+ data +'"/>Mais</a>' :
                   data;
             }},
             {data: "hostname" , render : function ( data, type, row, meta ) {
                   return type === 'display'  ?
-                    '<a class="btn btn-primary" id="#" href="/server-edit.html" role="button"><input type="text" style="display:none" id="edithostName" placeholder="'+ data +'"/>Edit</a>' :
+                    '<a class="btn btn-primary" id="#" href="/server-edit.html" role="button"><input type="text" style="display:none" id="edithostName" placeholder="'+ data +'"  value="'+ data +'"/>Edit</a>' :
                     data;
               }},
           ]
