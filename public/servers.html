@@ -178,7 +178,8 @@
   <!-- Call JavaScript Funcionts file-->
   <script type = "text/javascript" src="js/functions.js" class="init"></script>
   <script>
-    const host = document.getElementById("hostName").value;
+    // const host = document.getElementById("hostName").value;
+    var host = document.querySelector("#hostName").value;
     localStorage.setItem('greeting', host);
   </script>
   </body>
