@@ -32,7 +32,7 @@ $(document).ready(function() {
             }},
             {data: "hostname" , render : function ( data, type, row, meta ) {
                   return type === 'display'  ?
-                    '<a class="btn btn-primary" id="#" href="/server-edit.html" role="button"><input type="text" style="display:none" id="edit-hostName" placeholder="'+ data +'"/>'+ data +'</input>Edit</a>' :
+                    '<a class="btn btn-primary" id="#" href="/server-edit.html" role="button" onclick="editValue()"><input type="text" style="display:none" id="edithostName" placeholder="'+ data +'"/>Edit</a>' :
                     data;
               }},
           ]
@@ -76,8 +76,9 @@ function parseHostname() {
 }
 
 
-$(document).ready(function() {
-  const hostEdit = document.getElementById("edit-hostName").value;
+
+function editValue() {
+  var hostEdit = document.getElementById("edithostName").placeholder;
   console.log(hostEdit);
 
   const elHostname = document.getElementById('in-hostname');
@@ -118,4 +119,4 @@ $(document).ready(function() {
   .catch(function(error) {
     console.log(error);
   });
-});
+}
