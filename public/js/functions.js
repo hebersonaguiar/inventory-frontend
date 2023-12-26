@@ -77,7 +77,7 @@ function parseHostname() {
 
 
 $(document).ready(function() {
-  var hostEdit = document.getElementById("edit-hostName");
+  var hostEdit = document.getElementById("edit-hostName").value;
   console.log(hostEdit);
 
   const elHostname = document.getElementById('in-hostname');
