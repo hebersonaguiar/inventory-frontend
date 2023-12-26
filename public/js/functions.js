@@ -42,7 +42,7 @@ $(document).ready(function() {
 function getValueHost(){
   var host = document.getElementById("hostName").placeholder;
   console.log("Host to edit: " + host);
-  localStorage.setItem('greeting', host);
+  localStorage.setItem('hosttoedit', host);
 }
 
 
