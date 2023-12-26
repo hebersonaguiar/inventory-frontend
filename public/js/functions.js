@@ -32,19 +32,25 @@ $(document).ready(function() {
             }},
             {data: "hostname" , render : function ( data, type, row, meta ) {
                   return type === 'display'  ?
-                    '<a class="btn btn-primary" id="#" href="/server-edit.html" role="button"><input type="text" style="display:none" id="edithostName" placeholder="'+ data +'"  value="'+ data +'"/>Edit</a>' :
+                    '<a class="btn btn-primary" id="#" href="/server-edit.html" role="button" onclick="getValueHost()"><input type="text" style="display:none" id="edithostName" placeholder="'+ data +'"  value="'+ data +'"/>Edit</a>' :
                     data;
               }},
           ]
         })
 });
 
-// 
+function getValueHost(){
+  var host = document.getElementById("hostName").placeholder;
+  console.log("Host to edit: " + host);
+  localStorage.setItem('greeting', host);
+}
+
+
 function parseHostname() {
   // Create a new DataTable object
   var host = document.getElementById("hostName").placeholder;
   // var teste = document.querySelector("#hostName").value;
-  localStorage.setItem('greeting', host);
+  // localStorage.setItem('greeting', host);
   // localStorage.setItem('hostnamevalue', host);
   var url = '/getHostsUsername/'+host;
   table = $('#additionalInformation').DataTable({
