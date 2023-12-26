@@ -43,7 +43,7 @@ $(document).ready(function() {
 function parseHostname() {
   // Create a new DataTable object
   var host = document.getElementById("hostName").placeholder;
-  sessionStorage.setItem("hostnamevalue", host);
+  localStorage.setItem('hostnamevalue', host);
   var url = '/getHostsUsername/'+host;
   table = $('#additionalInformation').DataTable({
     //  "lengthMenu": [ [15, 50, 100, -1], [15, 50, 100, "All"] ],
