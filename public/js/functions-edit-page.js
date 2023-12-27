@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     const hostToEdit = localStorage.getItem('hosttoedit');
-    console.log("Edit page: " + hostToEdit);
+    // console.log("Edit page: " + hostToEdit);
 
     const elHostname = document.getElementById('in-hostname');
     const elUrl = document.getElementById('in-url');
@@ -26,7 +26,7 @@ $(document).ready(function() {
 
     hosts.map(function(host) {
         elHostname.setAttribute('placeholder', `${host.hostname}`);
-        elUrl.setAttribute('placeholder', `${host.url}`);
+        elUrl.setAttribute('value', `${host.url}`);
         elCluster.setAttribute('placeholder', `${host.cluster}`);
         elPublicacao.setAttribute('placeholder', `${host.publication}`);
         elMiddleware.setAttribute('placeholder', `${host.midleware}`);
