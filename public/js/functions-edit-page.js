@@ -25,17 +25,17 @@ $(document).ready(function() {
     let hosts = data;
 
     hosts.map(function(host) {
-        elHostname.setAttribute('placeholder', `${host.hostname}`);
+        elHostname.setAttribute('value', `${host.hostname}`);
         elUrl.setAttribute('value', `${host.url}`);
-        elCluster.setAttribute('placeholder', `${host.cluster}`);
-        elPublicacao.setAttribute('placeholder', `${host.publication}`);
-        elMiddleware.setAttribute('placeholder', `${host.midleware}`);
-        elFramework.setAttribute('placeholder', `${host.framework}`);
-        elLinguagem.setAttribute('placeholder', `${host.app_language}`);
-        elPrioridade.setAttribute('placeholder', `${host.priority}`);
-        elRisco.setAttribute('placeholder', `${host.risk}`);
-        elSigla.setAttribute('placeholder', `${host.acronym}`);
-        elRepositorio.setAttribute('placeholder', `${host.repository}`);
+        elCluster.setAttribute('value', `${host.cluster}`);
+        elPublicacao.setAttribute('value', `${host.publication}`);
+        elMiddleware.setAttribute('value', `${host.midleware}`);
+        elFramework.setAttribute('value', `${host.framework}`);
+        elLinguagem.setAttribute('value', `${host.app_language}`);
+        elPrioridade.setAttribute('value', `${host.priority}`);
+        elRisco.setAttribute('value', `${host.risk}`);
+        elSigla.setAttribute('value', `${host.acronym}`);
+        elRepositorio.setAttribute('value', `${host.repository}`);
     });
     })
     .catch(function(error) {
