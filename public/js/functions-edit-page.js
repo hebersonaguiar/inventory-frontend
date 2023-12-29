@@ -14,7 +14,7 @@ $(document).ready(function() {
     const elRisco = document.getElementById('in-risco');
     const elSigla = document.getElementById('in-sigla');
     const elRepositorio = document.getElementById('in-repositorio');
-    const elEnvironment = document.getElementById('in-environment');
+    const elEnvironment = document.getElementById('in-environnment');
     // const elDatacenter = document.getElementById('in-datacenter');
     // const elNacionalcjf = document.getElementById('in-nacional-cjf');
     // const elGoal = document.getElementById('in-goal');
@@ -40,7 +40,7 @@ $(document).ready(function() {
         elRisco.setAttribute('value', `${host.risk}`);
         elSigla.setAttribute('value', `${host.acronym}`);
         elRepositorio.setAttribute('value', `${host.repository}`);
-        elEnvironment.setAttribute('value', `${host.environment}`);
+        elEnvironment.setAttribute('value', `${host.environnment}`);
         // elDatacenter.setAttribute('selected', `${host.datacenter}`);
         // elNacionalcjf.setAttribute('selected', `${host.national_cjf}`);
         // elGoal.setAttribute('data-content', `${host.goal}`);
