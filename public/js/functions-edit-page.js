@@ -14,6 +14,10 @@ $(document).ready(function() {
     const elRisco = document.getElementById('in-risco');
     const elSigla = document.getElementById('in-sigla');
     const elRepositorio = document.getElementById('in-repositorio');
+    const elEnvironment = document.getElementById('in-environment');
+    const elDatacenter = document.getElementById('in-datacenter');
+    const elNacionalcjf = document.getElementById('in-nacional-cjf');
+    // const elGoal = document.getElementById('in-goal');
 
     const url = 'http://10.0.0.171:5000/hosts/'+hostToEdit;
 
@@ -36,6 +40,11 @@ $(document).ready(function() {
         elRisco.setAttribute('value', `${host.risk}`);
         elSigla.setAttribute('value', `${host.acronym}`);
         elRepositorio.setAttribute('value', `${host.repository}`);
+        elEnvironment.setAttribute('value', `${host.environment}`);
+        elDatacenter.setAttribute('selected', `${host.datacenter}`);
+        elNacionalcjf.setAttribute('selected', `${host.national_cjf}`);
+        // elGoal.setAttribute('data-content', `${host.goal}`);
+        document.getElementById("in-goal").innerHTML = `${host.goal}`;
     });
     })
     .catch(function(error) {
