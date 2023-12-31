@@ -72,7 +72,7 @@ app.get("/updateinfo", function (req, res) {
   const url = 'http://inventory:5000/hosts/'+hostname;
 
   // Make a request
-  axios.puut(url, {
+  axios.put(url, {
     formurl: req.params.url,
     environnment: req.params.environnment,
     cluster: req.params.cluster,
