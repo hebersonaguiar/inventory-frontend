@@ -50,3 +50,53 @@ app.get("/getHostsUsername/:id", function (req, res) {
        res.json({"error": error});
     })
 });
+
+app.get("/updateinfo", function (req, res) {
+
+  const hostname = req.params.hostname;
+  // const formurl = req.params.url;
+  // const environnment = req.params.environnment;
+  // const cluster = req.params.cluster;
+  // const publicacao = req.params.publicacao;
+  // const middleware = req.params.middleware;
+  // const framework = req.params.framework;
+  // const linguagem = req.params.linguagem;
+  // const prioridade = req.params.prioridade;
+  // const risco = req.params.risco;
+  // const sigla = req.params.sigla;
+  // const datacenter = req.params.datacenter;
+  // const repositorio = req.params.repositorio;
+  // const objetivo = req.params.objetivo;
+  // const nacionalcjf = req.params.nacionalcjf;
+  
+  const url = 'http://inventory:5000/hosts/'+hostname;
+
+  // Make a request
+  axios.puut(url, {
+    formurl: req.params.url,
+    environnment: req.params.environnment,
+    cluster: req.params.cluster,
+    publicacao: req.params.publicacao,
+    middleware: req.params.middleware,
+    framework: req.params.framework,
+    linguagem: req.params.linguagem,
+    prioridade: req.params.prioridade,
+    risco: req.params.risco,
+    sigla: req.params.sigla,
+    datacenter: req.params.datacenter,
+    repositorio: req.params.repositorio,
+    objetivo: req.params.objetivo,
+    nacionalcjf: req.params.nacionalcjf,
+  })
+    .then(response => {
+      // send the collected data back to the client-side DataTable
+      res.json({
+        "data": response.data
+      })
+    })
+    .catch(function (error) {
+       // handle error
+       console.log(error);
+       res.json({"error": error});
+    })
+});
