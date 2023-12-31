@@ -19,7 +19,7 @@ $(document).ready(function() {
     // const elNacionalcjf = document.getElementById('in-nacional-cjf');
     // const elGoal = document.getElementById('in-goal');
 
-    const url = 'http://10.0.0.171:5000/hosts/'+hostToEdit;
+    const url = 'http://192.168.10.171:5000/hosts/'+hostToEdit;
 
     fetch(url)
     .then((response) => {
