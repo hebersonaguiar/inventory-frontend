@@ -53,41 +53,41 @@ app.get("/getHostsUsername/:id", function (req, res) {
 
 app.get("/updateinfo", function (req, res) {
 
-  const hostname = req.params.hostname;
+  const hostname = req.body.hostname;
   console.log("Update Hostname"+hostname)
-  // const formurl = req.params.url;
-  // const environnment = req.params.environnment;
-  // const cluster = req.params.cluster;
-  // const publicacao = req.params.publicacao;
-  // const middleware = req.params.middleware;
-  // const framework = req.params.framework;
-  // const linguagem = req.params.linguagem;
-  // const prioridade = req.params.prioridade;
-  // const risco = req.params.risco;
-  // const sigla = req.params.sigla;
-  // const datacenter = req.params.datacenter;
-  // const repositorio = req.params.repositorio;
-  // const objetivo = req.params.objetivo;
-  // const nacionalcjf = req.params.nacionalcjf;
+  // const formurl = req.body.url;
+  // const environnment = req.body.environnment;
+  // const cluster = req.body.cluster;
+  // const publicacao = req.body.publicacao;
+  // const middleware = req.body.middleware;
+  // const framework = req.body.framework;
+  // const linguagem = req.body.linguagem;
+  // const prioridade = req.body.prioridade;
+  // const risco = req.body.risco;
+  // const sigla = req.body.sigla;
+  // const datacenter = req.body.datacenter;
+  // const repositorio = req.body.repositorio;
+  // const objetivo = req.body.objetivo;
+  // const nacionalcjf = req.body.nacionalcjf;
   
   const url = 'http://inventory:5000/hosts/'+hostname;
 
   // Make a request
   axios.put(url, {
-    formurl: req.params.url,
-    environnment: req.params.environnment,
-    cluster: req.params.cluster,
-    publicacao: req.params.publicacao,
-    middleware: req.params.middleware,
-    framework: req.params.framework,
-    linguagem: req.params.linguagem,
-    prioridade: req.params.prioridade,
-    risco: req.params.risco,
-    sigla: req.params.sigla,
-    datacenter: req.params.datacenter,
-    repositorio: req.params.repositorio,
-    objetivo: req.params.objetivo,
-    nacionalcjf: req.params.nacionalcjf,
+    formurl: req.body.url,
+    environnment: req.body.environnment,
+    cluster: req.body.cluster,
+    publicacao: req.body.publicacao,
+    middleware: req.body.middleware,
+    framework: req.body.framework,
+    linguagem: req.body.linguagem,
+    prioridade: req.body.prioridade,
+    risco: req.body.risco,
+    sigla: req.body.sigla,
+    datacenter: req.body.datacenter,
+    repositorio: req.body.repositorio,
+    objetivo: req.body.objetivo,
+    nacionalcjf: req.body.nacionalcjf,
   })
     .then(response => {
       // send the collected data back to the client-side DataTable
