@@ -92,9 +92,10 @@ app.get("/updateinfo", function (req, res) {
   })
     .then(response => {
       // send the collected data back to the client-side DataTable
-      res.json({
-        "data": response.data
-      })
+      // res.json({
+      //   "data": response.data
+      // })
+      res.redirect('/servers.html');
     })
     .catch(function (error) {
        // handle error
