@@ -55,7 +55,7 @@ app.get("/updateinfo", function (req, res) {
 
   const hostname = req.body.hostname;
   console.log("Update Hostname"+hostname)
-  // const formurl = req.body.url;
+  // const url = req.body.url;
   // const environnment = req.body.environnment;
   // const cluster = req.body.cluster;
   // const publicacao = req.body.publicacao;
@@ -74,7 +74,7 @@ app.get("/updateinfo", function (req, res) {
 
   // Make a request
   axios.put(url, {
-    formurl: req.body.url,
+    url: req.body.url,
     environnment: req.body.environnment,
     cluster: req.body.cluster,
     publicacao: req.body.publicacao,
