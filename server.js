@@ -70,7 +70,8 @@ app.get("/updateinfo", function (req, res) {
   // const objetivo = req.body.objetivo;
   // const nacionalcjf = req.body.nacionalcjf;
   
-  const url = 'http://inventory:5000/hosts/'+hostname;
+  // const url = 'http://10.0.0.171:5000/hosts/'+hostname;
+  const url = 'http://10.0.0.171:5000/hosts/vm-one';
 
   // Make a request
   axios.put(url, {
