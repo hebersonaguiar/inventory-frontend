@@ -53,3 +53,12 @@ $(document).ready(function() {
     console.log(error);
     });
 });
+
+
+$(document).ready(function() {
+    document.getElementById("submitFormUpdate").addEventListener("click", myFunction);  
+      function myFunction() {  
+        window.location.href="/servers.html";  
+      }
+});
+
