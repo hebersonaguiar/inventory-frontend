@@ -55,7 +55,8 @@ app.get("/getHostsUsername/:id", function (req, res) {
 app.get("/updateinfo", function (req, res) {
 
   const hostname = req.body.hostname;
-  console.log("Update Hostname"+hostname)
+  console.log("Update Hostname "+hostname)
+  console.log("Update Hostname2 "+req.body.hostname)
   // const url = req.body.url;
   // const environnment = req.body.environnment;
   // const cluster = req.body.cluster;
