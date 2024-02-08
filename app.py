@@ -1,5 +1,5 @@
-import json, re, csv
-from flask import Flask, render_template, request, requests, redirect, url_for, flash, stream_with_context, g, session
+import json, re, csv, requests
+from flask import Flask, render_template, request, redirect, url_for, flash, stream_with_context, g, session
 from flask_restful import Resource, Api
 from flask_mysqldb import MySQL
 from flask_cors import CORS
