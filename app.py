@@ -13,6 +13,10 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 app.secret_key = "flash message"
 
 
+@app.route('/', methods=['GET'])
+def index():
+    return render_template('index.html')
+
 @app.route('/servers', methods=['GET'])
 def servers():
 	# if g.username:
