@@ -13,15 +13,15 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 app.secret_key = "flash message"
 
 
-@app.route('/servers')
+@app.route('/servers', methods=['GET'])
 def servers():
 	# if g.username:
     try:
 
         api_url = "http://inventory:5000/hosts/"
         response = requests.get(api_url)
-        print("Testessss")
-        print(response.json())
+        # print("Testessss")
+        # print(response.json())
 
         # cur = mysql.connection.cursor()
         # cur.execute("SELECT * FROM users")
@@ -39,7 +39,8 @@ def servers():
         # displayNameObj  = connect.entries[0].displayName.value
         # displayName = str(displayNameObj)
 
-        return render_template('servers.html', users=data)
+        # return render_template('servers.html', users=data)
+        return response.json()
 
     except Exception as e:
         return redirect(url_for('servers'))
