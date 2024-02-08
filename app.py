@@ -18,10 +18,10 @@ def servers():
 	# if g.username:
     try:
 
-        api_url = "http://inventory:5000/hosts/"
+        api_url = "http://inventory:5000/hosts"
         response = requests.get(api_url)
-        # print("Testessss")
-        # print(response.json())
+        print("Testessss")
+        print(response.json())
 
         # cur = mysql.connection.cursor()
         # cur.execute("SELECT * FROM users")
