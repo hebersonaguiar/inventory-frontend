@@ -20,6 +20,7 @@ def servers():
 
         api_url = "http://inventory:5000/hosts/"
         response = requests.get(api_url)
+        print("Testessss")
         print(response.json())
 
         # cur = mysql.connection.cursor()
