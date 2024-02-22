@@ -46,7 +46,7 @@ def servers():
 
         print("data: "+data)
 
-        return render_template('servers.html', hosts=data)
+        return render_template('servers.html')
         # return response.json()
 
     except Exception as e:
