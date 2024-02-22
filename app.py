@@ -41,9 +41,12 @@ def servers():
 
         # displayNameObj  = connect.entries[0].displayName.value
         # displayName = str(displayNameObj)
-        print(response)
 
-        return render_template('servers.html', hosts=response)
+        data = json.load(response.json)
+
+        print(data)
+
+        return render_template('servers.html', hosts=data)
         # return response.json()
 
     except Exception as e:
