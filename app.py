@@ -42,9 +42,9 @@ def servers():
         # displayNameObj  = connect.entries[0].displayName.value
         # displayName = str(displayNameObj)
 
-        data = json.load(response.json)
+        # data = json.load(response.json)
 
-        # print("data: "+data)
+        print("Testando page")
 
         return render_template('servers.html')
         # return response.json()
