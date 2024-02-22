@@ -28,7 +28,6 @@ def servers():
         if response.status_code == 200:
              data = json.loads(response.text)
              print(data)
-             print(data['hostname'])
         else:
              print(f"Error retrieving data, status code: {response.status_code}")
 
