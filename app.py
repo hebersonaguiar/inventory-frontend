@@ -24,27 +24,12 @@ def servers():
 
         api_url = "http://inventory:5000/hosts"
         response = requests.get(api_url)
-        # print(response.json())
 
-        # cur = mysql.connection.cursor()
-        # cur.execute("SELECT * FROM users")
-        # data = cur.fetchall()
-        # cur.close()
-
-        # user = g.username
-
-        # domain_name = 'mdh.gov.br'
-        # domain      = domain_name.split('.')
-        # connect     = conn()
-
-        # connect.search('dc={},dc={},dc={}'.format(domain[0], domain[1], domain[2]), '(sAMAccountName={})'.format(user), attributes = [ 'sAMAccountName', 'distinguishedName', 'displayName'], search_scope=SUBTREE )
-
-        # displayNameObj  = connect.entries[0].displayName.value
-        # displayName = str(displayNameObj)
-
-        # data = json.load(response.json)
-
-        print("Testando page")
+        if response.status_code == 200:
+             data = json.loads(response.text)
+             print(data)
+        else:
+             print(f"Error retrieving data, status code: {response.status_code}")
 
         return render_template('servers.html')
         # return response.json()
