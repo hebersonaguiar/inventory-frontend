@@ -24,8 +24,7 @@ def servers():
 
         api_url = "http://inventory:5000/hosts"
         response = requests.get(api_url)
-        print("Testessss")
-        print(response.json())
+        # print(response.json())
 
         # cur = mysql.connection.cursor()
         # cur.execute("SELECT * FROM users")
@@ -42,12 +41,14 @@ def servers():
 
         # displayNameObj  = connect.entries[0].displayName.value
         # displayName = str(displayNameObj)
+        print(response)
 
-        # return render_template('servers.html', users=data)
-        return response.json()
+        return render_template('servers.html', hosts=response)
+        # return response.json()
 
     except Exception as e:
-        return redirect(url_for('servers'))
+        # return redirect(url_for('servers'))
+        return redirect(url_for('index'))
 
 	# return redirect(url_for('servers'))
 
