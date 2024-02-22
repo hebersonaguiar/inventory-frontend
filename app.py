@@ -31,7 +31,7 @@ def servers():
         else:
              print(f"Error retrieving data, status code: {response.status_code}")
 
-        return render_template('servers.html', hosts=data)
+        return render_template('servers.html', hosts=data[0])
         # return response.json()
 
     except Exception as e:
