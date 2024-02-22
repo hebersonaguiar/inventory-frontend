@@ -44,7 +44,7 @@ def servers():
 
         data = json.load(response.json)
 
-        print("data: "+data)
+        # print("data: "+data)
 
         return render_template('servers.html')
         # return response.json()
