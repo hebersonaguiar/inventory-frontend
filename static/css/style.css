@@ -226,3 +226,12 @@ hr{
 #bt-cancel-form:hover{
     color:#fff;
 }
+
+
+.select,
+#locale {
+  width: 100%;
+}
+.like {
+  margin-right: 10px;
+}
