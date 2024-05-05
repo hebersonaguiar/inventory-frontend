@@ -62,7 +62,7 @@
      </div>
       <h1 class="service-title">Servidores Linux</h1>
       <div class="row text-center">
-        <!-- <table class="table table-servers" id="servers-list">
+        <table class="table table-servers" id="servers-list">
           <thead>
             <tr>
               <th scope="col">Id</th>
@@ -80,11 +80,59 @@
               <th scope="col">Criado em</th>
               <th scope="col">Atualizado em</th>
               <th scope="col">Ambiente</th>
-              <th scope="col">Mais</th>
-              <th scope="col">Editar</th>
+              <!-- <th scope="col">Mais</th>
+              <th scope="col">Editar</th> -->
             </tr>
           </thead>
-        </table> -->
+          <tbody>
+            {% for host in hosts %}
+            <tr>
+                <td>{{host.0}}</td>
+                <td>{{host.1}}</td>
+                <td>{{host.2}}</td>
+                <td>{{host.3}}</td>
+                <td>{{host.4}}</td>
+                <td>{{host.5}}</td>
+                <td>{{host.6}}</td>
+                <td>{{host.7}}</td>
+                <td>{{host.8}}</td>
+                <td>{{host.9}}</td>
+                <td>{{host.10}}</td>
+                <td>{{host.11}}</td>
+                <td>{{host.12}}</td>
+                <td>{{host.13}}</td>
+                <td>{{host.14}}</td>
+                <!-- <td>Mais</td>
+                <td>Editar</td> -->
+                <td>
+                  <!-- <a href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#edit-modal">Edit</a> -->
+                  <a style="text-decoration: none;" href="/delete/{{row.0}}" class="btn btn-danger btn-xs" onclick="return confirm('Deseja deletar?')">Delete</a>
+                </td>
+            </tr>
+            {%endfor%}
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Hostname</th>
+              <th scope="col">Ip</th>
+              <th scope="col">Architcture</th>
+              <th scope="col">Plataform</th>
+              <th scope="col">Processor</th>
+              <th scope="col">S.O.</th>
+              <th scope="col">Distribution</th>
+              <th scope="col">Mem Total</th>
+              <th scope="col">Mem Free</th>
+              <th scope="col">Uptime</th>
+              <th scope="col">Mac</th>
+              <th scope="col">Criado em</th>
+              <th scope="col">Atualizado em</th>
+              <th scope="col">Ambiente</th>
+              <!-- <th scope="col">Mais</th>
+              <th scope="col">Editar</th>                    -->
+            </tr>
+          </tfoot>
+        </table>
       </div>
       <div class="modal fade" id="moreInfoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
