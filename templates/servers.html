@@ -60,7 +60,8 @@
         </br>
      </div>
       <h1 class="service-title">Servidores Linux</h1>
-      <div class="row text-center">
+      <!-- <div class="row text-center"> -->
+      <div class="table-responsive">
         <table class="table table-servers" id="servers-list">
           <thead>
             <tr>
@@ -78,9 +79,9 @@
               <th scope="col">Uptime</th>
               <!-- <th scope="col">Criado em</th>
               <th scope="col">Atualizado em</th>
-              <th scope="col">Ambiente</th>
+              <th scope="col">Ambiente</th-->
               <th scope="col">Mais</th>
-              <th scope="col">Editar</th> -->
+              <th scope="col">Editar</th>
             </tr>
             <tr>
               <td>{{ host.hostname }}</td>
@@ -91,6 +92,8 @@
               <td>{{ host.mem_total }}</td>
               <td>{{ host.mem_free }}</td>
               <td>{{ host.up_time }}</td>
+              <td></td>
+              <td></td>
             </tr>
           </thead>
         </table>
