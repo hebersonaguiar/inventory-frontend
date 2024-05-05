@@ -57,7 +57,6 @@
         <div class="clear"></div> -->
         {% for host in hosts %}
         <h1 id="welcome" >Bem Vindo, {{ host.hostname }} !</h1>
-        {% endfor %}
         </br>
      </div>
       <h1 class="service-title">Servidores Linux</h1>
@@ -85,6 +84,7 @@
             </tr>
           </thead>
         </table>
+        {% endfor %}
       </div>
       <div class="modal fade" id="moreInfoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
