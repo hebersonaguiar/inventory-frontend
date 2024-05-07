@@ -36,6 +36,7 @@ def servers():
 
     except Exception as e:
         # return redirect(url_for('servers'))
+        print(e)
         return redirect(url_for('index'))
 
 	# return redirect(url_for('servers'))
