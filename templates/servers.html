@@ -55,7 +55,8 @@
       <div class="subtopo">
         <!-- <h1 id="titleMin" >Atualização de dados cadastrais</h1>
         <div class="clear"></div> -->
-        </br>
+        
+     </br>
      </div>
       <h1 class="service-title">Servidores</h1>
       <!-- <div class="row text-center"> -->
@@ -81,6 +82,8 @@
               <!-- <th scope="col">Criado em</th>
               <th scope="col">Atualizado em</th>
               <th scope="col">Ambiente</th-->
+              <th scope="col">Mais</th>
+              <th scope="col">Editar</th>
             </tr>
           </thead>
           <tbody>
@@ -94,6 +97,8 @@
               <td>{{ host.mem_total }}</td>
               <td>{{ host.mem_free }}</td>
               <td>{{ host.up_time }}</td>
+              <td><button type="button" class="btn btn-primary">Mais</button></td>
+              <td><button type="button" class="btn btn-secondary">Editar</button></td>
             </tr>            
             {% endfor %}
           </tbody>
@@ -114,6 +119,8 @@
               <!-- <th scope="col">Criado em</th>
               <th scope="col">Atualizado em</th>
               <th scope="col">Ambiente</th-->
+              <th scope="col">Mais</th>
+              <th scope="col">Editar</th>
             </tr>
           </tfoot>
         </table>
