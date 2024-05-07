@@ -87,8 +87,8 @@
               <th scope="col">Editar</th>
             </tr>
           </thead>
-          {% for host in hosts %}
           <tbody>
+            {% for host in hosts %}
             <tr>
               <td>{{ host.hostname }}</td>
               <td>{{ host.ip }}</td>
@@ -101,8 +101,8 @@
               <td><button type="button" class="btn btn-primary">Mais</button></td>
               <td><button type="button" class="btn btn-secondary">Editar</button></td>
             </tr>
+            {% endfor %}
           </tbody>
-          {% endfor %}
           <tfoot>
             <tr>
               <!-- <th scope="col">Id</th> -->
