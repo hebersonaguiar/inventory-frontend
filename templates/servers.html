@@ -88,16 +88,16 @@
             </tr>
           </thead>
           <tbody>
-            {%for host in hosts%}
+            {%for row in hosts%}
             <tr>
-              <td>{{ host.hostname }}</td>
-              <td>{{ host.ip }}</td>
-              <!-- <td>{{ host.mac_address }}</td> -->
-              <td>{{ host.so }}</td>
-              <td>{{ host.distribution }}</td>
-              <td>{{ host.mem_total }}</td>
-              <td>{{ host.mem_free }}</td>
-              <td>{{ host.up_time }}</td>
+              <td>{{ row.hostname }}</td>
+              <td>{{ row.ip }}</td>
+              <!-- <td>{{ row.mac_address }}</td> -->
+              <td>{{ row.so }}</td>
+              <td>{{ row.distribution }}</td>
+              <td>{{ row.mem_total }}</td>
+              <td>{{ row.mem_free }}</td>
+              <td>{{ row.up_time }}</td>
               <!-- <td><button type="button" class="btn btn-primary">Mais</button></td>
               <td><button type="button" class="btn btn-secondary">Editar</button></td> -->
             </tr>            
