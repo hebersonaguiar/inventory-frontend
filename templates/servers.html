@@ -55,7 +55,7 @@
       <div class="subtopo">
         <!-- <h1 id="titleMin" >Atualização de dados cadastrais</h1>
         <div class="clear"></div> -->
-        {% for host in hosts %}
+        
         <!-- <h1 id="welcome" >Bem Vindo, {{ host.hostname }} !</h1> -->
         </br>
      </div>
@@ -88,6 +88,7 @@
             </tr>
           </thead>
           <tbody>
+            {% for host in hosts %}
             <tr>
               <td>{{ host.hostname }}</td>
               <td>{{ host.ip }}</td>
@@ -99,7 +100,8 @@
               <td>{{ host.up_time }}</td>
               <td><button type="button" class="btn btn-primary">Mais</button></td>
               <td><button type="button" class="btn btn-secondary">Editar</button></td>
-            </tr>
+            </tr>            
+            {% endfor %}
           </tbody>
           <tfoot>
             <tr>
@@ -123,7 +125,6 @@
             </tr>
           </tfoot>
         </table>
-        {% endfor %}
       </div>
       <!--TABLE HERE-->
       <div class="modal fade" id="moreInfoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
