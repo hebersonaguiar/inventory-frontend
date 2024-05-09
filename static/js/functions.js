@@ -81,6 +81,7 @@ function parseHostname() {
           { "data": "datacenter" },
           { "data": "repository" },
           { "data": "national_cjf" },
+          { "data": "ip" },
         ]
       })
 }
