@@ -54,7 +54,7 @@ function parseHostname() {
   // localStorage.setItem('hostnamevalue', host);
   var url = 'http://10.0.0.171:5000/hosts/'+host;
   table = $('#additionalInformation').DataTable({
-    //  "lengthMenu": [ [15, 50, 100, -1], [15, 50, 100, "All"] ],
+     "lengthMenu": [ [15, 50, 100, -1], [15, 50, 100, "All"] ],
     //  "pagingType": "simple",
     //  scrollY: 400,
       scrollCollapse: false,
