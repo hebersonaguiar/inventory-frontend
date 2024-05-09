@@ -65,7 +65,7 @@ function parseHostname() {
       ajax: {
       type: "GET",
         url: url,
-        dataSrc: ''
+        dataSrc: 'data'
       },
       columns: [
           { data: 'url' },
