@@ -63,24 +63,25 @@ function parseHostname() {
       destroy: true,
     //  order: [[ 0, 'asc' ], [3, 'desc' ]],
       ajax: {
-      type: "GET",
+        type: "GET",
         url: url,
-        dataSrc: 'data'
+        dataSrc: "data",
+        dataType: "json"
       },
       columns: [
-          { data: 0 },
-          { data: 1 },
-          { data: 2 },
-          { data: 3 },
-          { data: 4 },
-          { data: 5 },
-          { data: 6 },
-          { data: 7 },
-          { data: 8 },
-          { data: 9 },
-          { data: 10 },
-          { data: 11 },
-          { data: 12 }
+          { data: 'url' },
+          { data: 'cluster' },
+          { data: 'publication' },
+          { data: 'midleware' },
+          { data: 'framework' },
+          { data: 'app_language' },
+          { data: 'priority' },
+          { data: 'risk' },
+          { data: 'acronym' },
+          { data: 'goal' },
+          { data: 'datacenter' },
+          { data: 'repository' },
+          { data: 'national_cjf' }
         ]
       })
 }
