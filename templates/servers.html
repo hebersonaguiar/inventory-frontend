@@ -97,11 +97,13 @@
               <td>{{ host.mem_total }}</td>
               <td>{{ host.mem_free }}</td>
               <td>{{ host.up_time }}</td>
-              <td><button type="button" class="btn btn-primary">Mais</button></td>
+              <!-- <td><button type="button" class="btn btn-primary">Mais</button></td> -->
+              <td><a class="btn btn-primary buttonModal" id="{{ host.hostname }}" href="#" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal" onclick="parseHostname()"><input type="text" style="display:none" id="hostName" placeholder="{{ host.hostname }}" value="{{ host.hostname }}"/>Mais</a></td>
               <td><button type="button" class="btn btn-secondary">Editar</button></td>
             </tr>            
             {% endfor %}
           </tbody>
+          <!-- <a class="btn btn-primary buttonModal" id="'+ data +'" href="#" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal" onclick="parseHostname()"><input type="text" style="display:none" id="hostName" placeholder="'+ data +'" value="'+ data +'"/>Mais</a> -->
           <tfoot>
             <tr>
               <!-- <th scope="col">Id</th> -->
@@ -223,6 +225,7 @@
   <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
   <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.11.1/js/dataTables.bootstrap5.min.js"></script>
+  <script type="text/javascript" src="../static/js/functions.js" class="init"></script>
   <script>
     new DataTable('#table-hosts-list');
   </script>
