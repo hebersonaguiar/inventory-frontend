@@ -81,7 +81,7 @@ function parseHostname() {
           { data: 'goal' },
           { data: 'datacenter' },
           { data: 'repository' },
-          { data: 'national_cjf' }
+          { data: 'national_cjf' },
         ]
       })
 }
