@@ -46,6 +46,19 @@
 // }
 
 
+$(function(){
+  $('#moreInfoModal').modal({
+      keyboard: true,
+      backdrop: "static",
+      show:false,
+      
+  }).on('show', function(){
+        var getIdFromRow = $(event.target).closest('tr').data('id');
+      //make your ajax call populate items or what even you need
+      $(this).find('#serverDetails').html($('<b> Order Id selected: ' + getIdFromRow  + '</b>'))
+  });
+});
+
 function parseHostname() {
   // Create a new DataTable object
   var host = document.getElementById("hostName").placeholder;
