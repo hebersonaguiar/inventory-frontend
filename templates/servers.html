@@ -64,7 +64,8 @@
       <!--TABLE HERE-->
       <div class="table-responsive">
         <!-- <table class="table table-servers" id="servers-list"> -->
-        <table id="table-hosts-list" class="table table-striped table-bordered" style="width:100%">
+        <!-- <table id="table-hosts-list" class="table table-striped table-bordered" style="width:100%"> -->
+        <table id="table-hosts-list" class="table table-striped table-bordered">
           <thead>
             <tr>
               <!-- <th scope="col">Id</th> -->
@@ -98,12 +99,11 @@
               <td>{{ host.mem_free }}</td>
               <td>{{ host.up_time }}</td>
               <!-- <td><button type="button" class="btn btn-primary">Mais</button></td> -->
-              <td><a class="btn btn-primary buttonModal" id="{{ host.hostname }}" href="#" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal" onclick="parseHostname()"><input type="text" id="hostName" placeholder="{{ host.hostname }}" value="{{ host.hostname }}"/>Mais</a></td>
+              <td><a class="btn btn-primary buttonModal" id="{{ host.hostname }}" href="#" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal" onclick="parseHostname()"><input type="text" style="display:none" id="hostName" placeholder="{{ host.hostname }}" value="{{ host.hostname }}"/>Mais</a></td>
               <td><button type="button" class="btn btn-secondary">Editar</button></td>
             </tr>            
             {% endfor %}
           </tbody>
-          <!-- <a class="btn btn-primary buttonModal" id="'+ data +'" href="#" role="button" data-bs-toggle="modal" data-bs-target="#moreInfoModal" onclick="parseHostname()"><input type="text" style="display:none" id="hostName" placeholder="'+ data +'" value="'+ data +'"/>Mais</a> -->
           <tfoot>
             <tr>
               <!-- <th scope="col">Id</th> -->
