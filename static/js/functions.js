@@ -67,7 +67,7 @@ function parseHostname() {
         url: url,
         dataSrc: "",
       },
-      columnDefs: [
+      columns: [
           { "data": "url" },
           { "data": "cluster" },
           { "data": "publication" },
