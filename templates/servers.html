@@ -126,41 +126,20 @@
           </tfoot>
         </table>
         <div class="modal fade" id="moreInfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-xl">
-            <div class="modal-content" id="modal-add-info">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Informações Complementares</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
               </div>
               <div class="modal-body">
-                <table class="table table-servers" id="additionalInformation">
-                  <thead>
-                    <tr>
-                      <th scope="col">Url</th>
-                      <th scope="col">Cluster</th>
-                      <th scope="col">Publicação</th>
-                      <th scope="col">Middleware</th>
-                      <th scope="col">Framework</th>
-                      <th scope="col">Linguagem</th>
-                      <th scope="col">Prioridade</th>
-                      <th scope="col">Risco</th>
-                      <th scope="col">Sigla</th>
-                      <th scope="col">Objetivo</th>
-                      <th scope="col">Datacenter</th>
-                      <th scope="col">Reposirório</th>
-                      <th scope="col">Nacional/CJF</th>
-                      <th>IP</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>ip</td>
-                    </tr>
-                  </tbody>
-                </table>
+                ...
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary buttonModal" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
               </div>
             </div>
           </div>
