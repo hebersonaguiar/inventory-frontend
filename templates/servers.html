@@ -99,7 +99,7 @@
               <td>{{ host.mem_free }}</td>
               <td>{{ host.up_time }}</td>
               <!-- <td><button type="button" class="btn btn-primary" data-toggle="modal" id="{{ host.hostname }}" data-target="#moreInfoModal">Mais</button></td> -->
-              <td><a href="#" data-toggle="modal" datatarget="#infosModal_{{ host.id }}" data-placement="left" title="Mais">Mais</a></td>
+              <td><a href={{ "/mais/" ~ user.id }} data-toggle="modal" datatarget="#infosModal_{{ host.id }}" data-placement="left" title="Mais">Mais</a></td>
               <td><button type="button" class="btn btn-secondary">Editar</button></td>
             </tr>
             <div class="modal fade" id="infosModal_{{ host.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
