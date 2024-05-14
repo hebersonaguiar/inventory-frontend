@@ -64,26 +64,16 @@
 
       <!--TABLE HERE-->
       <div class="table-responsive">
-        <!-- <table class="table table-servers" id="servers-list"> -->
-        <!-- <table id="table-hosts-list" class="table table-striped table-bordered" style="width:100%"> -->
         <table id="table-hosts-list" class="table table-striped table-bordered">
           <thead>
             <tr>
-              <!-- <th scope="col">Id</th> -->
               <th scope="col">Hostname</th>
               <th scope="col">Ip</th>
-              <!-- <th scope="col">Mac</th> -->
-              <!-- <th scope="col">Architcture</th>
-              <th scope="col">Plataform</th>
-              <th scope="col">Processor</th> -->
               <th scope="col">S.O.</th>
               <th scope="col">Distribution</th>
               <th scope="col">Mem Total</th>
               <th scope="col">Mem Free</th>
               <th scope="col">Uptime</th>
-              <!-- <th scope="col">Criado em</th>
-              <th scope="col">Atualizado em</th>
-              <th scope="col">Ambiente</th-->
               <th scope="col">Mais</th>
               <th scope="col">Editar</th>
             </tr>
@@ -93,7 +83,6 @@
             <tr>
               <td>{{ host.hostname }}</td>
               <td>{{ host.ip }}</td>
-              <!-- <td>{{ host.mac_address }}</td> -->
               <td>{{ host.so }}</td>
               <td>{{ host.distribution }}</td>
               <td>{{ host.mem_total }}</td>
@@ -103,7 +92,7 @@
               <td><button type="button" class="btn btn-secondary">Editar</button></td>
             </tr>
             <div class="modal fade" id="infosModal_{{host.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
-              <div class="modal-dialog" role="document">
+              <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Informações adicionais</h5>
@@ -113,80 +102,24 @@
                   </div>
                   <div class="modal-body">
                     <!-- table modal here-->
-                    <table id="table-hosts-modal" class="table table-striped table-bordered">
-                      <thead>
-                        <tr>
-                          <th scope="col">Hostname</th>
-                          <th scope="col">Sigla</th>
-                          <th scope="col">Linguagem</th>
-                          <th scope="col">Cluster</th>
-                          <th scope="col">Datacenter</th>
-                          <th scope="col">Ambiente</th>
-                          <th scope="col">Framework</th>
-                          <th scope="col">Objetivo</th>
-                          <th scope="col">Mac Address</th>
-                          <th scope="col">Middleware</th>
-                          <th scope="col">Nacional/CJF?</th>
-                          <th scope="col">Plataforma</th>
-                          <th scope="col">Prioridade</th>
-                          <th scope="col">Processador</th>
-                          <th scope="col">Publicado?</th>
-                          <th scope="col">Repositório</th>
-                          <th scope="col">Risco</th>
-                          <th scope="col">URL</th>
-                          <th scope="col">Created em</th>
-                          <th scope="col">Atualizado em</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>{{ host.hostname }}</td>
-                          <td>{{ host.acronym }}</td>
-                          <td>{{ host.app_language }}</td>
-                          <td>{{ host.cluster }}</td>
-                          <td>{{ host.datacenter }}</td>
-                          <td>{{ host.environnment }}</td>
-                          <td>{{ host.framework }}</td>
-                          <td>{{ host.goal }}</td>
-                          <td>{{ host.mac_address }}</td>
-                          <td>{{ host.midleware }}</td>
-                          <td>{{ host.national_cjf }}</td>
-                          <td>{{ host.plataform }}</td>
-                          <td>{{ host.priority }}</td>
-                          <td>{{ host.processor }}</td>
-                          <td>{{ host.publication }}</td>
-                          <td>{{ host.repository }}</td>
-                          <td>{{ host.risk }}</td>
-                          <td>{{ host.url }}</td>
-                          <td>{{ host.created_at }}</td>
-                          <td>{{ host.updated_at }}</td>
-                        </tr>
-                      </tbody>
-                      <tfoot>
-                        <tr>
-                          <th scope="col">Hostname</th>
-                          <th scope="col">Sigla</th>
-                          <th scope="col">Linguagem</th>
-                          <th scope="col">Cluster</th>
-                          <th scope="col">Datacenter</th>
-                          <th scope="col">Ambiente</th>
-                          <th scope="col">Framework</th>
-                          <th scope="col">Objetivo</th>
-                          <th scope="col">Mac Address</th>
-                          <th scope="col">Middleware</th>
-                          <th scope="col">Nacional/CJF?</th>
-                          <th scope="col">Plataforma</th>
-                          <th scope="col">Prioridade</th>
-                          <th scope="col">Processador</th>
-                          <th scope="col">Publicado?</th>
-                          <th scope="col">Repositório</th>
-                          <th scope="col">Risco</th>
-                          <th scope="col">URL</th>
-                          <th scope="col">Created em</th>
-                          <th scope="col">Atualizado em</th>
-                        </tr>
-                      </tfoot>
-                    </table>
+                    <div class="table table-responsive">
+                      <table id="example">
+                        <thead>
+                          <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>ID Number</th>
+                            <th>Proband</th>
+                            <th>Gender</th>
+                            <th>Birth Date</th>
+                            <th>Life Status</th>
+                            <th>Phenotype</th>
+                            <th>Genotype</th>
+                            <th>&nbsp;</th>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
                     <!-- table modal here -->
                   </div>
                   <div class="modal-footer">
@@ -211,9 +144,6 @@
               <th scope="col">Mem Total</th>
               <th scope="col">Mem Free</th>
               <th scope="col">Uptime</th>
-              <!-- <th scope="col">Criado em</th>
-              <th scope="col">Atualizado em</th>
-              <th scope="col">Ambiente</th-->
               <th scope="col">Mais</th>
               <th scope="col">Editar</th>
             </tr>
