@@ -38,7 +38,7 @@ def servers():
         print(e)
         return redirect(url_for('index'))
     
-@app.route('/edit/<string:servername', methods=['GET'])
+@app.route('/edit/<string:servername>', methods=['GET'])
 def edit(servername):
     try:
 
