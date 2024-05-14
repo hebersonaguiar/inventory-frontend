@@ -39,11 +39,11 @@
 //         })
 // });
 
-// function getValueHost(){
-//   var host = document.getElementById("hostName").placeholder;
-//   // console.log("Host to edit: " + host);
-//   localStorage.setItem('hosttoedit', host);
-// }
+function getValueHost(){
+  var host = document.getElementById("hostName").placeholder;
+  // console.log("Host to edit: " + host);
+  localStorage.setItem('hosttoedit', host);
+}
 
 
 function parseHostname() {
