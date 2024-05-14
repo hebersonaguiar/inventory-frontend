@@ -243,3 +243,7 @@ hr{
 .dataTables_info{
     display: flex;
 }
+
+.modal-body {
+    overflow-x: auto;
+  }
