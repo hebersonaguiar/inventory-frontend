@@ -112,88 +112,80 @@
                     </button>
                   </div>
                   <div class="modal-body">
-
-                    <!--TABLE HERE-->
-                      <div class="table-responsive">
-                        <!-- <table class="table table-servers" id="servers-list"> -->
-                        <!-- <table id="table-hosts-list" class="table table-striped table-bordered" style="width:100%"> -->
-                        <table id="table-hosts-list" class="table table-striped table-bordered">
-                          <thead>
-                            <tr>
-                              <th scope="col">Hostname</th>
-                              <th scope="col">Sigla</th>
-                              <th scope="col">Linguagem</th>
-                              <th scope="col">Cluster</th>
-                              <th scope="col">Datacenter</th>
-                              <th scope="col">Ambiente</th>
-                              <th scope="col">Framework</th>
-                              <th scope="col">Objetivo</th>
-                              <th scope="col">Mac Address</th>
-                              <th scope="col">Middleware</th>
-                              <th scope="col">Nacional/CJF?</th>
-                              <th scope="col">Plataforma</th>
-                              <th scope="col">Prioridade</th>
-                              <th scope="col">Processador</th>
-                              <th scope="col">Publicado?</th>
-                              <th scope="col">Repositório</th>
-                              <th scope="col">Risco</th>
-                              <th scope="col">URL</th>
-                              <th scope="col">Created em</th>
-                              <th scope="col">Atualizado em</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>{{ host.hostname }}</td>
-                              <td>{{ host.acronym }}</td>
-                              <td>{{ host.app_language }}</td>
-                              <td>{{ host.cluster }}</td>
-                              <td>{{ host.datacenter }}</td>
-                              <td>{{ host.environnment }}</td>
-                              <td>{{ host.framework }}</td>
-                              <td>{{ host.goal }}</td>
-                              <td>{{ host.mac_address }}</td>
-                              <td>{{ host.midleware }}</td>
-                              <td>{{ host.national_cjf }}</td>
-                              <td>{{ host.plataform }}</td>
-                              <td>{{ host.priority }}</td>
-                              <td>{{ host.processor }}</td>
-                              <td>{{ host.publication }}</td>
-                              <td>{{ host.repository }}</td>
-                              <td>{{ host.risk }}</td>
-                              <td>{{ host.url }}</td>
-                              <td>{{ host.created_at }}</td>
-                              <td>{{ host.updated_at }}</td>
-                            </tr>
-                          </tbody>
-                          <tfoot>
-                            <tr>
-                              <th scope="col">Hostname</th>
-                              <th scope="col">Sigla</th>
-                              <th scope="col">Linguagem</th>
-                              <th scope="col">Cluster</th>
-                              <th scope="col">Datacenter</th>
-                              <th scope="col">Ambiente</th>
-                              <th scope="col">Framework</th>
-                              <th scope="col">Objetivo</th>
-                              <th scope="col">Mac Address</th>
-                              <th scope="col">Middleware</th>
-                              <th scope="col">Nacional/CJF?</th>
-                              <th scope="col">Plataforma</th>
-                              <th scope="col">Prioridade</th>
-                              <th scope="col">Processador</th>
-                              <th scope="col">Publicado?</th>
-                              <th scope="col">Repositório</th>
-                              <th scope="col">Risco</th>
-                              <th scope="col">URL</th>
-                              <th scope="col">Created em</th>
-                              <th scope="col">Atualizado em</th>
-                            </tr>
-                          </tfoot>
-                        </table>
-                      </div>
-
-
+                    <table id="table-hosts-list" class="table table-striped table-bordered">
+                      <thead>
+                        <tr>
+                          <th scope="col">Hostname</th>
+                          <th scope="col">Sigla</th>
+                          <th scope="col">Linguagem</th>
+                          <th scope="col">Cluster</th>
+                          <th scope="col">Datacenter</th>
+                          <th scope="col">Ambiente</th>
+                          <th scope="col">Framework</th>
+                          <th scope="col">Objetivo</th>
+                          <th scope="col">Mac Address</th>
+                          <th scope="col">Middleware</th>
+                          <th scope="col">Nacional/CJF?</th>
+                          <th scope="col">Plataforma</th>
+                          <th scope="col">Prioridade</th>
+                          <th scope="col">Processador</th>
+                          <th scope="col">Publicado?</th>
+                          <th scope="col">Repositório</th>
+                          <th scope="col">Risco</th>
+                          <th scope="col">URL</th>
+                          <th scope="col">Created em</th>
+                          <th scope="col">Atualizado em</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>{{ host.hostname }}</td>
+                          <td>{{ host.acronym }}</td>
+                          <td>{{ host.app_language }}</td>
+                          <td>{{ host.cluster }}</td>
+                          <td>{{ host.datacenter }}</td>
+                          <td>{{ host.environnment }}</td>
+                          <td>{{ host.framework }}</td>
+                          <td>{{ host.goal }}</td>
+                          <td>{{ host.mac_address }}</td>
+                          <td>{{ host.midleware }}</td>
+                          <td>{{ host.national_cjf }}</td>
+                          <td>{{ host.plataform }}</td>
+                          <td>{{ host.priority }}</td>
+                          <td>{{ host.processor }}</td>
+                          <td>{{ host.publication }}</td>
+                          <td>{{ host.repository }}</td>
+                          <td>{{ host.risk }}</td>
+                          <td>{{ host.url }}</td>
+                          <td>{{ host.created_at }}</td>
+                          <td>{{ host.updated_at }}</td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th scope="col">Hostname</th>
+                          <th scope="col">Sigla</th>
+                          <th scope="col">Linguagem</th>
+                          <th scope="col">Cluster</th>
+                          <th scope="col">Datacenter</th>
+                          <th scope="col">Ambiente</th>
+                          <th scope="col">Framework</th>
+                          <th scope="col">Objetivo</th>
+                          <th scope="col">Mac Address</th>
+                          <th scope="col">Middleware</th>
+                          <th scope="col">Nacional/CJF?</th>
+                          <th scope="col">Plataforma</th>
+                          <th scope="col">Prioridade</th>
+                          <th scope="col">Processador</th>
+                          <th scope="col">Publicado?</th>
+                          <th scope="col">Repositório</th>
+                          <th scope="col">Risco</th>
+                          <th scope="col">URL</th>
+                          <th scope="col">Created em</th>
+                          <th scope="col">Atualizado em</th>
+                        </tr>
+                      </tfoot>
+                    </table>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
