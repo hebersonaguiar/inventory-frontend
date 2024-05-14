@@ -24,10 +24,10 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">INÍCIO</a>
+              <a class="nav-link" href="/">INÍCIO</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="servers.html">SERVIDORES</a>
+              <a class="nav-link" href="servers">SERVIDORES</a>
             </li>
           </ul>
         </div>
@@ -54,12 +54,13 @@
     <div class="container text-center">
       <h1 class="service-title">Servidores Linux</h1>
       <div class="row" id="form-infos">
+        {% for hostedit in edit %}
         <form action="/updateinfo" method="GET">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Hostname</label>
-            <input class="form-control" type="text" id="in-hostname" name="hostname" placeholder="Hostname" aria-label="default input example" disabled>
+            <input class="form-control" type="text" id="in-hostname" name="hostname" value="{{ hostedit.hostname }}" placeholder="{{ hostedit.hostname }}" aria-label="default input example" disabled>
           </div>
-          <div class="mb-3">
+          <!-- <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">URL</label>
             <input class="form-control" type="text" id="in-url" name="url" placeholder="URL" aria-label="default input example">
           </div>
@@ -98,12 +99,12 @@
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Sigla</label>
             <input class="form-control" type="text" id="in-sigla" name="sigla" placeholder="Sigla" aria-label="default input example">
-          </div>
-          <div class="mb-3">
+          </div> -->
+          <!-- <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Datacenter</label>
-            <select class="form-select" id="in-datacenter" name="datacenter" aria-label="Selecione">
+            <select class="form-select" id="in-datacenter" name="datacenter" aria-label="Selecione"> -->
               <!-- <option selected>Selecione</option> -->
-              <option id="in-Blade" value="Blade">Blade</option>
+              <!-- <option id="in-Blade" value="Blade">Blade</option>
               <option id="in-HCI" value="HCI">HCI</option>
             </select>
           </div>
@@ -113,9 +114,9 @@
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nacional/CJF</label>
-            <select class="form-select" id="in-nacional-cjf" name="nacionalcjf" aria-label="Selecione">
+            <select class="form-select" id="in-nacional-cjf" name="nacionalcjf" aria-label="Selecione"> -->
               <!-- <option selected>Selecione</option> -->
-              <option id="in-CJF" value="CJF">CJF</option>
+              <!-- <option id="in-CJF" value="CJF">CJF</option>
               <option id="in-Nacional" value="Nacional">Nacional</option>
             </select>
           </div>
@@ -123,9 +124,10 @@
             <label for="in-goal" class="form-label">Objetivo</label>
             <textarea class="form-control" id="in-goal" name="objetivo" rows="3"></textarea>
           </div>
-          <button  onclick="window.location.href='/servers.html';" type="submit" id="submitFormUpdate" class="btn btn-primary">Atualizar</button>
-          <button type="button" class="btn btn-secondary"><a href="/index.html" id="bt-cancel-form">Cancelar</a></button>
+          <button  onclick="window.location.href='/servers.html';" type="submit" id="submitFormUpdate" class="btn btn-primary">Atualizar</button> -->
+          <button type="button" class="btn btn-secondary"><a href="/index" id="bt-cancel-form">Cancelar</a></button>
         </form>
+        {% endfor %}
       </div>
     </div>
   <!-- <div class="container text-center">
