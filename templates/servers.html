@@ -104,14 +104,14 @@
                     <!-- tabs modal here-->
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                       <li class="nav-item">
-                        <a class="nav-link active" id="operational-tab" data-toggle="tab" href="#operational" role="tab" aria-controls="operational" aria-selected="true">Operacional</a>
+                        <a class="nav-link active" id="operational-tab_{{ host.id }}" data-toggle="tab" href="#operational_{{ host.id }}" role="tab" aria-controls="operational" aria-selected="true">Operacional</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="bussines-tab" data-toggle="tab" href="#bussines" role="tab" aria-controls="bussines" aria-selected="false">Negócio</a>
+                        <a class="nav-link" id="bussines-tab_{{ host.id }}" data-toggle="tab" href="#bussines_{{ host.id }}" role="tab" aria-controls="bussines" aria-selected="false">Negócio</a>
                       </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
-                      <div class="tab-pane fade show active" id="operational" role="tabpanel" aria-labelledby="operational-tab">
+                      <div class="tab-pane fade show active" id="operational_{{ host.id }}" role="tabpanel" aria-labelledby="operational-tab_{ host.id }">
                         <hr>
                         <p class="text-justify"><strong>Mac Addres:</strong> {{ host.mac_address}}</p>
                         <hr>
@@ -136,7 +136,7 @@
                         <p class="text-justify"><strong>Repositório:</strong> {{ host.repository}}</p>
                         <hr>
                       </div>
-                      <div class="tab-pane fade" id="bussines" role="tabpanel" aria-labelledby="bussines-tab">
+                      <div class="tab-pane fade" id="bussines_{{ host.id }}" role="tabpanel" aria-labelledby="bussines-tab_{{ host.id }}">
                         <hr>
                         <p class="text-justify"><strong>Sigla:</strong> {{ host.acronym}}</p>
                         <hr>
