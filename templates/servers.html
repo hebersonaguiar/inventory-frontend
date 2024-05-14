@@ -95,31 +95,25 @@
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Informações adicionais</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Informações Adicionais</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body">
-                    <!-- table modal here-->
-                    <table id="classTable_{{hosts.id}}" class="table table-bordered">
-                      <thead>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>CLN</td>
-                          <td>Last Updated Date</td>
-                          <td>Class Name</td>
-                          <td># Tests</td>
-                          <td>Test Coverage (Instruction)</td>
-                          <td>Test Coverage (Complexity)</td>
-                          <td>Complex Covered</td>
-                          <td>Complex Total</td>
-                          <td>Category</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <!-- table modal here -->
+                    <!-- tabs modal here-->
+                    <ul class="nav nav-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Operacional</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Negócio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                    </ul>
+                    <!-- tabs modal here -->
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
