@@ -63,7 +63,7 @@ def edit(servername):
 @app.route('/updateinventory', methods=['GET','POST'])
 def updateinventory():
     try:
-        now = datetime.datetime.now()
+        # now = datetime.datetime.now()
         hostname = request.form.get('hostname')
         url = request.form.get('url')
         environnment = request.form.get('environnment')
@@ -79,7 +79,7 @@ def updateinventory():
         repositorio = request.form.get('repositorio')
         nacionalcjf = request.form.get('nacionalcjf')
         objetivo = request.form.get('objetivo')
-        updated_at = now.strftime("%Y-%m-%d %H:%M")
+        # updated_at = now.strftime("%Y-%m-%d %H:%M")
 
         print(hostname)
         print(url)
@@ -96,7 +96,7 @@ def updateinventory():
         print(repositorio)
         print(nacionalcjf)
         print(objetivo)
-        print(updated_at)
+        # print(updated_at)
 
         return render_template('servers.html')
 
