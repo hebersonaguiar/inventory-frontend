@@ -122,7 +122,7 @@
           </div>
           <div class="mb-3">
             <label for="in-goal" class="form-label">Objetivo</label>
-            <textarea class="form-control" id="in-goal" name="objetivo" value="{{ hostedit.goal }}" placeholder="{{ hostedit.goal }}" rows="3"></textarea>
+            <textarea class="form-control" id="in-goal" name="objetivo" value="{{ hostedit.goal }}" placeholder="{{ hostedit.goal }}" rows="3">{{ hostedit.goal }}</textarea>
           </div>
           <button  onclick="window.location.href='/servers.html';" type="submit" id="submitFormUpdate" class="btn btn-primary">Atualizar</button>
           <button type="button" class="btn btn-secondary"><a href="/" id="bt-cancel-form">Cancelar</a></button>
