@@ -58,6 +58,49 @@ def edit(servername):
         # return redirect(url_for('servers'))
         print(e)
         return redirect(url_for('index'))
+    
+
+@app.route('/updateinventory', methods=['POST'])
+def modifyuser():
+    try:
+        now = datetime.datetime.now()
+        hostname = request.form.get('hostname')
+        environnment = request.form.get('environnment')
+        cluster = request.form.get('cluster')
+        publicacao = request.form.get('publicacao')
+        middleware = request.form.get('middleware')
+        framework = request.form.get('framework')
+        linguagem = request.form.get('linguagem')
+        prioridade = request.form.get('prioridade')
+        risco = request.form.get('risco')
+        sigla = request.form.get('sigla')
+        datacenter = request.form.get('datacenter')
+        repositorio = request.form.get('repositorio')
+        nacionalcjf = request.form.get('nacionalcjf')
+        objetivo = request.form.get('objetivo')
+        updated_at = now.strftime("%Y-%m-%d %H:%M")
+
+        print(hostname)
+        print(environnment)
+        print(cluster)
+        print(publicacao)
+        print(middleware)
+        print(framework)
+        print(linguagem)
+        print(prioridade)
+        print(risco)
+        print(sigla)
+        print(datacenter)
+        print(repositorio)
+        print(nacionalcjf)
+        print(objetivo)
+        print(updated_at)
+
+        return render_template('index.html')
+
+    except Exception as e:
+	    return redirect(url_for('index'))
+
 
 if __name__ == '__main__':
 	app.run(debug=True, host='0.0.0.0', port='5000')

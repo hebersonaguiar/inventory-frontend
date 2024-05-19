@@ -55,7 +55,7 @@
       <h1 class="service-title">Servidores Linux</h1>
       <div class="row" id="form-infos">
         {% for hostedit in edit %}
-        <form action="/updateinfo" method="GET">
+        <form action="/updateinventory" method="GET">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Hostname</label>
             <input class="form-control" type="text" id="in-hostname" name="hostname" value="{{ hostedit.hostname }}" placeholder="{{ hostedit.hostname }}" aria-label="default input example" disabled>
@@ -125,7 +125,7 @@
             <textarea class="form-control" id="in-goal" name="objetivo" value="{{ hostedit.goal }}" placeholder="{{ hostedit.goal }}" rows="3">{{ hostedit.goal }}</textarea>
           </div>
           <button  onclick="window.location.href='/servers.html';" type="submit" id="submitFormUpdate" class="btn btn-primary">Atualizar</button>
-          <button type="button" class="btn btn-secondary"><a href="/" id="bt-cancel-form">Cancelar</a></button>
+          <button type="button" class="btn btn-secondary"><a href="/servers" id="bt-cancel-form">Cancelar</a></button>
         </form>
         {% endfor %}
       </div>
