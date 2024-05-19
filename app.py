@@ -61,7 +61,7 @@ def edit(servername):
     
 
 @app.route('/updateinventory', methods=['POST'])
-def modifyuser():
+def updateinventory():
     try:
         now = datetime.datetime.now()
         hostname = request.form.get('hostname')
