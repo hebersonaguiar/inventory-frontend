@@ -65,6 +65,7 @@ def updateinventory():
     try:
         now = datetime.datetime.now()
         hostname = request.form.get('hostname')
+        url = request.form.get('url')
         environnment = request.form.get('environnment')
         cluster = request.form.get('cluster')
         publicacao = request.form.get('publicacao')
@@ -81,6 +82,7 @@ def updateinventory():
         updated_at = now.strftime("%Y-%m-%d %H:%M")
 
         print(hostname)
+        print(url)
         print(environnment)
         print(cluster)
         print(publicacao)
