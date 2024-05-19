@@ -98,10 +98,11 @@ def updateinventory():
         print(objetivo)
         print(updated_at)
 
-        return render_template('index.html')
+        return render_template('servers.html')
 
     except Exception as e:
-	    return redirect(url_for('index'))
+        print(e)
+        return redirect(url_for('servers'))
 
 
 if __name__ == '__main__':
