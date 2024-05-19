@@ -100,11 +100,11 @@
             <label for="exampleFormControlInput1" class="form-label">Sigla</label>
             <input class="form-control" type="text" id="in-sigla" name="sigla" value="{{ hostedit.acronym }}" placeholder="{{ hostedit.acronym }}" aria-label="default input example">
           </div>
-          <!-- <div class="mb-3">
+          <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Datacenter</label>
             <select class="form-select" id="in-datacenter" name="datacenter" aria-label="Selecione"> -->
-              <!-- <option selected>Selecione</option> -->
-              <!-- <option id="in-Blade" value="Blade">Blade</option>
+              <option selected value="{{ host.datacenter }}">Selecione</option>
+              <option id="in-Blade" value="Blade">Blade</option>
               <option id="in-HCI" value="HCI">HCI</option>
             </select>
           </div>
@@ -115,8 +115,8 @@
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nacional/CJF</label>
             <select class="form-select" id="in-nacional-cjf" name="nacionalcjf" aria-label="Selecione"> -->
-              <!-- <option selected>Selecione</option> -->
-              <!-- <option id="in-CJF" value="CJF">CJF</option>
+              <option selected>Selecione</option>
+              <option id="in-CJF" value="CJF">CJF</option>
               <option id="in-Nacional" value="Nacional">Nacional</option>
             </select>
           </div>
@@ -124,7 +124,7 @@
             <label for="in-goal" class="form-label">Objetivo</label>
             <textarea class="form-control" id="in-goal" name="objetivo" rows="3"></textarea>
           </div>
-          <button  onclick="window.location.href='/servers.html';" type="submit" id="submitFormUpdate" class="btn btn-primary">Atualizar</button> -->
+          <button  onclick="window.location.href='/servers.html';" type="submit" id="submitFormUpdate" class="btn btn-primary">Atualizar</button>
           <button type="button" class="btn btn-secondary"><a href="/" id="bt-cancel-form">Cancelar</a></button>
         </form>
         {% endfor %}
