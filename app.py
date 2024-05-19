@@ -60,7 +60,7 @@ def edit(servername):
         return redirect(url_for('index'))
     
 
-@app.route('/updateinventory', methods=['GET','POST'])
+@app.route('/updateinventory', methods=['POST'])
 def updateinventory():
     try:
         now = datetime.datetime.now()
