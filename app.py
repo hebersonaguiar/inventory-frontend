@@ -98,7 +98,7 @@ def updateinventory():
         print(objetivo)
         print(updated_at)
 
-        return render_template('servers.html')
+        return redirect(url_for('servers'))
 
     except Exception as e:
         print(e)
