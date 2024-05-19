@@ -55,7 +55,7 @@
       <h1 class="service-title">Servidores Linux</h1>
       <div class="row" id="form-infos">
         {% for hostedit in edit %}
-        <form action="/updateinventory" method="GET">
+        <form action="/updateinventory" method="POST">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Hostname</label>
             <input class="form-control" type="text" id="in-hostname" name="hostname" value="{{ hostedit.hostname }}" placeholder="{{ hostedit.hostname }}" aria-label="default input example" disabled>
