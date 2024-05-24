@@ -63,7 +63,7 @@ def edit(servername):
 @app.route('/updateinventory', methods=['POST'])
 def updateinventory():
     try:
-        hostname = request.form.get('hostname')
+        hostname = request.form.get('hostname-up')
         url = request.form.get('url')
         environnment = request.form.get('environnment')
         cluster = request.form.get('cluster')
