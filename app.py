@@ -64,7 +64,7 @@ def edit(servername):
 def updateinventory():
     try:
         now = datetime.datetime.now()
-        hostname = request.form.get('hostname')
+        hostname = request.form.post('hostname')
         url = request.form.get('url')
         environnment = request.form.get('environnment')
         cluster = request.form.get('cluster')
