@@ -77,11 +77,7 @@ def updateinventory():
         datacenter = request.form.get('datacenter')
         repositorio = request.form.get('repositorio')
         nacionalcjf = request.form.get('nacionalcjf')
-        objetivo = request.form.get('objetivo')
-
-        print("http://inventory:5000/v1/updateiventory/{}".format(hostname))
-        print(url)
-        
+        objetivo = request.form.get('objetivo')       
         now = datetime.datetime.now()
         updated_at = now.strftime("%Y-%m-%d %H:%M")
 
