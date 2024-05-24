@@ -99,7 +99,7 @@ def updateinventory():
                     nacionalcjf,
                     objetivo,
                     updated_at):
-             update_inventory = requests.put('http://inventory:5000/v1/updateiventory/{}'.format(hostname), data=json.dumps({
+             update_inventory = requests.post('http://inventory:5000/v1/updateiventory/{}'.format(hostname), data=json.dumps({
                   'url': url,
                   'environnment': environnment,
                   'cluster': cluster,
