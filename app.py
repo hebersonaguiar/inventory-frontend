@@ -99,7 +99,7 @@ def updateinventory():
                     nacionalcjf,
                     objetivo,
                     updated_at):
-             update_inventory = requests.post('http://inventory:5000/v1/updateiventory/{}'.format(hostname) ,data=json.dumps({
+             update_inventory = requests.post('http://inventory:5000/v1/updateiventory/{}'.format(hostname), data=json.dumps({
                   'url': url,
                   'environnment': environnment,
                   'cluster': cluster,
@@ -114,10 +114,11 @@ def updateinventory():
                   'repository': repositorio,
                   'national_cjf': nacionalcjf,
                   'goal': objetivo,
-                  'updated_at': updated_at})),
-             headers={'Content-Type':'application/json'}
+                  'updated_at': updated_at}), 
+                headers={'Content-Type':'application/json'})
+             
 
-        return update_inventory
+        return redirect(url_for('servers'))
 
     except Exception as e:
         print(e)
