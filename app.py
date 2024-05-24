@@ -98,7 +98,7 @@ def updateinventory():
                     repositorio,
                     nacionalcjf,
                     objetivo,
-                    updated_at,):
+                    updated_at):
              update_inventory = requests.post('http://inventory:5000/v1/updateiventory/{}'.format(hostname) ,data=json.dumps({
                   'url': url,
                   'environnment': environnment,
