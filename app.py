@@ -81,28 +81,44 @@ def updateinventory():
         objetivo = request.form.get('objetivo')
         updated_at = now.strftime("%Y-%m-%d %H:%M")
 
-        print(hostname)
-        print(url)
-        print(environnment)
-        print(cluster)
-        print(publicacao)
-        print(middleware)
-        print(framework)
-        print(linguagem)
-        print(prioridade)
-        print(risco)
-        print(sigla)
-        print(datacenter)
-        print(repositorio)
-        print(nacionalcjf)
-        print(objetivo)
-        print(updated_at)
+        if None not in(url,
+                    environnment,
+                    cluster,
+                    publicacao,
+                    middleware,
+                    framework,
+                    linguagem,
+                    prioridade,
+                    risco,
+                    sigla,
+                    datacenter,
+                    repositorio,
+                    nacionalcjf,
+                    objetivo,
+                    updated_at,):
+             update_inventory = requests.post('http://inventory:5000/v1/updateiventory/{}'.format(hostname) ,data=json.dumps({
+                  'url': url,
+                  'environnment': environnment,
+                  'cluster': cluster,
+                  'publication': publicacao,
+                  'middleware': middleware,
+                  'framework': framework,
+                  'app_language': linguagem,
+                  'priority': prioridade,
+                  'risk': risco,
+                  'acronym': sigla,
+                  'datacenter': datacenter,
+                  'repository': repositorio,
+                  'national_cjf': nacionalcjf,
+                  'goal': objetivo,
+                  'updated_at': updated_at})),
+             headers={'Content-Type':'application/json'}
 
         return redirect(url_for('servers'))
 
     except Exception as e:
         print(e)
-        return redirect(url_for('servers'))
+        return redirect(url_for('index'))
 
 
 if __name__ == '__main__':
