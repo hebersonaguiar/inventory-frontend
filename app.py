@@ -80,6 +80,7 @@ def updateinventory():
         objetivo = request.form.get('objetivo')
 
         print("http://inventory:5000/v1/updateiventory/{}".format(hostname))
+        print(url)
         
         now = datetime.datetime.now()
         updated_at = now.strftime("%Y-%m-%d %H:%M")
