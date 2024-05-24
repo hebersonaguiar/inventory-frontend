@@ -81,7 +81,10 @@ def updateinventory():
         objetivo = request.form.get('objetivo')
         updated_at = now.strftime("%Y-%m-%d %H:%M")
 
-        if None not in(url,
+        print(hostname)
+
+        if None not in(hostname,
+                    url,
                     environnment,
                     cluster,
                     publicacao,
@@ -114,7 +117,7 @@ def updateinventory():
                   'updated_at': updated_at})),
              headers={'Content-Type':'application/json'}
 
-        return redirect(url_for('servers'))
+        return update_inventory
 
     except Exception as e:
         print(e)
