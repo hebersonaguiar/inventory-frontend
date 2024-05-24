@@ -60,11 +60,11 @@ def edit(servername):
         return redirect(url_for('index'))
     
 
-@app.route('/updateinventory', methods=['POST'])
+@app.route('/updateinventory', methods=['GET'])
 def updateinventory():
     try:
         now = datetime.datetime.now()
-        hostname = request.form.post('hostname')
+        hostname = request.form.get('hostname')
         url = request.form.get('url')
         environnment = request.form.get('environnment')
         cluster = request.form.get('cluster')
