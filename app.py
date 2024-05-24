@@ -60,10 +60,9 @@ def edit(servername):
         return redirect(url_for('index'))
     
 
-@app.route('/updateinventory', methods=['GET'])
+@app.route('/updateinventory', methods=['POST'])
 def updateinventory():
     try:
-        now = datetime.datetime.now()
         hostname = request.form.get('hostname')
         url = request.form.get('url')
         environnment = request.form.get('environnment')
@@ -79,9 +78,11 @@ def updateinventory():
         repositorio = request.form.get('repositorio')
         nacionalcjf = request.form.get('nacionalcjf')
         objetivo = request.form.get('objetivo')
-        updated_at = now.strftime("%Y-%m-%d %H:%M")
 
-        print(hostname)
+        print("http://inventory:5000/v1/updateiventory/{}".format(hostname))
+        
+        now = datetime.datetime.now()
+        updated_at = now.strftime("%Y-%m-%d %H:%M")
 
         if None not in(hostname,
                     url,
