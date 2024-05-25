@@ -15,7 +15,8 @@ app.secret_key = "flash message"
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('index.html')
+    return render_template('govbr.html')
+    # return render_template('index.html')
 
 @app.route('/servers', methods=['GET'])
 def servers():
