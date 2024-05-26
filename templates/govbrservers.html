@@ -272,67 +272,31 @@
                             <label for="check-all-3415">Selecionar todas as linhas</label>
                           </div>
                         </th>
-                        <th scope="col">Título coluna 1</th>
-                        <th scope="col">Título coluna 2</th>
-                        <th scope="col">Título coluna 3</th>
+                        <th scope="col">Hostname</th>
+                        <th scope="col">Ip</th>
+                        <th scope="col">S.O.</th>
+                        <th scope="col">Distribution</th>
+                        <th scope="col">Mem Total</th>
+                        <th scope="col">Mem Free</th>
+                        <th scope="col">Uptime</th>
+                        <th scope="col">Mais</th>
+                        <th scope="col">Editar</th>
                       </tr>
                     </thead>
                     <tbody>
+                      {% for host in hosts %}
                       <tr>
-                        <td>
-                          <button class="br-button circle small" type="button" id="button-line-1-3415" aria-label="Expandir/Retrair Rótulo 01" data-toggle="collapse" data-target="collapse-1-4-3415" aria-describedby="collapse-1-4-3415"><i class="fas fa-chevron-down" aria-hidden="true"></i>
-                          </button>
-                        </td>
-                        <td>
-                          <div class="br-checkbox hidden-label">
-                            <input id="check-line-1-3415" name="check-line-1-3415" type="checkbox" aria-label="Selecionar linha 1" data-child="check-01-3415"/>
-                            <label for="check-line-1-3415">Selecionar linha 1</label>
-                          </div>
-                        </td>
-                        <td data-th="Título coluna 1">Linha 1 coluna 1</td>
-                        <td data-th="Título coluna 2">Linha 1 coluna 2</td>
-                        <td data-th="Título coluna 3">Linha 1 coluna 3</td>
-                      </tr>
-                      <tr class="collapse">
-                        <td id="collapse-1-4-3415" aria-hidden="true" hidden="hidden" colspan="6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies aliquet lacinia. Vestibulum in interdum eros. Donec vel tempus diam. Aenean pulvinar mattis nisi in laoreet. Integer felis mi, vehicula sed pretium sit amet, pellentesque vel nisl. Curabitur metus ante, pellentesque in lectus a, sagittis imperdiet mi.</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <button class="br-button circle small" type="button" id="button-line-2-3415" aria-label="Expandir/Retrair Rótulo 01" data-toggle="collapse" data-target="collapse-2-4-3415" aria-describedby="collapse-2-4-3415"><i class="fas fa-chevron-down" aria-hidden="true"></i>
-                          </button>
-                        </td>
-                        <td>
-                          <div class="br-checkbox hidden-label">
-                            <input id="check-line-2-3415" name="check-line-2-3415" type="checkbox" aria-label="Selecionar linha 2" data-child="check-01-3415"/>
-                            <label for="check-line-2-3415">Selecionar linha 2</label>
-                          </div>
-                        </td>
-                        <td data-th="Título coluna 1">Linha 2 coluna 1</td>
-                        <td data-th="Título coluna 2">Linha 2 coluna 2</td>
-                        <td data-th="Título coluna 3">Linha 2 coluna 3</td>
-                      </tr>
-                      <tr class="collapse">
-                        <td id="collapse-2-4-3415" aria-hidden="true" hidden="hidden" colspan="6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies aliquet lacinia. Vestibulum in interdum eros. Donec vel tempus diam. Aenean pulvinar mattis nisi in laoreet. Integer felis mi, vehicula sed pretium sit amet, pellentesque vel nisl. Curabitur metus ante, pellentesque in lectus a, sagittis imperdiet mi.</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <button class="br-button circle small" type="button" id="button-line-3-3415" aria-label="Expandir/Retrair Rótulo 01" data-toggle="collapse" data-target="collapse-3-4-3415" aria-describedby="collapse-3-4-3415"><i class="fas fa-chevron-down" aria-hidden="true"></i>
-                          </button>
-                        </td>
-                        <td>
-                          <div class="br-checkbox hidden-label">
-                            <input id="check-line-3-3415" name="check-line-3-3415" type="checkbox" aria-label="Selecionar linha 3" data-child="check-01-3415"/>
-                            <label for="check-line-3-3415">Selecionar linha 3</label>
-                          </div>
-                        </td>
-                        <td data-th="Título coluna 1">Linha 3 coluna 1</td>
-                        <td data-th="Título coluna 2">Linha 3 coluna 2</td>
-                        <td data-th="Título coluna 3">Linha 3 coluna 3</td>
-                      </tr>
-                      <tr class="collapse">
-                        <td id="collapse-3-4-3415" aria-hidden="true" hidden="hidden" colspan="6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies aliquet lacinia. Vestibulum in interdum eros. Donec vel tempus diam. Aenean pulvinar mattis nisi in laoreet. Integer felis mi, vehicula sed pretium sit amet, pellentesque vel nisl. Curabitur metus ante, pellentesque in lectus a, sagittis imperdiet mi.</td>
-                      </tr>
-                    </tbody>
+                        <td>{{ host.hostname }}</td>
+                        <td>{{ host.ip }}</td>
+                        <td>{{ host.so }}</td>
+                        <td>{{ host.distribution }}</td>
+                        <td>{{ host.mem_total }}</td>
+                        <td>{{ host.mem_free }}</td>
+                        <td>{{ host.up_time }}</td>
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal" id="{{ host.hostname }}" data-target="#infosModal_{{host.id}}"><input type="text" style="display:none" id="hostName" placeholder="{{ host.hostname }}" value="{{ host.hostname }}"/>Mais</button></td>                        
+                        <td><a class="btn btn-secondary" id="#" href="/edit/{{ host.hostname }}" role="button">Edit</a></td>
+                      {% endfor %}
+                      </tbody>
                   </table>
                   <div class="table-footer">
                     <nav class="br-pagination" aria-label="paginação" data-total="50" data-current="1" data-per-page="20">
