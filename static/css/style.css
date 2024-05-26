@@ -247,3 +247,10 @@ hr{
 .modal-body {
     overflow-x: auto;
   }
+
+
+/* GOVBR CHANGES */
+
+.logo-cjf{
+    width: 145px;
+}
