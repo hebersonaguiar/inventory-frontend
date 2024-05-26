@@ -15465,3 +15465,8 @@ behavior.initInstanceAll()
 ;
 });
 //# sourceMappingURL=core-init.js.map
+
+const carouselList = []
+for (const brCarousel of window.document.querySelectorAll('.br-carousel')) {
+  carouselList.push(new core.BRCarousel('br-carousel', brCarousel))
+}
