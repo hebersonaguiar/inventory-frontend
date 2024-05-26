@@ -252,5 +252,5 @@ hr{
 /* GOVBR CHANGES */
 
 .logo-cjf{
-    width: 145px;
+    width: 145px !important;
 }
