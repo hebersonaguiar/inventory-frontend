@@ -31,13 +31,15 @@ def servers():
         else:
              print(f"Error retrieving data, status code: {response.status_code}")
 
-        return render_template('servers.html', hosts=data)
+        # return render_template('servers.html', hosts=data)
+        return render_template('govbrservers.html', hosts=data)
         # return response.json()
 
     except Exception as e:
         # return redirect(url_for('servers'))
         print(e)
-        return redirect(url_for('index'))
+        return redirect(url_for('govbr.html'))
+        # return redirect(url_for('index'))
     
 @app.route('/edit/<string:servername>', methods=['GET'])
 def edit(servername):
