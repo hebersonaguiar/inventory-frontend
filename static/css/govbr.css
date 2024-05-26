@@ -4,6 +4,19 @@
     width: 145px !important;
 }
 
+.pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+.disabled, [disabled] {
+  cursor: not-allowed;
+  opacity: var(--disabled);
+}
+
+
+
 .br-card {
     --card-padding: var(--spacing-scale-2x);
     --card-height-fixed: 250px;
