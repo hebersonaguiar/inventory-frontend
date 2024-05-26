@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap"/>
     <!-- Design System de Governo-->
     <link rel="stylesheet" href="../static/css/core.min.css"/>
+    <!-- Design System de Governo Changes-->
+    <link rel="stylesheet" href="../static/css/govbr.css"/>
     <!-- Fontawesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
   </head>
@@ -41,7 +43,7 @@
                   <div class="header">
                     <div class="title">Funcionalidades do Sistema</div>
                   </div>
-                  <div class="br-item">
+                  <!-- <div class="br-item">
                     <button class="br-button circle small" type="button" aria-label="Funcionalidade 1"><i class="fas fa-chart-bar" aria-hidden="true"></i><span class="text">Funcionalidade 1</span>
                     </button>
                   </div>
@@ -52,7 +54,7 @@
                   <div class="br-item">
                     <button class="br-button circle small" type="button" aria-label="Funcionalidade 3"><i class="fas fa-comment" aria-hidden="true"></i><span class="text">Funcionalidade 3</span>
                     </button>
-                  </div>
+                  </div> -->
                   <div class="br-item">
                     <button class="br-button circle small" type="button" aria-label="Funcionalidade 4"><i class="fas fa-adjust" aria-hidden="true"></i><span class="text">Funcionalidade 4</span>
                     </button>
@@ -63,13 +65,13 @@
                 <button class="br-button circle" type="button" aria-label="Abrir Busca" data-toggle="search" data-target=".header-search"><i class="fas fa-search" aria-hidden="true"></i>
                 </button>
               </div>
-              <div class="header-login">
+              <!-- <div class="header-login">
                 <div class="header-sign-in">
                   <button class="br-sign-in small" type="button" data-trigger="login"><i class="fas fa-user" aria-hidden="true"></i><span class="d-sm-inline">Entrar</span>
                   </button>
                 </div>
                 <div class="header-avatar"></div>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="header-bottom">
@@ -199,6 +201,42 @@
                   </li>
                 </ol>
               </nav>
+              <div class="main-content pl-sm-3 mt-4" id="main-content">
+                <div class="row">
+                    <div class="col-sm-12 col-md-8">
+                    <div class="br-carousel" aria-label="Carrossel de Exemplo" aria-roledescription="carousel">
+                        <div class="carousel-button">
+                        <button class="br-button carousel-btn-prev terciary circle" type="button" aria-label="Anterior"><i class="fas fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                        </div>
+                        <div class="carousel-stage">
+                        <div class="carousel-page" active="active" role="group" aria-roledescription="slide" aria-live="polite">
+                            <div class="carousel-content bg-blue-10">
+                            <div class="h3 carousel-title">Página 1</div>
+                            </div>
+                        </div>
+                        <div class="carousel-page" role="group" aria-roledescription="slide" aria-live="polite">
+                            <div class="carousel-content bg-violet-warm-10">
+                            <div class="h3 carousel-title">Página 2</div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="carousel-button">
+                        <button class="br-button carousel-btn-next terciary circle" type="button" aria-label="Próximo"><i class="fas fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                        </div>
+                        <div class="carousel-step">
+                        <nav class="br-step" data-initial="1" data-type="simple" role="none">
+                            <div class="step-progress" role="listbox" aria-orientation="horizontal" aria-label="Lista de Opções">
+                            <button class="step-progress-btn" role="option" aria-posinset="1" aria-setsize="5" type="button"><span class="step-info">Exemplo de Rótulo 1</span></button>
+                            <button class="step-progress-btn" role="option" aria-posinset="2" aria-setsize="5" type="button"><span class="step-info">Exemplo de Rótulo 2</span></button>
+                            </div>
+                        </nav>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+              </div>
               <!-- <div class="main-content pl-sm-3 mt-4" id="main-content">
                 <h1>Título h1</h1>
                 <p>Parágrafo de exemplo <a href="">link de exemplo</a>.</p>
