@@ -240,79 +240,24 @@
                             <td><button type="button" class="btn btn-primary" data-toggle="modal" id="{{ host.hostname }}" data-target="#infosModal_{{host.id}}"><input type="text" style="display:none" id="hostName" placeholder="{{ host.hostname }}" value="{{ host.hostname }}"/>Mais</button></td>                        
                             <td><a class="btn btn-secondary" id="#" href="/edit/{{ host.hostname }}" role="button">Edit</a></td>
                           </tr>
-                          <div class="modal fade" id="infosModal_{{host.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg" role="document">
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Informações Adicionais</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div>
-                                  <div class="modal-body">
-                                    <!-- tabs modal here-->
-                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                        <li class="nav-item">
-                                          <a class="nav-link active" id="operational-tab_{{ host.id }}" data-toggle="tab" href="#operational_{{ host.id }}" role="tab" aria-controls="operational" aria-selected="true">Operacional</a>
-                                        </li>
-                                        <li class="nav-item">
-                                          <a class="nav-link" id="bussines-tab_{{ host.id }}" data-toggle="tab" href="#bussines_{{ host.id }}" role="tab" aria-controls="bussines" aria-selected="false">Negócio</a>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content" id="myTabContent">
-                                        <div class="tab-pane fade show active" id="operational_{{ host.id }}" role="tabpanel" aria-labelledby="operational-tab_{ host.id }">
-                                          <hr>
-                                          <p class="text-justify"><strong>Mac Addres:</strong> {{ host.mac_address}}</p>
-                                          <hr>
-                                          <p class="text-justify"><strong>Linguagem:</strong> {{ host.app_language}}</p>
-                                          <hr>
-                                          <p class="text-justify"><strong>Arquitetura:</strong> {{ host.architecture}}</p>
-                                          <hr>
-                                          <p class="text-justify"><strong>Cluster:</strong> {{ host.cluster}}</p>
-                                          <hr>
-                                          <p class="text-justify"><strong>Datacenter:</strong> {{ host.datacenter}}</p>
-                                          <hr>
-                                          <p class="text-justify"><strong>Ambiente:</strong> {{ host.environnment}}</p>
-                                          <hr>
-                                          <p class="text-justify"><strong>Framework:</strong> {{ host.framework}}</p>
-                                          <hr>
-                                          <p class="text-justify"><strong>Midleware:</strong> {{ host.midleware}}</p>
-                                          <hr>
-                                          <p class="text-justify"><strong>Plataforma:</strong> {{ host.plataform}}</p>
-                                          <hr>
-                                          <p class="text-justify"><strong>Processador:</strong> {{ host.processor}}</p>
-                                          <hr>
-                                          <p class="text-justify"><strong>Repositório:</strong> {{ host.repository}}</p>
-                                          <hr>
-                                        </div>
-                                        <div class="tab-pane fade" id="bussines_{{ host.id }}" role="tabpanel" aria-labelledby="bussines-tab_{{ host.id }}">
-                                          <hr>
-                                          <p class="text-justify"><strong>Sigla:</strong> {{ host.acronym}}</p>
-                                          <hr>
-                                          <p class="text-justify"><strong>Objetivo:</strong> {{ host.goal}}</p>
-                                          <hr>
-                                          <p class="text-justify"><strong>Nacional/CJF?:</strong> {{ host.national_cjf}}</p>
-                                          <hr>
-                                          <p class="text-justify"><strong>Prioridade:</strong> {{ host.priority}}</p>
-                                          <hr>
-                                          <p class="text-justify"><strong>Publicado Externamente?:</strong> {{ host.publication }}</p>
-                                          <hr>
-                                          <p class="text-justify"><strong>Risco:</strong> {{ host.risk}}</p>
-                                          <hr>
-                                          <p class="text-justify"><strong>Url:</strong> {{ host.url}}</p>
-                                          <hr>
-                                          <p class="text-justify"><strong>Atualizado em:</strong> {{ host.updated_at}}</p>
-                                          <hr>
-                                        </div>
-                                    </div>
-                                    <!-- tabs modal here -->
-                                  </div>
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                                  </div>
+                          
+                            <div class="div br-modal medium" aria-modal="true" role="dialog" aria-labelledby="modalalerttitle">
+                              <div class="br-modal-header">
+                                <div class="modal-title" id="modalalerttitle">Título da modal</div>
+                                <button class="br-button close circle" type="button" data-dismiss="br-modal" aria-label="Fechar"><i class="fas fa-times" aria-hidden="true"></i>
+                                </button>
+                              </div>
+                              <div class="br-modal-body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus commodi laboriosam vel sequi quam deleniti, laborum mollitia blanditiis dolores officiis nulla quos dolorem repellat in nisi alias nesciunt fugit. Similique!</p>
+                              </div>
+                              <div class="br-modal-footer justify-content-end">
+                                <button class="br-button secondary" type="button">Ação 1
+                                </button>
+                                <button class="br-button primary ml-2" type="button">Ação2
+                                </button>
                               </div>
                             </div>
-                        </div>
+
                           {% endfor %}
                       </tbody>
                       <!-- <tfoot>
