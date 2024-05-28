@@ -610,3 +610,8 @@
 .header-servers{
   z-index: auto !important;
 }
+
+#table-servers{
+  margin-right: -19% !important;
+  padding-left: 69px !important;
+}
