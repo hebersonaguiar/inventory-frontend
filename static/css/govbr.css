@@ -608,5 +608,5 @@
 }
 
 .header-servers{
-  z-index: auto;
+  z-index: auto !important;
 }
