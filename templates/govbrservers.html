@@ -238,7 +238,7 @@
                             <td>{{ host.mem_total }}</td>
                             <td>{{ host.mem_free }}</td>
                             <td>{{ host.up_time }}</td>
-                            <td><button type="button" class="btn btn-primary" data-toggle="modal" id="{{ host.hostname }}" data-target="#infosModal_{{host.id}}"><input type="text" style="display:none" id="hostName" placeholder="{{ host.hostname }}" value="{{ host.hostname }}"/>Mais</button></td>                        
+                            <td><button type="button" class="btn btn-primary" data-toggle="modal" id="{{ host.hostname }}" data-target="#infosModal_{{host.id}}">Mais</button></td>                        
                             <td><a class="btn btn-secondary" id="#" href="/edit/{{ host.hostname }}" role="button">Edit</a></td>
                           </tr>
                           <div class="modal fade" id="infosModal_{{host.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
