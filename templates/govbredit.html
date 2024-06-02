@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap"/>
     <!-- Design System de Governo-->
     <link rel="stylesheet" href="../static/css/core.min.css"/>
-    <link rel="stylesheet" href="../static/css/carousel.css"/>
+    <link rel="stylesheet" href="../static/css/input.min.css"/>
     <!-- Design System de Governo Changes-->
     <link rel="stylesheet" href="../static/css/govbr.css"/>
     <!-- Fontawesome-->
@@ -216,9 +216,38 @@
                 
                     
               <div class="row">
-                
-                <h1>teste</h1>
-
+                <!-- {% for hostedit in edit %} -->
+                <div class="col-sm-4 mb-3">
+                  <div class="br-input success">
+                    <label for="input-success">Label / Rótulo</label>
+                    <input id="input-success" type="text" placeholder="Digite somente números" aria-describedby="success"/><span class="feedback success" role="alert" id="success"><i class="fas fa-check-circle" aria-hidden="true"></i>Mensagem de Sucesso</span>
+                  </div>
+                </div>
+                <div class="col-sm-4 mb-3">
+                  <div class="br-input danger">
+                    <label for="input-danger">Label / Rótulo</label>
+                    <input id="input-danger" type="text" placeholder="Digite somente números" aria-describedby="danger"/><span class="feedback danger" role="alert" id="danger"><i class="fas fa-times-circle" aria-hidden="true"></i>Mensagem de Erro</span>
+                  </div>
+                </div>
+                <div class="col-sm-4 mb-3">
+                  <div class="br-input info">
+                    <label for="input-info">Label / Rótulo</label>
+                    <input id="input-info" type="text" placeholder="Digite somente números" aria-describedby="info"/><span class="feedback info" role="alert" id="info"><i class="fas fa-info-circle" aria-hidden="true"></i>Mensagem informativa</span>
+                  </div>
+                </div>
+                <div class="col-sm-4 mb-3">
+                  <div class="br-input warning">
+                    <label for="input-warning">Label / Rótulo</label>
+                    <input id="input-warning" type="text" placeholder="Digite somente números" aria-describedby="warning"/><span class="feedback warning" role="alert" id="warning"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i>Mensagem de alerta</span>
+                  </div>
+                </div>
+                <div class="col-sm-4 mb-3">
+                  <div class="br-input">
+                    <label for="input-disabled">Label / Rótulo</label>
+                    <input id="input-disabled" type="text" placeholder="Digite somente números" aria-describedby="warning-des" disabled="disabled"/><span class="feedback warning" role="alert" id="warning-des"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i>Campo Desabilitado</span>
+                  </div>
+                </div>
+                <!-- {% endfor %} -->
               </div>
                   
   
@@ -324,5 +353,6 @@
     </div>
     <script src="../static/js/core-init.js"></script>
     <script src="../static/js/core.min.js"></script>
+    <script src="../static/js/input.min.js"></script>
   </body>
 </html>
