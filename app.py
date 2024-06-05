@@ -86,6 +86,10 @@ def updateinventory():
         now = datetime.datetime.now()
         updated_at = now.strftime("%Y-%m-%d %H:%M")
 
+        print(hostname)
+        print(datacenter)
+        print(nacionalcjf)
+
         if None not in(hostname,
                     url,
                     environnment,
