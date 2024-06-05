@@ -222,6 +222,7 @@
                     <div class="br-input input-highlight">
                       <label for="hostname">Hostname</label>
                       <input id="hostname" type="text" name="hostname" value="{{ hostedit.hostname }}" placeholder="{{ hostedit.hostname }}" disabled/>
+                      <input type="text" style="display:none" id="hostname-up" name="hostname-up" placeholder="{{ hostedit.hostname }}" value="{{ hostedit.hostname }}"/>
                     </div>
                   <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
@@ -287,8 +288,8 @@
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
                     <div class="br-select">
                       <div class="br-input input-highlight">
-                        <label for="select-simple">Datacenter</label>
-                        <input id="select-simple" type="text" value="{{ hostedit.datacenter }}" placeholder="{{ hostedit.datacenter }}"/>
+                        <label for="datacenter">Datacenter</label>
+                        <input id="datacenter" name="datacenter" type="text" value="{{ hostedit.datacenter }}" placeholder="{{ hostedit.datacenter }}"/>
                         <button class="br-button" type="button" aria-label="Exibir lista" tabindex="-1" data-trigger="data-trigger"><i class="fas fa-angle-down" aria-hidden="true"></i>
                         </button>
                       </div>
@@ -317,8 +318,8 @@
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
                     <div class="br-select">
                       <div class="br-input input-highlight">
-                        <label for="select-simple">Nacional/CJF</label>
-                        <input id="select-simple" type="text" value="{{ hostedit.national_cjf }}" placeholder="{{ hostedit.national_cjf }}"/>
+                        <label for="nacionalcjf">Nacional/CJF</label>
+                        <input id="nacionalcjf" name="nacionalcjf" type="text" value="{{ hostedit.national_cjf }}" placeholder="{{ hostedit.national_cjf }}"/>
                         <button class="br-button" type="button" aria-label="Exibir lista" tabindex="-1" data-trigger="data-trigger"><i class="fas fa-angle-down" aria-hidden="true"></i>
                         </button>
                       </div>
@@ -341,7 +342,7 @@
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
                     <div class="br-textarea input-highlight">
                       <label for="goal">Objetivo</label>
-                      <textarea id="goal" value="{{ hostedit.goal }}" placeholder="{{ hostedit.goal }}"></textarea>
+                      <textarea id="goal" name="goal" value="{{ hostedit.goal }}" placeholder="{{ hostedit.goal }}"></textarea>
                       <div class="text-base mt-1"><span class="characters" aria-live="assertive"><strong>0</strong> caracteres digitados</span></div>
                     </div>
                   <!-- </div> -->
