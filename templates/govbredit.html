@@ -313,12 +313,6 @@
                       <label for="repository">Repositório</label>
                       <input id="repository" type="text" name="repository" value="{{ hostedit.repository }}" placeholder="{{ hostedit.repository }}"/>
                     </div>
-                  </div>
-                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
-                    <div class="br-input input-highlight">
-                      <label for="repository">Repositório</label>
-                      <input id="repository" type="text" name="repository" value="{{ hostedit.repository }}" placeholder="{{ hostedit.repository }}"/>
-                    </div>
                   <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
                     <div class="br-select">
@@ -352,9 +346,10 @@
                     </div>
                   <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                  <div class="p-3">
                     <button onclick="window.location.href='/servers.html';" type="submit" id="submitFormUpdate"  class="br-button primary mr-3" type="button">Atualizar</button>
                     <button type="button" class="br-button secondary mr-3" type="button"><a href="/servers" id="bt-cancel-form">Cancelar</a></button>
-                  <!-- </div> -->
+                  </div>
                 </form>
                 {% endfor %}
               </div>
