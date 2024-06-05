@@ -633,3 +633,12 @@ a {
 .main-view{
   width: 0% !important;
 }
+
+#bt-cancel-form{
+  color: #fff;
+  text-decoration: none;
+}
+
+#bt-cancel-form:hover{
+  color:#fff;
+}

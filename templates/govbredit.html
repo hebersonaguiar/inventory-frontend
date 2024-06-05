@@ -217,140 +217,145 @@
                     
               <div class="row">
                 {% for hostedit in edit %}
-                
-                <div class="col-sm-10 col-lg-8 mb-3">
-                  <div class="br-input input-highlight">
-                    <label for="hostname">Hostname</label>
-                    <input id="hostname" type="text" name="hostname" value="{{ hostedit.hostname }}" placeholder="{{ hostedit.hostname }}" disabled/>
-                  </div>
-                </div>
-                <div class="col-sm-10 col-lg-8 mb-3">
-                  <div class="br-input input-highlight">
-                    <label for="url">Url</label>
-                    <input id="url" type="text" name="url" value="{{ hostedit.url }}" placeholder="{{ hostedit.url }}" />
-                  </div>
-                </div>
-                <div class="col-sm-10 col-lg-8 mb-3">
-                  <div class="br-input input-highlight">
-                    <label for="environnment">Ambiente</label>
-                    <input id="environnment" type="text" name="environnment" value="{{ hostedit.environnment }}" placeholder="{{ hostedit.environnment }}"/>
-                  </div>
-                </div>
-                <div class="col-sm-10 col-lg-8 mb-3">
-                  <div class="br-input input-highlight">
-                    <label for="cluster">Cluster</label>
-                    <input id="cluster" type="text" name="cluster" value="{{ hostedit.cluster }}" placeholder="{{ hostedit.cluster }}"/>
-                  </div>
-                </div>
-                <div class="col-sm-10 col-lg-8 mb-3">
-                  <div class="br-input input-highlight">
-                    <label for="publication">Publicação</label>
-                    <input id="publication" type="text" name="publication" value="{{ hostedit.publication }}" placeholder="{{ hostedit.publication }}"/>
-                  </div>
-                </div>
-                <div class="col-sm-10 col-lg-8 mb-3">
-                  <div class="br-input input-highlight">
-                    <label for="midleware">Middleware</label>
-                    <input id="midleware" type="text" name="midleware" value="{{ hostedit.midleware }}" placeholder="{{ hostedit.midleware }}"/>
-                  </div>
-                </div>
-                <div class="col-sm-10 col-lg-8 mb-3">
-                  <div class="br-input input-highlight">
-                    <label for="framework">Framework</label>
-                    <input id="framework" type="text" name="framework" value="{{ hostedit.framework }}" placeholder="{{ hostedit.framework }}"/>
-                  </div>
-                </div>
-                <div class="col-sm-10 col-lg-8 mb-3">
-                  <div class="br-input input-highlight">
-                    <label for="app_language">Linguagem</label>
-                    <input id="app_language" type="text" name="app_language" value="{{ hostedit.app_language }}" placeholder="{{ hostedit.app_language }}"/>
-                  </div>
-                </div>
-                <div class="col-sm-10 col-lg-8 mb-3">
-                  <div class="br-input input-highlight">
-                    <label for="priority">Prioridade</label>
-                    <input id="priority" type="text" name="priority" value="{{ hostedit.priority }}" placeholder="{{ hostedit.priority }}"/>
-                  </div>
-                </div>
-                <div class="col-sm-10 col-lg-8 mb-3">
-                  <div class="br-input input-highlight">
-                    <label for="risk">Risco</label>
-                    <input id="risk" type="text" name="risk" value="{{ hostedit.risk }}" placeholder="{{ hostedit.risk }}"/>
-                  </div>
-                </div>
-                <div class="col-sm-10 col-lg-8 mb-3">
-                  <div class="br-input input-highlight">
-                    <label for="acronym">Sigla</label>
-                    <input id="acronym" type="text" name="acronym" value="{{ hostedit.acronym }}" placeholder="{{ hostedit.acronym }}"/>
-                  </div>
-                </div>
-                <div class="col-sm-10 col-lg-8 mb-3">
-                  <div class="br-select">
+                <form action="/updateinventory" method="POST">
+                  <div class="col-sm-10 col-lg-8 mb-3">
                     <div class="br-input input-highlight">
-                      <label for="select-simple">Datacenter</label>
-                      <input id="select-simple" type="text" value="{{ hostedit.datacenter }}" placeholder="{{ hostedit.datacenter }}"/>
-                      <button class="br-button" type="button" aria-label="Exibir lista" tabindex="-1" data-trigger="data-trigger"><i class="fas fa-angle-down" aria-hidden="true"></i>
-                      </button>
-                    </div>
-                    <div class="br-list" tabindex="0">
-                      <div class="br-item" tabindex="-1">
-                        <div class="br-radio">
-                          <input id="rb0" type="radio" name="estados-simples" value="Blade"/>
-                          <label for="rb0">Blade</label>
-                        </div>
-                      </div>
-                      <div class="br-item" tabindex="-1">
-                        <div class="br-radio">
-                          <input id="rb1" type="radio" name="estados-simples" value="HCI"/>
-                          <label for="rb1">HCI</label>
-                        </div>
-                      </div>
+                      <label for="hostname">Hostname</label>
+                      <input id="hostname" type="text" name="hostname" value="{{ hostedit.hostname }}" placeholder="{{ hostedit.hostname }}" disabled/>
                     </div>
                   </div>
-                </div>
-                <div class="col-sm-10 col-lg-8 mb-3">
-                  <div class="br-input input-highlight">
-                    <label for="repository">Repositório</label>
-                    <input id="repository" type="text" name="repository" value="{{ hostedit.repository }}" placeholder="{{ hostedit.repository }}"/>
-                  </div>
-                </div>
-                <div class="col-sm-10 col-lg-8 mb-3">
-                  <div class="br-input input-highlight">
-                    <label for="repository">Repositório</label>
-                    <input id="repository" type="text" name="repository" value="{{ hostedit.repository }}" placeholder="{{ hostedit.repository }}"/>
-                  </div>
-                </div>
-                <div class="col-sm-10 col-lg-8 mb-3">
-                  <div class="br-select">
+                  <div class="col-sm-10 col-lg-8 mb-3">
                     <div class="br-input input-highlight">
-                      <label for="select-simple">Nacional/CJF</label>
-                      <input id="select-simple" type="text" value="{{ hostedit.national_cjf }}" placeholder="{{ hostedit.national_cjf }}"/>
-                      <button class="br-button" type="button" aria-label="Exibir lista" tabindex="-1" data-trigger="data-trigger"><i class="fas fa-angle-down" aria-hidden="true"></i>
-                      </button>
+                      <label for="url">Url</label>
+                      <input id="url" type="text" name="url" value="{{ hostedit.url }}" placeholder="{{ hostedit.url }}" />
                     </div>
-                    <div class="br-list" tabindex="0">
-                      <div class="br-item" tabindex="-1">
-                        <div class="br-radio">
-                          <input id="rb0" type="radio" name="estados-simples" value="CJF"/>
-                          <label for="rb0">CJF</label>
-                        </div>
+                  </div>
+                  <div class="col-sm-10 col-lg-8 mb-3">
+                    <div class="br-input input-highlight">
+                      <label for="environnment">Ambiente</label>
+                      <input id="environnment" type="text" name="environnment" value="{{ hostedit.environnment }}" placeholder="{{ hostedit.environnment }}"/>
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-lg-8 mb-3">
+                    <div class="br-input input-highlight">
+                      <label for="cluster">Cluster</label>
+                      <input id="cluster" type="text" name="cluster" value="{{ hostedit.cluster }}" placeholder="{{ hostedit.cluster }}"/>
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-lg-8 mb-3">
+                    <div class="br-input input-highlight">
+                      <label for="publication">Publicação</label>
+                      <input id="publication" type="text" name="publication" value="{{ hostedit.publication }}" placeholder="{{ hostedit.publication }}"/>
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-lg-8 mb-3">
+                    <div class="br-input input-highlight">
+                      <label for="midleware">Middleware</label>
+                      <input id="midleware" type="text" name="midleware" value="{{ hostedit.midleware }}" placeholder="{{ hostedit.midleware }}"/>
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-lg-8 mb-3">
+                    <div class="br-input input-highlight">
+                      <label for="framework">Framework</label>
+                      <input id="framework" type="text" name="framework" value="{{ hostedit.framework }}" placeholder="{{ hostedit.framework }}"/>
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-lg-8 mb-3">
+                    <div class="br-input input-highlight">
+                      <label for="app_language">Linguagem</label>
+                      <input id="app_language" type="text" name="app_language" value="{{ hostedit.app_language }}" placeholder="{{ hostedit.app_language }}"/>
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-lg-8 mb-3">
+                    <div class="br-input input-highlight">
+                      <label for="priority">Prioridade</label>
+                      <input id="priority" type="text" name="priority" value="{{ hostedit.priority }}" placeholder="{{ hostedit.priority }}"/>
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-lg-8 mb-3">
+                    <div class="br-input input-highlight">
+                      <label for="risk">Risco</label>
+                      <input id="risk" type="text" name="risk" value="{{ hostedit.risk }}" placeholder="{{ hostedit.risk }}"/>
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-lg-8 mb-3">
+                    <div class="br-input input-highlight">
+                      <label for="acronym">Sigla</label>
+                      <input id="acronym" type="text" name="acronym" value="{{ hostedit.acronym }}" placeholder="{{ hostedit.acronym }}"/>
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-lg-8 mb-3">
+                    <div class="br-select">
+                      <div class="br-input input-highlight">
+                        <label for="select-simple">Datacenter</label>
+                        <input id="select-simple" type="text" value="{{ hostedit.datacenter }}" placeholder="{{ hostedit.datacenter }}"/>
+                        <button class="br-button" type="button" aria-label="Exibir lista" tabindex="-1" data-trigger="data-trigger"><i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </button>
                       </div>
-                      <div class="br-item" tabindex="-1">
-                        <div class="br-radio">
-                          <input id="rb1" type="radio" name="estados-simples" value="Nacional"/>
-                          <label for="rb1">Nacional</label>
+                      <div class="br-list" tabindex="0">
+                        <div class="br-item" tabindex="-1">
+                          <div class="br-radio">
+                            <input id="rb0" type="radio" name="estados-simples" value="Blade"/>
+                            <label for="rb0">Blade</label>
+                          </div>
+                        </div>
+                        <div class="br-item" tabindex="-1">
+                          <div class="br-radio">
+                            <input id="rb1" type="radio" name="estados-simples" value="HCI"/>
+                            <label for="rb1">HCI</label>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-sm-10 col-lg-8 mb-3">
-                  <div class="br-textarea input-highlight">
-                    <label for="goal">Objetivo</label>
-                    <textarea id="goal" value="{{ hostedit.goal }}" placeholder="{{ hostedit.goal }}"></textarea>
-                    <div class="text-base mt-1"><span class="characters" aria-live="assertive"><strong>0</strong> caracteres digitados</span></div>
+                  <div class="col-sm-10 col-lg-8 mb-3">
+                    <div class="br-input input-highlight">
+                      <label for="repository">Repositório</label>
+                      <input id="repository" type="text" name="repository" value="{{ hostedit.repository }}" placeholder="{{ hostedit.repository }}"/>
+                    </div>
                   </div>
-                </div>
+                  <div class="col-sm-10 col-lg-8 mb-3">
+                    <div class="br-input input-highlight">
+                      <label for="repository">Repositório</label>
+                      <input id="repository" type="text" name="repository" value="{{ hostedit.repository }}" placeholder="{{ hostedit.repository }}"/>
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-lg-8 mb-3">
+                    <div class="br-select">
+                      <div class="br-input input-highlight">
+                        <label for="select-simple">Nacional/CJF</label>
+                        <input id="select-simple" type="text" value="{{ hostedit.national_cjf }}" placeholder="{{ hostedit.national_cjf }}"/>
+                        <button class="br-button" type="button" aria-label="Exibir lista" tabindex="-1" data-trigger="data-trigger"><i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </button>
+                      </div>
+                      <div class="br-list" tabindex="0">
+                        <div class="br-item" tabindex="-1">
+                          <div class="br-radio">
+                            <input id="rb0" type="radio" name="estados-simples" value="CJF"/>
+                            <label for="rb0">CJF</label>
+                          </div>
+                        </div>
+                        <div class="br-item" tabindex="-1">
+                          <div class="br-radio">
+                            <input id="rb1" type="radio" name="estados-simples" value="Nacional"/>
+                            <label for="rb1">Nacional</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-lg-8 mb-3">
+                    <div class="br-textarea input-highlight">
+                      <label for="goal">Objetivo</label>
+                      <textarea id="goal" value="{{ hostedit.goal }}" placeholder="{{ hostedit.goal }}"></textarea>
+                      <div class="text-base mt-1"><span class="characters" aria-live="assertive"><strong>0</strong> caracteres digitados</span></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-lg-8 mb-3">
+                    <button onclick="window.location.href='/servers.html';" type="submit" id="submitFormUpdate"  class="br-button primary mr-3" type="button">Atualizar</button>
+                    <button type="button" class="br-button secondary mr-3" type="button"><a href="/servers" id="bt-cancel-form">Cancelar</a></button>
+                  </div>
+                </form>
                 {% endfor %}
               </div>
                   
