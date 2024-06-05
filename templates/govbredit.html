@@ -316,7 +316,7 @@
                     </div>
                   <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
-                    <div class="br-select">
+                    <!-- <div class="br-select">
                       <div class="br-input input-highlight">
                         <label for="nacionalcjf">Nacional/CJF</label>
                         <input id="nacionalcjf" name="nacionalcjf" type="text" value="{{ hostedit.national_cjf }}" placeholder="{{ hostedit.national_cjf }}"/>
@@ -337,6 +337,14 @@
                           </div>
                         </div>
                       </div>
+                    </div> -->
+                    <div class="br-input input-highlight">
+                      <label for="nacionalcjf">Nacional/CJF</label>
+                      <select class="form-select" id="nacional-cjf" name="nacionalcjf" aria-label="Selecione">
+                        <option selected value="{{ hostedit.national_cjf }}">{{ hostedit.national_cjf }}</option>
+                        <option id="CJF" value="CJF">CJF</option>
+                        <option id="Nacional" value="Nacional">Nacional</option>
+                      </select>
                     </div>
                   <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
