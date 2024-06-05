@@ -68,7 +68,7 @@ def edit(servername):
 @app.route('/updateinventory', methods=['POST'])
 def updateinventory():
     try:
-        hostname = request.form.get('hostname-up')
+        hostname = request.form.get('hostname')
         url = request.form.get('url')
         environnment = request.form.get('environnment')
         cluster = request.form.get('cluster')
@@ -87,8 +87,8 @@ def updateinventory():
         updated_at = now.strftime("%Y-%m-%d %H:%M")
 
         print(hostname)
-        print(datacenter)
-        print(nacionalcjf)
+        print(url)
+        print(environnment)
 
         if None not in(hostname,
                     url,
