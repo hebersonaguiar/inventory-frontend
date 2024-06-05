@@ -218,16 +218,6 @@ hr{
     font-weight: bold;
 }
 
-#bt-cancel-form{
-    color: #fff;
-    text-decoration: none;
-}
-
-#bt-cancel-form:hover{
-    color:#fff;
-}
-
-
 .select,
 #locale {
   width: 100%;
