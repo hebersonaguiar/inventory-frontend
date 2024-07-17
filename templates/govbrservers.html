@@ -234,10 +234,11 @@
                             <td>{{ host.hostname }}</td>
                             <td>{{ host.ip }}</td>
                             <td>{{ host.so }}</td>
-                            <td>{{ host.distribution }}</td>
+                            <!-- <td>{{ host.distribution }}</td> -->
                             <td>{{ host.mem_total }}</td>
                             <td>{{ host.mem_free }}</td>
                             <td>{{ host.up_time }}</td>
+                            <td>{{ host.url }}</td>
                             <td><button type="button" class="btn btn-primary" data-toggle="modal" id="{{ host.hostname }}" data-target="#infosModal_{{host.id}}">Mais</button></td>                        
                             <td><a class="btn btn-secondary" id="#" href="/edit/{{ host.hostname }}" role="button">Edit</a></td>
                           </tr>
@@ -263,27 +264,51 @@
                                      <div class="tab-content" id="myTabContent">
                                         <div class="tab-pane fade show active" id="operational_{{ host.id }}" role="tabpanel" aria-labelledby="operational-tab_{ host.id }">
                                            <hr>
-                                           <p class="text-justify"><strong>Mac Addres:</strong> {{ host.mac_address}}</p>
+                                           <p class="text-justify"><strong>Mac Addres:</strong> {{ host.mac_address }}</p>
                                            <hr>
-                                           <p class="text-justify"><strong>Linguagem:</strong> {{ host.app_language}}</p>
+                                           <p class="text-justify"><strong>Linguagem:</strong> {{ host.app_language }}</p>
                                            <hr>
-                                           <p class="text-justify"><strong>Arquitetura:</strong> {{ host.architecture}}</p>
+                                           <p class="text-justify"><strong>Arquitetura:</strong> {{ host.architecture }}</p>
                                            <hr>
-                                           <p class="text-justify"><strong>Cluster:</strong> {{ host.cluster}}</p>
+                                           <p class="text-justify"><strong>Cluster:</strong> {{ host.cluster }}</p>
                                            <hr>
-                                           <p class="text-justify"><strong>Datacenter:</strong> {{ host.datacenter}}</p>
+                                           <p class="text-justify"><strong>Datacenter:</strong> {{ host.datacenter }}</p>
+                                           <!-- <hr>
+                                           <p class="text-justify"><strong>Ambiente:</strong> {{ host.environnment }}</p>
+                                           <hr> -->
+                                           <p class="text-justify"><strong>Framework:</strong> {{ host.framework }}</p>
                                            <hr>
-                                           <p class="text-justify"><strong>Ambiente:</strong> {{ host.environnment}}</p>
+                                           <p class="text-justify"><strong>Midleware:</strong> {{ host.midleware }}</p>
                                            <hr>
-                                           <p class="text-justify"><strong>Framework:</strong> {{ host.framework}}</p>
+                                           <p class="text-justify"><strong>Plataforma:</strong> {{ host.plataform }}</p>
                                            <hr>
-                                           <p class="text-justify"><strong>Midleware:</strong> {{ host.midleware}}</p>
+                                           <p class="text-justify"><strong>Processador:</strong> {{ host.processor }}</p>
                                            <hr>
-                                           <p class="text-justify"><strong>Plataforma:</strong> {{ host.plataform}}</p>
+                                           <p class="text-justify"><strong>Repositório:</strong> {{ host.repository }}</p>
                                            <hr>
-                                           <p class="text-justify"><strong>Processador:</strong> {{ host.processor}}</p>
+                                           <p class="text-justify"><strong>Escopo:</strong> {{ host.scope }}</p>
                                            <hr>
-                                           <p class="text-justify"><strong>Repositório:</strong> {{ host.repository}}</p>
+                                           <p class="text-justify"><strong>Database Server:</strong> {{ host.db_server }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Database Name:</strong> {{ host.db_name }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Database Schema:</strong> {{ host.db_schema }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Database User:</strong> {{ host.db_user }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Database Type:</strong> {{ host.db_type }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Kubernetes:</strong> {{ host.kubernetes }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Arquitetura:</strong> {{ host.arch_ref }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Monitoramento Zabbix?:</strong> {{ host.monitoring_z }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Situação:</strong> {{ host.situation }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Repositório:</strong> {{ host.repository }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Tipo:</strong> {{ host.type }}</p>
                                            <hr>
                                         </div>
                                         <div class="tab-pane fade" id="bussines_{{ host.id }}" role="tabpanel" aria-labelledby="bussines-tab_{{ host.id }}">
