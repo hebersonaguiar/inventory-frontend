@@ -273,8 +273,8 @@
                                            <p class="text-justify"><strong>Cluster:</strong> {{ host.cluster }}</p>
                                            <hr>
                                            <p class="text-justify"><strong>Datacenter:</strong> {{ host.datacenter }}</p>
-                                           <!-- <hr>
-                                           <p class="text-justify"><strong>Ambiente:</strong> {{ host.environnment }}</p>
+                                           <hr>
+                                           <!-- <p class="text-justify"><strong>Ambiente:</strong> {{ host.environnment }}</p>
                                            <hr> -->
                                            <p class="text-justify"><strong>Framework:</strong> {{ host.framework }}</p>
                                            <hr>
@@ -312,22 +312,50 @@
                                            <hr>
                                         </div>
                                         <div class="tab-pane fade" id="bussines_{{ host.id }}" role="tabpanel" aria-labelledby="bussines-tab_{{ host.id }}">
+                                          <hr>
+                                           <p class="text-justify"><strong>Prioridade</strong> {{ host.priority }}</p>
                                            <hr>
-                                           <p class="text-justify"><strong>Sigla:</strong> {{ host.acronym}}</p>
+                                           <p class="text-justify"><strong>Sigla:</strong> {{ host.acronym }}</p>
                                            <hr>
-                                           <p class="text-justify"><strong>Objetivo:</strong> {{ host.goal}}</p>
+                                           <p class="text-justify"><strong>Nome:</strong> {{ host.name }}</p>
                                            <hr>
-                                           <p class="text-justify"><strong>Nacional/CJF?:</strong> {{ host.national_cjf}}</p>
+                                           <p class="text-justify"><strong>Ações STI:</strong> {{ host.sti_action }}</p>
                                            <hr>
-                                           <p class="text-justify"><strong>Prioridade:</strong> {{ host.priority}}</p>
+                                           <p class="text-justify"><strong>Objetivo:</strong> {{ host.goal }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Nacional/CJF?:</strong> {{ host.national_cjf }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Prioridade:</strong> {{ host.priority }}</p>
                                            <hr>
                                            <p class="text-justify"><strong>Publicado Externamente?:</strong> {{ host.publication }}</p>
                                            <hr>
-                                           <p class="text-justify"><strong>Risco:</strong> {{ host.risk}}</p>
+                                           <p class="text-justify"><strong>Risco:</strong> {{ host.risk }}</p>
                                            <hr>
-                                           <p class="text-justify"><strong>Url:</strong> {{ host.url}}</p>
+                                           <p class="text-justify"><strong>Url:</strong> {{ host.url }}</p>
                                            <hr>
-                                           <p class="text-justify"><strong>Atualizado em:</strong> {{ host.updated_at}}</p>
+                                           <p class="text-justify"><strong>Atualizado em:</strong> {{ host.updated_at }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Permissão:</strong> {{ host.permission }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Autenticação:</strong> {{ host.auth }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Responável pelo Cadastro:</strong> {{ host.responsible_cad }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Responável pelo permissionamento:</strong> {{ host.responsible_permission }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Gerente:</strong> {{ host.manager }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Gerente Suplente:</strong> {{ host.manager_substitute }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Unidade:</strong> {{ host.unit }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Consta na Portaria Gestor?</strong> {{ host.concierge_manager }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Processo SEI</strong> {{ host.sei_processor }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Observation</strong> {{ host.observation }}</p>
+                                           <hr>
+                                           <p class="text-justify"><strong>Objetivo</strong> {{ host.goal }}</p>
                                            <hr>
                                         </div>
                                      </div>
