@@ -234,8 +234,8 @@
                   <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
                     <div class="br-input input-highlight">
-                      <label for="environnment">Ambiente</label>
-                      <input id="environnment" type="text" name="environnment" value="{{ hostedit.environnment }}" placeholder="{{ hostedit.environnment }}"/>
+                      <label for="priority">Prioridade</label>
+                      <input id="priority" type="text" name="priority" value="{{ hostedit.priority }}" placeholder="{{ hostedit.priority }}"/>
                     </div>
                   <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
@@ -245,15 +245,15 @@
                     </div>
                   <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
-                    <div class="br-input input-highlight">
+                    <!-- <div class="br-input input-highlight">
                       <label for="publication">Publicação</label>
                       <input id="publication" type="text" name="publication" value="{{ hostedit.publication }}" placeholder="{{ hostedit.publication }}"/>
-                    </div>
+                    </div> -->
                   <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
                     <div class="br-input input-highlight">
-                      <label for="midleware">Middleware</label>
-                      <input id="midleware" type="text" name="midleware" value="{{ hostedit.midleware }}" placeholder="{{ hostedit.midleware }}"/>
+                      <label for="middleware">Middleware</label>
+                      <input id="middleware" type="text" name="middleware" value="{{ hostedit.middleware }}" placeholder="{{ hostedit.middleware }}"/>
                     </div>
                   <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
@@ -270,20 +270,110 @@
                   <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
                     <div class="br-input input-highlight">
-                      <label for="priority">Prioridade</label>
-                      <input id="priority" type="text" name="priority" value="{{ hostedit.priority }}" placeholder="{{ hostedit.priority }}"/>
+                      <label for="sti_action">Ações STI</label>
+                      <input id="sti_action" type="text" name="sti_action" value="{{ hostedit.sti_action }}" placeholder="{{ hostedit.sti_action }}"/>
                     </div>
                   <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
-                    <div class="br-input input-highlight">
+                    <!-- <div class="br-input input-highlight">
+                      <label for="priority">Prioridade</label>
+                      <input id="priority" type="text" name="priority" value="{{ hostedit.priority }}" placeholder="{{ hostedit.priority }}"/>
+                    </div> -->
+                  <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                    <!-- <div class="br-input input-highlight">
                       <label for="risk">Risco</label>
                       <input id="risk" type="text" name="risk" value="{{ hostedit.risk }}" placeholder="{{ hostedit.risk }}"/>
-                    </div>
+                    </div> -->
                   <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
                     <div class="br-input input-highlight">
                       <label for="acronym">Sigla</label>
                       <input id="acronym" type="text" name="acronym" value="{{ hostedit.acronym }}" placeholder="{{ hostedit.acronym }}"/>
+                    </div>
+                  <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                    <div class="br-input input-highlight">
+                      <label for="scope">Escopo</label>
+                      <input id="scope" type="text" name="scope" value="{{ hostedit.scope }}" placeholder="{{ hostedit.scope }}"/>
+                    </div>
+                  <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                    <div class="br-input input-highlight">
+                      <label for="scope">Escopo</label>
+                      <input id="scope" type="text" name="scope" value="{{ hostedit.scope }}" placeholder="{{ hostedit.scope }}"/>
+                    </div>
+                  <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                    <div class="br-input input-highlight">
+                      <label for="db_name">Database Name</label>
+                      <input id="db_name" type="text" name="db_name" value="{{ hostedit.db_name }}" placeholder="{{ hostedit.db_name }}"/>
+                    </div>
+                  <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                    <div class="br-input input-highlight">
+                      <label for="db_schema">Database Schema</label>
+                      <input id="db_schema" type="text" name="db_schema" value="{{ hostedit.db_schema }}" placeholder="{{ hostedit.db_schema }}"/>
+                    </div>
+                  <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                    <div class="br-input input-highlight">
+                      <label for="db_server">Database Server</label>
+                      <input id="db_server" type="text" name="db_server" value="{{ hostedit.db_server }}" placeholder="{{ hostedit.db_server }}"/>
+                    </div>
+                  <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                    <div class="br-input input-highlight">
+                      <label for="db_type">Database Type</label>
+                      <input id="db_type" type="text" name="db_type" value="{{ hostedit.db_type }}" placeholder="{{ hostedit.db_type }}"/>
+                    </div>
+                  <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                    <div class="br-input input-highlight">
+                      <label for="db_user">Database User</label>
+                      <input id="db_user" type="text" name="db_user" value="{{ hostedit.db_user }}" placeholder="{{ hostedit.db_user }}"/>
+                    </div>
+                  <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                    <div class="br-input input-highlight">
+                      <label for="kubernetes">Kubernetes?</label>
+                      <input id="kubernetes" type="text" name="kubernetes" value="{{ hostedit.kubernetes }}" placeholder="{{ hostedit.kubernetes }}"/>
+                    </div>
+                  <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                    <div class="br-input input-highlight">
+                      <label for="monitoring_z">Monitoramento Zabbix?</label>
+                      <input id="monitoring_z" type="text" name="monitoring_z" value="{{ hostedit.monitoring_z }}" placeholder="{{ hostedit.monitoring_z }}"/>
+                    </div>
+                  <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                    <div class="br-input input-highlight">
+                      <label for="arch_ref">Arquitetura#FAQ</label>
+                      <input id="arch_ref" type="text" name="arch_ref" value="{{ hostedit.arch_ref }}" placeholder="{{ hostedit.arch_ref }}"/>
+                    </div>
+                  <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                    <div class="br-input input-highlight">
+                      <label for="situation">Situação</label>
+                      <input id="situation" type="text" name="situation" value="{{ hostedit.situation }}" placeholder="{{ hostedit.situation }}"/>
+                    </div>
+                  <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                    <div class="br-input input-highlight">
+                      <label for="type">Tipo</label>
+                      <input id="type" type="text" name="type" value="{{ hostedit.type }}" placeholder="{{ hostedit.type }}"/>
+                    </div>
+                  <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                    <div class="br-input input-highlight">
+                      <label for="unit">Unidade</label>
+                      <input id="unit" unit="text" name="unit" value="{{ hostedit.unit }}" placeholder="{{ hostedit.unit }}"/>
+                    </div>
+                  <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                    <div class="br-input input-highlight">
+                      <label for="name">Nome</label>
+                      <input id="name" name="text" name="name" value="{{ hostedit.name }}" placeholder="{{ hostedit.name }}"/>
                     </div>
                   <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
@@ -298,14 +388,32 @@
                       <div class="br-list" tabindex="0">
                         <div class="br-item" tabindex="-1">
                           <div class="br-radio">
-                            <input id="blade" type="radio" name="datacenter" value="Blade"/>
-                            <label for="blade">Blade</label>
+                            <input id="Corporativo" type="radio" name="datacenter" value="Corporativo"/>
+                            <label for="Corporativo">Corporativo</label>
                           </div>
                         </div>
                         <div class="br-item" tabindex="-1">
                           <div class="br-radio">
-                            <input id="hci" type="radio" name="datacenter" value="HCI"/>
-                            <label for="hci">HCI</label>
+                            <input id="Corporativo/Nujufe" type="radio" name="datacenter" value="Corporativo/Nujufe"/>
+                            <label for="Corporativo/Nujufe">Corporativo/Nujufe</label>
+                          </div>
+                        </div>
+                        <div class="br-item" tabindex="-1">
+                          <div class="br-radio">
+                            <input id="Exteno" type="radio" name="datacenter" value="Exteno"/>
+                            <label for="Exteno">Exteno</label>
+                          </div>
+                        </div>
+                        <div class="br-item" tabindex="-1">
+                          <div class="br-radio">
+                            <input id="Nujufe" type="radio" name="datacenter" value="Nujufe"/>
+                            <label for="Nujufe">Nujufe</label>
+                          </div>
+                        </div>
+                        <div class="br-item" tabindex="-1">
+                          <div class="br-radio">
+                            <input id="Office365" type="radio" name="datacenter" value="Office365"/>
+                            <label for="Office365">Office365</label>
                           </div>
                         </div>
                       </div>
