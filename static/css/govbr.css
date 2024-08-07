@@ -638,7 +638,7 @@ a {
   width: 1250px;
 }
 
-table {
+table,#table-hosts-list_wrapper {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
