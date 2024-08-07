@@ -647,6 +647,6 @@ table,#table-hosts-list_wrapper {
 
 th, td {
   text-align: left;
-  padding: 8px;
+  /* padding: 8px; */
   padding-right: 0px;
 }
