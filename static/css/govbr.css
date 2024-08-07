@@ -612,7 +612,7 @@
 }
 
 #table-servers{
-  margin-right: -23% !important;
+  /* margin-right: -23% !important; */
   padding-left: 54px !important;
 }
 
@@ -636,4 +636,16 @@ a {
 
 #form-edit{
   width: 1250px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
 }
