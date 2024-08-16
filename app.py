@@ -169,7 +169,7 @@ def updateinventory():
 
         print("Environment: ", environment)
 
-        if None not in(hostname):
+        if hostname.strip() != "":
              update_inventory = requests.put('http://inventory:5000/v1/updateiventory/{}'.format(hostname), data=json.dumps({
                   'cluster': cluster,
                   'url': url,
