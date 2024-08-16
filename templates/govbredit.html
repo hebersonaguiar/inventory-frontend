@@ -299,10 +299,10 @@
                     </div>
                   <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
-                    <div class="br-input input-highlight">
+                    <!-- <div class="br-input input-highlight">
                       <label for="scope">Escopo</label>
                       <input id="scope" type="text" name="scope" value="{{ hostedit.scope }}" placeholder="{{ hostedit.scope }}"/>
-                    </div>
+                    </div> -->
                   <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
                     <div class="br-input input-highlight">
@@ -367,13 +367,13 @@
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
                     <div class="br-input input-highlight">
                       <label for="unit">Unidade</label>
-                      <input id="unit" unit="text" name="unit" value="{{ hostedit.unit }}" placeholder="{{ hostedit.unit }}"/>
+                      <input id="unit" type="text" name="unit" value="{{ hostedit.unit }}" placeholder="{{ hostedit.unit }}"/>
                     </div>
                   <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
                     <div class="br-input input-highlight">
                       <label for="name">Nome</label>
-                      <input id="name" name="text" name="name" value="{{ hostedit.name }}" placeholder="{{ hostedit.name }}"/>
+                      <input id="name" type="text" name="name" value="{{ hostedit.name }}" placeholder="{{ hostedit.name }}"/>
                     </div>
                   <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
@@ -449,7 +449,85 @@
                         </div>
                       </div>
                     </div>
+                  <!-- </div> -->                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                    <div class="br-select">
+                      <div class="br-input input-highlight">
+                        <label for="backup">Backup?</label>
+                        <input id="backup" name="backup" type="text" value="{{ hostedit.backup }}" placeholder="{{ hostedit.backup }}" onchange="getAndPutValue()"/>
+                        <input id="backup-hidden" name="backup-hidden" style="display: none;" type="text" value="{{ hostedit.backup }}" placeholder="{{ hostedit.backup }}"/>
+                        <button class="br-button" type="button" aria-label="Exibir lista" tabindex="-1" data-trigger="data-trigger"><i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </button>
+                      </div>
+                      <div class="br-list" tabindex="0">
+                        <div class="br-item" tabindex="-1">
+                          <div class="br-radio">
+                            <input id="sim" type="radio" name="estados-simples" value="Sim"/>
+                            <label for="sim">Sim</label>
+                          </div>
+                        </div>
+                        <div class="br-item" tabindex="-1">
+                          <div class="br-radio">
+                            <input id="Não" type="radio" name="estados-simples" value="Não"/>
+                            <label for="Não">Não</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                  <div class="br-input input-highlight">
+                    <label for="auth">Auth</label>
+                    <input id="auth" type="text" name="auth" value="{{ hostedit.auth }}" placeholder="{{ hostedit.auth }}"/>
+                  </div>
+                <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                  <div class="br-input input-highlight">
+                    <label for="permission">Permissão</label>
+                    <input id="permission" type="text" name="permission" value="{{ hostedit.permission }}" placeholder="{{ hostedit.permission }}"/>
+                  </div>
+                <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                  <div class="br-input input-highlight">
+                    <label for="responsible_cad">Responsável pelo Cadastro</label>
+                    <input id="responsible_cad" type="text" name="responsible_cad" value="{{ hostedit.responsible_cad }}" placeholder="{{ hostedit.responsible_cad }}"/>
+                  </div>
+                <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                  <div class="br-input input-highlight">
+                    <label for="responsible_permission">Responsável pelo Permissionamento</label>
+                    <input id="responsible_permission" type="text" name="responsible_permission" value="{{ hostedit.responsible_permission }}" placeholder="{{ hostedit.responsible_permission }}"/>
+                  </div>
+                <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                  <div class="br-input input-highlight">
+                    <label for="manager">Gerente</label>
+                    <input id="manager" type="text" name="manager" value="{{ hostedit.manager }}" placeholder="{{ hostedit.manager }}"/>
+                  </div>
+                <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                  <div class="br-input input-highlight">
+                    <label for="manager_substitute">Gerente Subistituto</label>
+                    <input id="manager_substitute" type="text" name="manager_substitute" value="{{ hostedit.manager_substitute }}" placeholder="{{ hostedit.manager_substitute }}"/>
+                  </div>
+                <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                  <div class="br-input input-highlight">
+                    <label for="concierge_manager">Gerente Portaria</label>
+                    <input id="concierge_manager" type="text" name="concierge_manager" value="{{ hostedit.concierge_manager }}" placeholder="{{ hostedit.concierge_manager }}"/>
+                  </div>
+                <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                  <div class="br-input input-highlight">
+                    <label for="sei_processor">Processo SEI</label>
+                    <input id="sei_processor" type="text" name="sei_processor" value="{{ hostedit.sei_processor }}" placeholder="{{ hostedit.sei_processor }}"/>
+                  </div>
+                <!-- </div> -->
+                  <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
+                  <div class="br-input input-highlight">
+                    <label for="observation">Observação</label>
+                    <input id="observation" type="text" name="observation" value="{{ hostedit.observation }}" placeholder="{{ hostedit.observation }}"/>
+                  </div>
+                <!-- </div> -->
                   <!-- <div class="col-sm-10 col-lg-8 mb-3"> -->
                     <div class="br-textarea input-highlight">
                       <label for="goal">Objetivo</label>
