@@ -1,6 +1,11 @@
 import streamlit as st
 import requests
 import os
+import pandas as pd
+from dotenv import load_dotenv
+
+# Carrega variáveis de ambiente do .env
+load_dotenv()
 
 API_URL = os.getenv("API_URL") # <-- PASSAR URL VIA .env
 
@@ -10,11 +15,16 @@ choice = st.sidebar.selectbox("Menu",menu)
 if choice == "Listar Hosts":
     st.subheader("Lista de Hosts")
     response = requests.get(f"{API_URL}/api/v1/inventory")
-    print(response.status_code)
-    if response.status_code == 200 or response.status_code == 201:
+    if response.status_code in (200, 201):
         hosts = response.json()
-        for host in hosts:
-            st.write(f"**{host['hostname']}** - {host['ipv4']}")
+        if not hosts:
+            st.info("Nenhum host encontrado")
+        else:
+            dataFrame = pd.DataFrame(hosts)
+            dataFrame = dataFrame.sort_values(by="hostname")
+            st.dataframe(dataFrame, use_container_width=True)
+            # for host in hosts:
+            #     st.write(f"**{host['hostname']}** - {host['ipv4']}")
     else:
         st.error("Erro ao buscar hosts")
 
