@@ -9,7 +9,7 @@ choice = st.sidebar.selectbox("Menu",menu)
 
 if choice == "Listar Hosts":
     st.subheader("Lista de Hosts")
-    response = requests.get(f"{API_URL}/hosts") # <-- TROCAR PARA A API CORRETA
+    response = requests.get(f"{API_URL}/api/v1/inventory") 
     if response.status_code == 200:
         hosts = response.json()
         for host in hosts:
@@ -28,7 +28,7 @@ elif choice == "Editar Host":
             so = st.text_input("SO", host.get("so",""))
             ## ADICIONAR O RESTANTE DOS PARAMETROS
             if st.button("Salvar"):
-                update_response = requests.put(f"{API_URL}/hosts/{hostname}", json={
+                update_response = requests.post(f"{API_URL}/api/v1/inventory/{hostname}", json={
                     "ipv4": ipv4,
                     "so": so
                     ## ADICIONAR O RESTANTE DOS PARAMETROS
