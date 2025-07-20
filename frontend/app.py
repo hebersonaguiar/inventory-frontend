@@ -9,7 +9,8 @@ choice = st.sidebar.selectbox("Menu",menu)
 
 if choice == "Listar Hosts":
     st.subheader("Lista de Hosts")
-    response = requests.get(f"{API_URL}/api/v1/inventory") 
+    response = requests.get(f"{API_URL}/api/v1/inventory")
+    print(response.status_code)
     if response.status_code == 200:
         hosts = response.json()
         for host in hosts:
