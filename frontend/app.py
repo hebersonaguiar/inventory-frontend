@@ -9,6 +9,13 @@ load_dotenv()
 
 API_URL = os.getenv("API_URL") # <-- PASSAR URL VIA .env
 
+st.set_page_config(
+    page_title="Dashboard Inventory",
+    page_icon="🖥️",
+    layout="wide",  # 👈 permite usar largura total
+    initial_sidebar_state="expanded",
+)
+
 menu = ["Listar Hosts", "Editar Host"]
 choice = st.sidebar.selectbox("Menu",menu)
 
