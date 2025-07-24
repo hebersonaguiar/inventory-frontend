@@ -35,6 +35,7 @@ if choice == "Listar Hosts":
             
             # Ordena as colunas
             ordered_columns = ["id","hostname","ipv4","distribution","so","up_time","mem_free","mem_total","mac_address","processor","created_at","updated_at","notes","app_language","app_system","env","is_internal","location","midleware","url"]
+            dataFrame = dataFrame[ordered_columns]
 
             # Mostra tabela interativa
             st.dataframe(dataFrame, use_container_width=True)
