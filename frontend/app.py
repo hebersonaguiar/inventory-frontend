@@ -61,7 +61,7 @@ elif choice == "Editar Host":
             # Busca dados completos de host selecionado
             host_data = next(host for host in hosts if host['hostname'] == selected_host)
 
-            st.write("Edite os campos abaixo:")
+            st.markdown("**Edite os campos abaixo**")
 
             # Cria inputs para os campos editáveis
             # ipv4 = st.text_input("IPv4", value=host_data.get("ipv4", ""), disabled=True)
