@@ -73,7 +73,7 @@ elif choice == "Editar Host":
 
             with col1:
     
-                st.markdown("#####IPv4")
+                st.markdown("##### IPv4")
                 st.code(host_data.get("ipv4", ""))
 
                 st.markdown("**Distribuição**")
