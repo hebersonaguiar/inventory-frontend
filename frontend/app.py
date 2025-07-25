@@ -56,7 +56,7 @@ elif choice == "Editar Host":
         if not hostnames:
             st.info("Nenhum host para editar.")
         else:
-            selected_host = st.selecbox("Selecione o Host para editar", hostnames)
+            selected_host = st.selectbox("Selecione o Host para editar", hostnames)
 
             # Busca dados completos de host selecionado
             host_data = next(host for host in hosts if host['hostnames'] == selected_host)
