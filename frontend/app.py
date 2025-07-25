@@ -56,7 +56,8 @@ elif choice == "Editar Host":
         if not hostnames:
             st.info("Nenhum host para editar.")
         else:
-            selected_host = st.selectbox("Selecione o Host para editar", hostnames)
+            st.markdown("**Selecione o host para editar**")
+            selected_host = st.selectbox("", hostnames)
 
             # Busca dados completos de host selecionado
             host_data = next(host for host in hosts if host['hostname'] == selected_host)
@@ -66,32 +67,38 @@ elif choice == "Editar Host":
             # Cria inputs para os campos editáveis
             # ipv4 = st.text_input("IPv4", value=host_data.get("ipv4", ""), disabled=True)
             # st.markdown(f"**IPv4:** {host_data.get('ipv4', '')}")
-            st.markdown("**IPv4**")
-            st.code(host_data.get("ipv4", ""))
 
-            st.markdown("**Distribuição**")
-            st.code(host_data.get("distribution", ""))
+            # Criar colunas para exibição lado a lado
+            col1, col2 = st.columns(2)
 
-            st.markdown("**Sistema Operacional**")
-            st.code(host_data.get("so", ""))
+            with col1:
+    
+                st.markdown("#####IPv4")
+                st.code(host_data.get("ipv4", ""))
 
-            st.markdown("**Uptime**")
-            st.code(host_data.get("up_time", ""))
+                st.markdown("**Distribuição**")
+                st.code(host_data.get("distribution", ""), language="")
 
-            st.markdown("**Memória Livre**")
-            st.code(host_data.get("mem_free", ""))
+                st.markdown("**Sistema Operacional**")
+                st.code(host_data.get("so", ""), language="")
 
-            st.markdown("**Memória Total**")
-            st.code(host_data.get("mem_total", ""))
+                st.markdown("**Uptime**")
+                st.code(host_data.get("up_time", ""))
 
-            st.markdown("**MAC Address**")
-            st.code(host_data.get("mac_address", ""))
+                st.markdown("**Memória Livre**")
+                st.code(host_data.get("mem_free", ""))
 
-            st.markdown("**Architecture:**")
-            st.code(host_data.get("arch", ""))
+                st.markdown("**Memória Total**")
+                st.code(host_data.get("mem_total", ""))
 
-            st.markdown("**Processador:**")
-            st.code(host_data.get("processor", ""))
+                st.markdown("**MAC Address**")
+                st.code(host_data.get("mac_address", ""))
+
+                st.markdown("**Arquitetura**")
+                st.code(host_data.get("arch", ""))
+
+                st.markdown("**Processador**")
+                st.code(host_data.get("processor", ""), language="")
             
             # distribution = st.text_input("Distribuição", value=host_data.get("distribution", ""), disabled=True)
             # so = st.text_input("Sistema Operacional", value=host_data.get("so", ""), disabled=True)
@@ -101,14 +108,17 @@ elif choice == "Editar Host":
             # mac_address = st.text_input("MAC Address", value=host_data.get("mac_address", ""), disabled=True)
             # arch = st.text_input("Architecture", value=host_data.get("arch", ""), disabled=True)
             # processor = st.text_input("Processador", value=host_data.get("processor", ""), disabled=True)
-            url = st.text_input("URL", value=host_data.get("url", ""))
-            notes = st.text_input("Descrição", value=host_data.get("notes", ""))
-            app_language = st.text_input("Linguagem App", value=host_data.get("app_language", ""))
-            app_system = st.text_input("Sistema App", value=host_data.get("app_system", ""))
-            env = st.text_input("Ambiente", value=host_data.get("env", ""))
-            is_internal = st.text_input("Interno?", value=host_data.get("is_internal", ""))
-            location = st.text_input("Local", value=host_data.get("location", ""))
-            midleware = st.text_input("Midlleware", value=host_data.get("midleware", ""))
+            with col2:
+                url = st.text_input("URL", value=host_data.get("url", ""))
+                # notes = st.text_input("Descrição", value=host_data.get("notes", ""))
+                app_language = st.text_input("Linguagem App", value=host_data.get("app_language", ""))
+                app_system = st.text_input("Sistema App", value=host_data.get("app_system", ""))
+                env = st.text_input("Ambiente", value=host_data.get("env", ""))
+                is_internal = st.text_input("Interno?", value=host_data.get("is_internal", ""))
+                location = st.text_input("Local", value=host_data.get("location", ""))
+                midleware = st.text_input("Midlleware", value=host_data.get("midleware", ""))
+                st.markdown("##### Observações")
+                st.text_area("Observações", host_data.get("notes", ""), height=100)
 
             if st.button("Salvar alterações"):
                 payload = {
