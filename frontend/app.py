@@ -59,7 +59,7 @@ elif choice == "Editar Host":
             selected_host = st.selectbox("Selecione o Host para editar", hostnames)
 
             # Busca dados completos de host selecionado
-            host_data = next(host for host in hosts if host['hostnames'] == selected_host)
+            host_data = next(host for host in hosts if host['hostname'] == selected_host)
 
             st.write("Edite os campos abaixo:")
 
