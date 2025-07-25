@@ -64,17 +64,43 @@ elif choice == "Editar Host":
             st.write("Edite os campos abaixo:")
 
             # Cria inputs para os campos editáveis
-            ipv4 = st.text_input("IPv4", value=host_data.get("ipv4", ""), disabled=True)
-            st.markdown(f"**IPv4:** {host_data.get('ipv4', '')}")
+            # ipv4 = st.text_input("IPv4", value=host_data.get("ipv4", ""), disabled=True)
+            # st.markdown(f"**IPv4:** {host_data.get('ipv4', '')}")
+            st.markdown("**IPv4**")
             st.code(host_data.get("ipv4", ""))
-            distribution = st.text_input("Distribuição", value=host_data.get("distribution", ""), disabled=True)
-            so = st.text_input("Sistema Operacional", value=host_data.get("so", ""), disabled=True)
-            up_time = st.text_input("Uptime", value=host_data.get("up_time", ""), disabled=True)
-            mem_free = st.text_input("Memória Livre", value=host_data.get("mem_free", ""), disabled=True)
-            mem_total = st.text_input("Memória Total", value=host_data.get("mem_total", ""), disabled=True)
-            mac_address = st.text_input("MAC Address", value=host_data.get("mac_address", ""), disabled=True)
-            arch = st.text_input("Architecture", value=host_data.get("arch", ""), disabled=True)
-            processor = st.text_input("Processor", value=host_data.get("processor", ""), disabled=True)
+
+            st.markdown("**Distribuição**")
+            st.code(host_data.get("distribution", ""))
+
+            st.markdown("**Sistema Operacional**")
+            st.code(host_data.get("so", ""))
+
+            st.markdown("**Uptime**")
+            st.code(host_data.get("up_time", ""))
+
+            st.markdown("**Memória Livre**")
+            st.code(host_data.get("mem_free", ""))
+
+            st.markdown("**Memória Total**")
+            st.code(host_data.get("mem_total", ""))
+
+            st.markdown("**MAC Address**")
+            st.code(host_data.get("mac_address", ""))
+
+            st.markdown("**Architecture:**")
+            st.code(host_data.get("arch", ""))
+
+            st.markdown("**Processador:**")
+            st.code(host_data.get("processor", ""))
+            
+            # distribution = st.text_input("Distribuição", value=host_data.get("distribution", ""), disabled=True)
+            # so = st.text_input("Sistema Operacional", value=host_data.get("so", ""), disabled=True)
+            # up_time = st.text_input("Uptime", value=host_data.get("up_time", ""), disabled=True)
+            # mem_free = st.text_input("Memória Livre", value=host_data.get("mem_free", ""), disabled=True)
+            # mem_total = st.text_input("Memória Total", value=host_data.get("mem_total", ""), disabled=True)
+            # mac_address = st.text_input("MAC Address", value=host_data.get("mac_address", ""), disabled=True)
+            # arch = st.text_input("Architecture", value=host_data.get("arch", ""), disabled=True)
+            # processor = st.text_input("Processador", value=host_data.get("processor", ""), disabled=True)
             url = st.text_input("URL", value=host_data.get("url", ""))
             notes = st.text_input("Descrição", value=host_data.get("notes", ""))
             app_language = st.text_input("Linguagem App", value=host_data.get("app_language", ""))
