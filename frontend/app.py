@@ -34,7 +34,7 @@ if choice == "Listar Hosts":
             # dataFrame = dataFrame.sort_values(by="hostname")
             
             # Ordena as colunas
-            ordered_columns = ["id","hostname","ipv4","distribution","so","up_time","mem_free","mem_total","mac_address","processor","created_at","updated_at","notes","app_language","app_system","env","is_internal","location","midleware","url"]
+            ordered_columns = ["hostname","ipv4","distribution","so","up_time","mem_free","mem_total","mac_address","processor","created_at","updated_at","notes","app_language","app_system","env","is_internal","location","midleware","url"]
             dataFrame = dataFrame[ordered_columns]
 
             # Mostra tabela interativa
