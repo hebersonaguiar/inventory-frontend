@@ -120,7 +120,7 @@ elif choice == "Editar Host":
                     "midleware": midleware
                 }
 
-                update_response = requests.post(f"{API_URL}/api/v1/inventory", json=payload)
+                update_response = requests.put(f"{API_URL}/api/v1/inventory", json=payload)
 
                 if update_response.status_code in (200, 201):
                     st.success("Host atualizado com sucesso!")
