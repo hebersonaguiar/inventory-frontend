@@ -28,7 +28,7 @@ def login_page():
             st.session_state.logged_in = True
             st.session_state.username = username
             st.success("Login realizado com sucesso!")
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.error("Usuário ou senha inválidos!")
 
@@ -178,7 +178,7 @@ def logout():
     if st.sidebar.button("Sair"):
         st.session_state.logged_in = False
         st.session_state.username = None
-        st.experimental_rerun()
+        st.rerun()
 
 def run():
     if "logged_in" not in st.session_state:
