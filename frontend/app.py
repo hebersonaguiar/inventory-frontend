@@ -64,10 +64,6 @@ elif choice == "Editar Host":
 
             st.markdown("**Edite os campos abaixo**")
 
-            # Cria inputs para os campos editáveis
-            # ipv4 = st.text_input("IPv4", value=host_data.get("ipv4", ""), disabled=True)
-            # st.markdown(f"**IPv4:** {host_data.get('ipv4', '')}")
-
             # Criar colunas para exibição lado a lado
             col1, col2 = st.columns(2)
 
@@ -100,17 +96,8 @@ elif choice == "Editar Host":
                 st.markdown("**Processador**")
                 st.code(host_data.get("processor", ""), language="")
             
-            # distribution = st.text_input("Distribuição", value=host_data.get("distribution", ""), disabled=True)
-            # so = st.text_input("Sistema Operacional", value=host_data.get("so", ""), disabled=True)
-            # up_time = st.text_input("Uptime", value=host_data.get("up_time", ""), disabled=True)
-            # mem_free = st.text_input("Memória Livre", value=host_data.get("mem_free", ""), disabled=True)
-            # mem_total = st.text_input("Memória Total", value=host_data.get("mem_total", ""), disabled=True)
-            # mac_address = st.text_input("MAC Address", value=host_data.get("mac_address", ""), disabled=True)
-            # arch = st.text_input("Architecture", value=host_data.get("arch", ""), disabled=True)
-            # processor = st.text_input("Processador", value=host_data.get("processor", ""), disabled=True)
             with col2:
                 url = st.text_input("URL", value=host_data.get("url", ""))
-                # notes = st.text_input("Descrição", value=host_data.get("notes", ""))
                 app_language = st.text_input("Linguagem App", value=host_data.get("app_language", ""))
                 app_system = st.text_input("Sistema App", value=host_data.get("app_system", ""))
                 env = st.text_input("Ambiente", value=host_data.get("env", ""))
@@ -118,20 +105,11 @@ elif choice == "Editar Host":
                 location = st.text_input("Local", value=host_data.get("location", ""))
                 midleware = st.text_input("Midlleware", value=host_data.get("midleware", ""))
                 st.markdown("##### Observações")
-                st.text_area("Observações", host_data.get("notes", ""), height=100)
+                notes = st.text_area("Observações", host_data.get("notes", ""), height=100)
 
             if st.button("Salvar alterações"):
                 payload = {
                     "hostname": selected_host,
-                    "ipv4": ipv4,
-                    "arch": arch,
-                    "processor": processor,
-                    "so": so,
-                    "distribution": distribution,
-                    "mem_total": mem_total,
-                    "mem_free": mem_free,
-                    "up_time": up_time,
-                    "mac_address": mac_address,
                     "url": url,
                     "notes": notes,
                     "app_language": app_language,
@@ -150,24 +128,3 @@ elif choice == "Editar Host":
                     st.error(f"Erro ao atualizar host: {update_response.text}")
     else:
         st.error("Erro ao carregar lista de hosts para edição.")
-
-    # hostname = st.text_input("Hostname para editar")
-    # if st.button("Carregar"):
-    #     response = requests.post(f"{API_URL}/hosts/hostname", json={"hostname": hostname})
-    #     if response.status_code == 200 or response.status_code == 201:
-    #         host = response.json()
-    #         ipv4 = st.text_input("IPv4", host.get("ipv4",""))
-    #         so = st.text_input("SO", host.get("so",""))
-    #         ## ADICIONAR O RESTANTE DOS PARAMETROS
-    #         if st.button("Salvar"):
-    #             update_response = requests.post(f"{API_URL}/api/v1/inventory/{hostname}", json={
-    #                 "ipv4": ipv4,
-    #                 "so": so
-    #                 ## ADICIONAR O RESTANTE DOS PARAMETROS
-    #             })
-    #             if update_response.status_code == 200 or update_response.status_code == 201:
-    #                 st.success("Host atualizado com sucesso!!")
-    #             else:
-    #                 st.error("Erro ao atualizar host")
-    #     else:
-    #         st.error("Host não encontrado")
