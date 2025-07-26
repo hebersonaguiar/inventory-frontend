@@ -130,7 +130,7 @@ elif choice == "Editar Host":
                 location = st.selectbox(
                     "Local",
                     options=local,
-                    index=local.index(host_data.get("location", "On Premise")) if host_data.get("location") in local else local.index("Interno")
+                    index=local.index(host_data.get("location", "On Premise")) if host_data.get("location") in local else local.index("On Premise")
                 )
                 midleware = st.text_input("Midlleware", value=host_data.get("midleware", ""))
                 st.markdown("##### Observações")
