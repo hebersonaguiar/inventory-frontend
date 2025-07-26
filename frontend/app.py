@@ -105,7 +105,7 @@ elif choice == "Editar Host":
                 location = st.text_input("Local", value=host_data.get("location", ""))
                 midleware = st.text_input("Midlleware", value=host_data.get("midleware", ""))
                 st.markdown("##### Observações")
-                notes = st.text_area("Observações", host_data.get("notes", ""), height=100)
+                notes = st.text_area(" ", host_data.get("notes", ""), height=100)
 
             if st.button("Salvar alterações"):
                 payload = {
