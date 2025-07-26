@@ -98,11 +98,40 @@ elif choice == "Editar Host":
             
             with col2:
                 url = st.text_input("URL", value=host_data.get("url", ""))
-                app_language = st.text_input("Linguagem App", value=host_data.get("app_language", ""))
+
+                # app_language = st.text_input("Linguagem App", value=host_data.get("app_language", ""))
+                linguagens = ["Python", "Node.js", "Java", "Go", "PHP", "Ruby", "C#", "Outros"]
+                app_language = st.selectbox(
+                    "Linguagem App",
+                    options=linguagens,
+                    index=linguagens.index(host_data.get("app_language", "Python")) if host_data.get("app_language") in linguagens else linguagens.index("Python")
+                )
+
                 app_system = st.text_input("Sistema App", value=host_data.get("app_system", ""))
-                env = st.text_input("Ambiente", value=host_data.get("env", ""))
-                is_internal = st.text_input("Interno?", value=host_data.get("is_internal", ""))
-                location = st.text_input("Local", value=host_data.get("location", ""))
+                
+                # env = st.text_input("Ambiente", value=host_data.get("env", ""))
+                environments = ["Produção", "Homologação", "Desenvolvimento", "Staging"]
+                env = st.selectbox(
+                    "Ambiente",
+                    options=environments,
+                    index=environments.index(host_data.get("env", "Produção")) if host_data.get("env") in environments else environments.index("Produção")
+                )
+
+                # is_internal = st.text_input("Interno?", value=host_data.get("is_internal", ""))
+                publication = ["Interno", "Externo"]
+                is_internal = st.selectbox(
+                    "Interno?",
+                    options=publication,
+                    index=publication.index(host_data.get("is_internal", "Interno")) if host_data.get("is_internal") in publication else publication.index("Interno")
+                )
+
+                # location = st.text_input("Local", value=host_data.get("location", ""))
+                local = ["AWS", "Huawei", "On Premise"]
+                location = st.selectbox(
+                    "Local",
+                    options=local,
+                    index=local.index(host_data.get("location", "On Premise")) if host_data.get("location") in local else local.index("Interno")
+                )
                 midleware = st.text_input("Midlleware", value=host_data.get("midleware", ""))
                 st.markdown("##### Observações")
                 notes = st.text_area(" ", host_data.get("notes", ""), height=100)
