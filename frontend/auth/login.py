@@ -1,13 +1,26 @@
 import streamlit as st
+from streamlit_cookies_manager import EncryptedCookieManager
 import requests
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
 API_URL = os.getenv("API_URL")
+cookies = EncryptedCookieManager(
+    prefix="login",  # prefixo opcional
+    password=os.getenv("COOKIE_TOKEN")  # troque por algo seguro
+)
+
+cookies.load()
 
 def login_page():
-    st.title("Login - Inventário")
+    st.title("Login")
+
+    # Se já estiver logado via cookie
+    if cookies.get("token"):
+        st.session_state["jwt_token"] = cookies.get("token")
+        st.session_state["logged_in"] = True
+        st.rerun()
 
     username = st.text_input("Usuário")
     password = st.text_input("Senha", type="password")
@@ -22,6 +35,8 @@ def login_page():
 
             if response.status_code in (200, 201):
                 token = response.json().get("access_token")
+                cookies.set("token", token)
+                cookies.save()
                 st.session_state["jwt_token"] = token
                 st.session_state["logged_in"] = True
                 st.success("Login realizado com sucesso!")

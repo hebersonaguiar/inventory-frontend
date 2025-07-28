@@ -1,8 +1,21 @@
 import streamlit as st
+import os
+from streamlit_cookies_manager import EncryptedCookieManager
 from protected.hosts_list import listar_hosts
 from protected.host_edit import editar_host
+from dotenv import load_dotenv
+
+load_dotenv()
+
+cookies = EncryptedCookieManager(
+    prefix="login",  # prefixo opcional
+    password=os.getenv("COOKIE_TOKEN")  # troque por algo seguro
+)
+
+cookies.load()
 
 def logout():
+    cookies.delete("token")
     st.session_state.clear()
     st.session_state.logged_in = False
     st.session_state.username = None
