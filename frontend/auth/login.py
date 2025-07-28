@@ -23,10 +23,14 @@ def logout():
     st.session_state.clear()
     st.session_state.logged_in = False
     st.session_state.username = None
-    st.rerun()
 
 def login_page():
     st.title("Login")
+
+    st.set_page_config(
+        layout="centered", 
+        initial_sidebar_state="collapsed"
+    )
 
     # Se já estiver logado via cookie
     if cookies.get("token") and cookies.get("token") != "expired":
@@ -36,9 +40,10 @@ def login_page():
 
     username = st.text_input("Usuário")
     password = st.text_input("Senha", type="password")
-    login_button = st.button("Entrar")
+    login_submit = st.form_submit_button("Entrar")  
+    # login_button = st.button("Entrar")
 
-    if login_button:
+    if login_submit:
         try:
             response = requests.post(f"{API_URL}/api/v1/auth/login", json={
                 "username": username,
