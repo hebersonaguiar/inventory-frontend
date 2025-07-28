@@ -1,30 +1,22 @@
 import streamlit as st
 import os
-from streamlit_cookies_manager import EncryptedCookieManager
+# from streamlit_cookies_manager import EncryptedCookieManager
+from auth.login import logout
 from protected.hosts_list import listar_hosts
 from protected.host_edit import editar_host
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 
-cookies = EncryptedCookieManager(
-    prefix="login",  # prefixo opcional
-    password=os.getenv("COOKIE_TOKEN")  # troque por algo seguro
-)
+# cookies = EncryptedCookieManager(
+#     prefix="login",  # prefixo opcional
+#     password=os.getenv("COOKIE_TOKEN")  # troque por algo seguro
+# )
 
-# Garantir que os cookies estão prontos para uso
-if not cookies.ready():
-    st.stop()
+# # Garantir que os cookies estão prontos para uso
+# if not cookies.ready():
+    # st.stop()
 
-def logout():
-    if "token" in cookies:
-        cookies.delete("token")
-        cookies.save()
-        
-    st.session_state.clear()
-    st.session_state.logged_in = False
-    st.session_state.username = None
-    st.rerun()
 
 def home_page():
     st.sidebar.success("Logado com sucesso")

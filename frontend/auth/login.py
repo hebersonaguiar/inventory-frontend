@@ -15,6 +15,16 @@ cookies = EncryptedCookieManager(
 if not cookies.ready():
     st.stop()
 
+def logout():
+    if "token" in cookies:
+        cookies.delete("token")
+        cookies.save()
+
+    st.session_state.clear()
+    st.session_state.logged_in = False
+    st.session_state.username = None
+    st.rerun()
+
 def login_page():
     st.title("Login")
 
