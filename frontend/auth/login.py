@@ -11,8 +11,6 @@ cookies = EncryptedCookieManager(
     password=os.getenv("COOKIE_TOKEN")  # troque por algo seguro
 )
 
-cookies.load()
-
 def login_page():
     st.title("Login")
 
