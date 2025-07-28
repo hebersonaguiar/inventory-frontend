@@ -1,6 +1,6 @@
 import streamlit as st
 from pages.hosts_list import listar_hosts
-from pages.host_edit import editar_hosts
+from pages.host_edit import editar_host
 
 def logout():
     st.session_state.clear()
