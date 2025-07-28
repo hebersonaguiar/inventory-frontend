@@ -32,7 +32,7 @@ def login_page():
             })
 
             if response.status_code in (200, 201):
-                token = response.json.get("access_token")
+                token = response.json().get("access_token")
                 st.session_state["jwt_token"] = token
                 st.session_state["logged_in"] = True
                 st.success("Login realizado com sucesso!")
