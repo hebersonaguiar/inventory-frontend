@@ -17,7 +17,7 @@ if not cookies.ready():
 
 def logout():
     if "token" in cookies:
-        cookies.delete("token")
+        cookies["token"] = None
         cookies.save()
 
     st.session_state.clear()
