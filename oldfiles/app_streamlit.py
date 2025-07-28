@@ -42,18 +42,6 @@ def login_page():
         except Exception as e:
                 st.error(f"Erro ao tentar login: {e}")
 
-
-
-
-    # if st.button("Entrar"):
-    #     if check_login(username, password):
-    #         st.session_state.logged_in = True
-    #         st.session_state.username = username
-    #         st.success("Login realizado com sucesso!")
-    #         st.rerun()
-    #     else:
-    #         st.error("Usuário ou senha inválidos!")
-
 def main_app():
 
     st.set_page_config(
