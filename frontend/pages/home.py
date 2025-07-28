@@ -25,4 +25,4 @@ def home_page():
     if choice == "Listar Hosts":
         listar_hosts()
     elif choice == "Editar Hosts":
-        editar_hosts()
+        editar_host()
