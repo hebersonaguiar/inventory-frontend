@@ -33,7 +33,7 @@ def login_page():
 
             if response.status_code in (200, 201):
                 token = response.json().get("access_token")
-                cookies.set("token", token)
+                cookies["token"] = token
                 cookies.save()
                 st.session_state["jwt_token"] = token
                 st.session_state["logged_in"] = True
