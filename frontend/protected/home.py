@@ -19,7 +19,7 @@ def home_page():
         initial_sidebar_state="expanded",
     )
 
-    menu = ["Listar Hosts", "Editar Host"]
+    menu = ["Listar Hosts", "Editar Hosts"]
     choice = st.sidebar.selectbox("Menu", menu)
 
     if choice == "Listar Hosts":
