@@ -3,6 +3,7 @@ services:
     build:
       context: .          
       dockerfile: Dockerfile
+    image: inventory-frontend
     container_name: inventory-frontend
     env_file:
       - .env              # Carrega variáveis de ambiente
