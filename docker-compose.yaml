@@ -1,5 +1,5 @@
 services:
-  inventory-frontend:
+  frontend:
     build:
       context: .          
       dockerfile: Dockerfile
