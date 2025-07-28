@@ -12,9 +12,15 @@ cookies = EncryptedCookieManager(
     password=os.getenv("COOKIE_TOKEN")  # troque por algo seguro
 )
 
+# Garantir que os cookies estão prontos para uso
+if not cookies.ready():
+    st.stop()
+
 def logout():
-    cookies.delete("token")
-    cookies.save()
+    if "token" in cookies:
+        cookies.delete("token")
+        cookies.save()
+        
     st.session_state.clear()
     st.session_state.logged_in = False
     st.session_state.username = None
