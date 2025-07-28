@@ -1,0 +1,17 @@
+services:
+  inventory-frontend:
+    build:
+      context: .          
+      dockerfile: Dockerfile
+    container_name: inventory-frontend
+    env_file:
+      - .env              # Carrega variáveis de ambiente
+    ports:
+      - "8501:8501"      
+    networks:
+      - shared_network # Usa rede compartilhada
+
+networks:
+  shared_network:
+    external: true        # Usa rede já criada por outro compose
+    name: inventory_default
