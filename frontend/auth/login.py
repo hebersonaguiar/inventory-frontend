@@ -38,10 +38,11 @@ def login_page():
         st.session_state["logged_in"] = True
         st.rerun()
 
-    username = st.text_input("Usuário")
-    password = st.text_input("Senha", type="password")
-    login_submit = st.form_submit_button("Entrar")  
-    # login_button = st.button("Entrar")
+    with st.form("login_form", clear_on_submit=False):
+        username = st.text_input("Usuário")
+        password = st.text_input("Senha", type="password")
+        login_submit = st.form_submit_button("Entrar")  
+        # login_button = st.button("Entrar")
 
     if login_submit:
         try:
