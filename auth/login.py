@@ -29,6 +29,8 @@ def login_page():
 
     st.set_page_config(
         layout="centered", 
+        page_title="Dashboard Inventory",
+        page_icon="🖥️",
         initial_sidebar_state="collapsed"
     )
 
